@@ -1,13 +1,15 @@
+"use client";
+import { useKindeBrowserClient } from "@kinde-oss/kinde-auth-nextjs";
 import {
   RegisterLink,
   LoginLink,
   LogoutLink,
 } from "@kinde-oss/kinde-auth-nextjs/components";
-import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
+import Image from "next/image";
 
-const Navbar = async () => {
-  const { getUser } = getKindeServerSession();
-  const user = await getUser();
+const Navbar = () => {
+  const { getUser, isLoading } = useKindeBrowserClient();
+  const user = getUser();
 
   return (
     <div className="navbar bg-base-100 shadow-sm">
@@ -35,52 +37,43 @@ const Navbar = async () => {
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
           >
             <li>
-              <a>Item 1</a>
+              <a href="/">Home</a>
             </li>
             <li>
-              <a>Parent</a>
-              <ul className="p-2">
-                <li>
-                  <a>Submenu 1</a>
-                </li>
-                <li>
-                  <a>Submenu 2</a>
-                </li>
-              </ul>
+              <a href="/vehicles">Vehicles</a>
             </li>
             <li>
-              <a>Item 3</a>
+              <a href="/about">About Us</a>
+            </li>
+            <li>
+              <a href="/contact">Contact Us</a>
             </li>
           </ul>
         </div>
         <a className="btn btn-ghost text-xl">daisyUI</a>
       </div>
+
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
           <li>
-            <a>Item 1</a>
+            <a href="/">Home</a>
           </li>
           <li>
-            <details>
-              <summary>Parent</summary>
-              <ul className="p-2">
-                <li>
-                  <a>Submenu 1</a>
-                </li>
-                <li>
-                  <a>Submenu 2</a>
-                </li>
-              </ul>
-            </details>
+            <a href="/vehicles">Vehicles</a>
           </li>
           <li>
-            <a>Item 3</a>
+            <a href="/about">About Us</a>
+          </li>
+          <li>
+            <a href="/contact">Contact Us</a>
           </li>
         </ul>
       </div>
 
       <div className="navbar-end gap-2">
-        {user ? (
+        {isLoading ? (
+          <span className="loading loading-spinner loading-sm"></span>
+        ) : user ? (
           <div className="dropdown dropdown-end">
             <div
               tabIndex={0}
@@ -88,9 +81,13 @@ const Navbar = async () => {
               className="btn btn-ghost btn-circle avatar"
             >
               <div className="w-10 rounded-full">
-                <img
-                  alt="Tailwind CSS Navbar component"
-                  src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+                <Image
+                  alt="User avatar"
+                  src={
+                    user.picture || "https://www.gravatar.com/avatar/?d=mp&s=64"
+                  }
+                  width={40}
+                  height={40}
                 />
               </div>
             </div>
@@ -114,8 +111,12 @@ const Navbar = async () => {
           </div>
         ) : (
           <>
-            <LoginLink className="btn">Sign In</LoginLink>
-            <RegisterLink className="btn">Sign Up</RegisterLink>
+            <LoginLink className="btn btn-xs sm:btn-sm md:btn-md ">
+              Sign In
+            </LoginLink>
+            <RegisterLink className="btn btn-xs sm:btn-sm md:btn-md">
+              Sign Up
+            </RegisterLink>
           </>
         )}
       </div>
