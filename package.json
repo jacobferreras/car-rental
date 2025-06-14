@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@kinde-oss/kinde-auth-nextjs": "^2.7.0",
     "@prisma/client": "^6.9.0",
     "daisyui": "^5.0.43",
     "next": "15.3.3",
