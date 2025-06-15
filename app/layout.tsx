@@ -28,13 +28,15 @@ export default function RootLayout({
 }>) {
   return (
     <AuthProvider>
-      <html lang="en" className="scroll-smooth" data-theme="halloween">
+      <html lang="en" className="scroll-smooth" data-theme="lofi">
         <body
           className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         >
-          <Navbar />
-          {children}
-          <Footer />
+          <div className="bg-base-300">
+            <Navbar />
+            {children}
+            <Footer />
+          </div>
         </body>
       </html>
     </AuthProvider>
