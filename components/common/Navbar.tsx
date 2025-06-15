@@ -6,13 +6,14 @@ import {
   LogoutLink,
 } from "@kinde-oss/kinde-auth-nextjs/components";
 import Image from "next/image";
+import Link from "next/link";
 
 const Navbar = () => {
   const { getUser, isLoading } = useKindeBrowserClient();
   const user = getUser();
 
   return (
-    <div className="navbar bg-base-100 shadow-sm">
+    <div className="fixed navbar bg-transparent shadow-sm z-10">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -37,16 +38,16 @@ const Navbar = () => {
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
           >
             <li>
-              <a href="/">Home</a>
+              <Link href="/">Home</Link>
             </li>
             <li>
-              <a href="/vehicles">Vehicles</a>
+              <Link href="/vehicles">Vehicles</Link>
             </li>
             <li>
-              <a href="/about">About Us</a>
+              <Link href="/about">About Us</Link>
             </li>
             <li>
-              <a href="/contact">Contact Us</a>
+              <Link href="/contact">Contact Us</Link>
             </li>
           </ul>
         </div>
@@ -56,16 +57,16 @@ const Navbar = () => {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
           <li>
-            <a href="/">Home</a>
+            <Link href="/">Home</Link>
           </li>
           <li>
-            <a href="/vehicles">Vehicles</a>
+            <Link href="/vehicles">Vehicles</Link>
           </li>
           <li>
-            <a href="/about">About Us</a>
+            <Link href="/about">About Us</Link>
           </li>
           <li>
-            <a href="/contact">Contact Us</a>
+            <Link href="/contact">Contact Us</Link>
           </li>
         </ul>
       </div>
