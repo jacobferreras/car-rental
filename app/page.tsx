@@ -78,10 +78,7 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="flex flex-col lg:flex-row justify-center items-center px-2 mb-4 gap-4">
-          <CarCard />
-          <CarCard />
-          <CarCard />
+        <div>
           <CarCard />
         </div>
       </div>
