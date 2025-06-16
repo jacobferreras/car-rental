@@ -6,12 +6,13 @@ interface DropdownProps {
   options: string;
   options1: string;
   options2: string;
-  options3: string;
-  options4: string;
-  placeholder1: string;
-  placeholder2: string;
-  placeholder3: string;
-  placeholder4: string;
+  options3?: string;
+  options4?: string;
+  placeholder1?: string;
+  placeholder2?: string;
+  placeholder3?: string;
+  placeholder4?: string;
+  desriptions?: string[];
 }
 
 const Dropdown = (props: DropdownProps) => {
@@ -24,10 +25,10 @@ const Dropdown = (props: DropdownProps) => {
       <option value="" className="text-white">
         {props.options}
       </option>
-      <option value={props.placeholder1}>{props.options1} Seater</option>
-      <option value={props.placeholder2}>{props.options2} Seater</option>
-      <option value={props.placeholder3}>{props.options3} Seater</option>
-      <option value={props.placeholder4}>{props.options4} Seater</option>
+      <option value={props.placeholder1}>{props.options1}</option>
+      <option value={props.placeholder2}>{props.options2}</option>
+      <option value={props.placeholder3}>{props.options3}</option>
+      <option value={props.placeholder4}>{props.options4}</option>
     </select>
   );
 };
