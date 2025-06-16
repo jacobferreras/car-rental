@@ -1,6 +1,6 @@
 "use client";
 import useCards from "@/hooks/useCards";
-import { use } from "react";
+import Image from "next/image";
 
 interface Car {
   id: number;
@@ -25,7 +25,13 @@ const CarCard = () => {
           className="card bg-base-100 w-auto  lg:w-96 shadow-sm"
         >
           <figure>
-            <img src={car.imageUrl} alt={car.make} className="h-50 w-full" />
+            <Image
+              src={car.imageUrl.trim()}
+              alt={car.make}
+              className="h-50 w-full"
+              width="1000"
+              height="1000"
+            />
           </figure>
 
           <div className="card-body">
