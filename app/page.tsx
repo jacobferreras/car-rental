@@ -1,7 +1,16 @@
+"use client";
 import CarCard from "@/components/common/CarCard";
 import Image from "next/image";
+import useCards from "@/hooks/useCards";
+import { use } from "react";
 
 export default function Home() {
+  const { cars } = useCards({
+    seats: 0,
+    transmission: "",
+    limit: 10,
+    page: 1,
+  });
   return (
     <div>
       <div className="hero min-h-screen py-24 xl:py-32">
@@ -85,7 +94,7 @@ export default function Home() {
         </div>
 
         <div>
-          <CarCard />
+          <CarCard cars={cars} />
         </div>
       </div>
 
