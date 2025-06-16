@@ -18,17 +18,14 @@ const CarCard = () => {
   const { cars } = useCards();
 
   return (
-    <div className="flex flex-col lg:flex-row justify-center items-center px-2 mb-4 gap-4">
+    <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 xl:gap-4 px-4 mb-4">
       {cars.map((car: Car) => (
-        <div
-          key={car.id}
-          className="card bg-base-100 w-auto  lg:w-96 shadow-sm"
-        >
+        <div key={car.id} className="card bg-base-100 w-auto shadow-sm">
           <figure>
             <Image
               src={car.imageUrl.trim()}
               alt={car.make}
-              className="h-50 w-full"
+              className="h-60 w-full"
               width="1000"
               height="1000"
             />
