@@ -9,7 +9,8 @@ export async function GET(req: Request, res: Response) {
     const limit = parseInt(searchParams.get("limit") || "10", 10);
     const page = parseInt(searchParams.get("page") || "1", 10);
     const seater = parseInt(searchParams.get("seats") || "0", 10);
-    const status = searchParams.get("status") || undefined;
+    const transmission = searchParams.get("transmission") || "";
+    const search = searchParams.get("search") || "";
 
     const skip = (page - 1) * limit;
 
@@ -17,8 +18,8 @@ export async function GET(req: Request, res: Response) {
     if (seater > 0) {
       where.seats = seater;
     }
-    if (status) {
-      where.status = status;
+    if (transmission) {
+      where.transmission = { equals: transmission, mode: "insensitive" };
     }
 
     const cars = await prisma.car.findMany({
