@@ -1,31 +1,35 @@
+"use client";
 import Dropdown from "@/components/common/Dropdown";
 import CarCards from "../../components/common/CarCard";
+import useCards from "@/hooks/useCards";
+import { useState } from "react";
+import Pagination from "@/components/common/Pagination";
 
 const page = () => {
+  const [currentPage, setCurrentPage] = useState(1);
+  const [transmission, setTransmission] = useState("");
+  const [seats, setSeats] = useState(0);
+  const { cars, totalpages } = useCards({
+    seats,
+    transmission: transmission,
+    limit: 8,
+    page: currentPage,
+  });
+
+  //
+
   return (
-    <div className="flex flex-col justify-center items-center min-h-screen pt-12">
-      <div className="flex flex-col sm:flex-row justify-center items-center mb-8 gap-4 pt-12">
+    <div className="flex flex-col min-h-screen pt-12">
+      <div className="flex flex-col sm:flex-row xl:flex-row justify-center items-center xl:justify-end xl:items-end xl:gap-0 mb-8 gap-4 pt-12 xl:ml-auto xl:pr-4 xl:mt-24">
         <Dropdown
-          value=""
-          options="Seats"
-          options1="2"
-          options2="4"
-          options3="5"
-          options4="7"
-          placeholder2="4"
-          placeholder3="5"
-          placeholder4="7"
+          value={seats.toString()}
+          onChange={(e) => {
+            setSeats(Number(e.target.value));
+            setCurrentPage(1);
+          }}
         />
 
-        <Dropdown
-          value=""
-          options="Transmission"
-          options1="Automatic"
-          options2="Manual"
-          placeholder1="Automatic"
-          placeholder2="Manual"
-        />
-        <label className="input">
+        <label className="input w-auto">
           <svg
             className="h-[1em] opacity-50"
             xmlns="http://www.w3.org/2000/svg"
@@ -48,7 +52,11 @@ const page = () => {
         </label>
       </div>
 
-      <CarCards />
+      <CarCards cars={cars} />
+
+      <div className="flex justify-center items-center mt-8 mb-4">
+        <Pagination />
+      </div>
     </div>
   );
 };
