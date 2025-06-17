@@ -1,7 +1,11 @@
 "use client";
 import { useEffect, useState } from "react";
 
-export const AddCarButton = () => {
+interface AddCarButtonProps {
+  onClick?: () => void;
+}
+
+export const AddCarButton = (props: AddCarButtonProps) => {
   const [isGranted, setIsGranted] = useState(false);
 
   useEffect(() => {
@@ -11,7 +15,14 @@ export const AddCarButton = () => {
   }, []);
   return (
     <div>
-      {isGranted ? <button className="btn btn-neutral">Add Car</button> : null}
+      {isGranted ? (
+        <button
+          className="btn bg-neutral-700 rounded-xl text-white"
+          onClick={props.onClick}
+        >
+          Add Car
+        </button>
+      ) : null}
     </div>
   );
 };
