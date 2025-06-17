@@ -7,9 +7,11 @@ import { useState } from "react";
 import Pagination from "@/components/common/Pagination";
 import useDebounce from "@/hooks/useDebounce";
 import { AddCarButton } from "@/components/common/AddCarButton";
+import AddCarModal from "@/components/common/AddCarModal";
 
 const page = () => {
   const [currentPage, setCurrentPage] = useState(1);
+  const [openModal, setOpenModal] = useState(false);
   const [transmission, setTransmission] = useState("");
   const [search, setSearch] = useState("");
   const debounceSearch = useDebounce(search, 400);
@@ -22,11 +24,13 @@ const page = () => {
     search: debounceSearch,
   });
 
+  console.log(openModal);
+
   return (
     <div className="flex flex-col min-h-screen pt-12">
       <div className="flex flex-col sm:flex-row xl:flex-row justify-center items-center xl:justify-end xl:items-end xl:gap-0 mb-8 gap-4 pt-12 xl:ml-auto xl:pr-4 xl:mt-24">
-        <div>
-          <AddCarButton />
+        <div className="mr-4">
+          <AddCarButton onClick={() => setOpenModal(true)} />
         </div>
         <Dropdown
           value={seats.toString()}
@@ -77,6 +81,7 @@ const page = () => {
       </div>
 
       <CarCards cars={cars} />
+      <AddCarModal open={openModal} onClose={() => setOpenModal(false)} />
 
       <div className="flex justify-center items-center mt-8 mb-4">
         <Pagination
