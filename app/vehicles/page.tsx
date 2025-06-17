@@ -1,22 +1,25 @@
 "use client";
-import Dropdown from "@/components/common/Dropdown";
+import Dropdown from "@/components/common/DropdownSeats";
+import DropdownTransmission from "@/components/common/DropdownTransmission";
 import CarCards from "../../components/common/CarCard";
 import useCards from "@/hooks/useCards";
 import { useState } from "react";
 import Pagination from "@/components/common/Pagination";
+import useDebounce from "@/hooks/useDebounce";
 
 const page = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [transmission, setTransmission] = useState("");
+  const [search, setSearch] = useState("");
+  const debounceSearch = useDebounce(search, 400);
   const [seats, setSeats] = useState(0);
   const { cars, totalpages } = useCards({
     seats,
-    transmission: transmission,
+    transmission,
     limit: 8,
     page: currentPage,
+    search: debounceSearch,
   });
-
-  //
 
   return (
     <div className="flex flex-col min-h-screen pt-12">
@@ -25,6 +28,14 @@ const page = () => {
           value={seats.toString()}
           onChange={(e) => {
             setSeats(Number(e.target.value));
+            setCurrentPage(1);
+          }}
+        />
+
+        <DropdownTransmission
+          value={transmission}
+          onChange={(e) => {
+            setTransmission(e.target.value);
             setCurrentPage(1);
           }}
         />
@@ -46,7 +57,16 @@ const page = () => {
               <path d="m21 21-4.3-4.3"></path>
             </g>
           </svg>
-          <input type="search" className="grow" placeholder="Search" />
+          <input
+            type="search"
+            className="grow"
+            placeholder="Search"
+            value={search}
+            onChange={(e) => {
+              setSearch(e.target.value);
+              setCurrentPage(1);
+            }}
+          />
           <kbd className="kbd kbd-sm">⌘</kbd>
           <kbd className="kbd kbd-sm">K</kbd>
         </label>
@@ -55,7 +75,11 @@ const page = () => {
       <CarCards cars={cars} />
 
       <div className="flex justify-center items-center mt-8 mb-4">
-        <Pagination />
+        <Pagination
+          currentPage={currentPage}
+          totalPages={totalpages}
+          onPageChange={setCurrentPage}
+        />
       </div>
     </div>
   );
