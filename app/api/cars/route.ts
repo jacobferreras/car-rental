@@ -21,6 +21,15 @@ export async function GET(req: Request, res: Response) {
     if (transmission) {
       where.transmission = { equals: transmission, mode: "insensitive" };
     }
+    if (search) {
+      where.OR = [
+        { make: { contains: search, mode: "insensitive" } },
+        { model: { contains: search, mode: "insensitive" } },
+      ];
+    }
+
+    const totalCars = await prisma.car.count({ where });
+    const totalpages = Math.ceil(totalCars / limit);
 
     const cars = await prisma.car.findMany({
       where,
@@ -28,7 +37,7 @@ export async function GET(req: Request, res: Response) {
       skip: skip,
       orderBy: { id: "asc" },
     });
-    return new Response(JSON.stringify(cars), {
+    return new Response(JSON.stringify({ cars, totalpages }), {
       status: 200,
       headers: {
         "Content-Type": "application/json",
@@ -36,6 +45,63 @@ export async function GET(req: Request, res: Response) {
     });
   } catch (error) {
     console.error("Error fetching cars:", error);
+    return new Response("Internal Server Error", { status: 500 });
+  } finally {
+    await prisma.$disconnect();
+  }
+}
+
+export async function POST(req: Request) {
+  try {
+    const body = await req.json();
+    const {
+      make,
+      model,
+      year,
+      seats,
+      transmission,
+      imageUrl,
+      status,
+      pricePerDay,
+      fuelType,
+    } = body;
+
+    if (
+      !make ||
+      !model ||
+      !year ||
+      !seats ||
+      !transmission ||
+      !imageUrl ||
+      !status ||
+      !pricePerDay ||
+      !fuelType
+    ) {
+      return new Response("Missing required fields", { status: 400 });
+    }
+
+    const newCar = await prisma.car.create({
+      data: {
+        make: String(make).trim(),
+        model: String(model).trim(),
+        year: Number(year),
+        seats: Number(seats),
+        transmission: String(transmission).trim(),
+        imageUrl: String(imageUrl).trim(),
+        status,
+        pricePerDay: parseFloat(pricePerDay),
+        fuelType,
+      },
+    });
+
+    return new Response(JSON.stringify(newCar), {
+      status: 201,
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+  } catch (error) {
+    console.error("Error creating car:", error);
     return new Response("Internal Server Error", { status: 500 });
   } finally {
     await prisma.$disconnect();
