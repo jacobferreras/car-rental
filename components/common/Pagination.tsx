@@ -1,33 +1,31 @@
 import React from "react";
 
-const Pagination = () => {
+interface PaginationProps {
+  currentPage: number;
+  totalPages: number;
+  onPageChange: (page: number) => void;
+}
+
+const Pagination = ({
+  currentPage,
+  totalPages,
+  onPageChange,
+}: PaginationProps) => {
+  if (totalPages <= 0) return null;
+
   return (
     <div className="join">
-      <input
-        className="join-item btn btn-square"
-        type="radio"
-        name="options"
-        aria-label="1"
-        checked={true}
-      />
-      <input
-        className="join-item btn btn-square"
-        type="radio"
-        name="options"
-        aria-label="2"
-      />
-      <input
-        className="join-item btn btn-square"
-        type="radio"
-        name="options"
-        aria-label="3"
-      />
-      <input
-        className="join-item btn btn-square"
-        type="radio"
-        name="options"
-        aria-label="4"
-      />
+      {Array.from({ length: totalPages }, (_, idx) => (
+        <input
+          key={idx + 1}
+          className="join-item btn btn-square"
+          type="radio"
+          name="options"
+          aria-label={(idx + 1).toString()}
+          checked={currentPage === idx + 1}
+          onChange={() => onPageChange(idx + 1)}
+        />
+      ))}
     </div>
   );
 };
