@@ -7,6 +7,7 @@ interface Car {
   transmission?: string;
   limit?: number;
   page?: number;
+  search?: string;
 }
 
 const useCards = (props: Car) => {
@@ -17,8 +18,8 @@ const useCards = (props: Car) => {
     const getCars = async () => {
       try {
         const data = await fetchCars(props);
-        setCars(data);
-        setTotalPages(data.page);
+        setCars(data.cars || []);
+        setTotalPages(data.totalpages || 1);
       } catch (error) {
         console.error("Error fetching cars:", error);
       } finally {
@@ -26,7 +27,7 @@ const useCards = (props: Car) => {
     };
 
     getCars();
-  }, [props.transmission, props.seats, props.limit, props.page]);
+  }, [props.transmission, props.seats, props.limit, props.page, props.search]);
 
   return { cars, totalpages };
 };
