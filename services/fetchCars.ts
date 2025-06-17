@@ -5,6 +5,7 @@ interface Car {
   transmission?: string;
   limit?: number;
   page?: number;
+  search?: string;
 }
 
 export const fetchCars = async (props: Car) => {
@@ -15,6 +16,7 @@ export const fetchCars = async (props: Car) => {
     if (props.transmission) params.append("transmission", props.transmission);
     if (props.limit) params.append("limit", props.limit.toString());
     if (props.page) params.append("page", props.page.toString());
+    if (props.search) params.append("search", props.search);
 
     const response = await axios.get("/api/cars", { params });
     return response.data;
