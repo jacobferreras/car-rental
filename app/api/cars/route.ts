@@ -2,7 +2,20 @@ import { PrismaClient } from "../../generated/prisma/client";
 
 const prisma = new PrismaClient();
 
-export async function GET(req: Request, res: Response) {
+const corsHeaders = {
+  "Access-Control-Allow-Origin": "http://localhost:3000",
+  "Access-Control-Allow-Methods": "GET,POST,OPTIONS",
+  "Access-Control-Allow-Headers": "Content-Type, Authorization",
+};
+
+export async function OPTIONS() {
+  return new Response(null, {
+    status: 204,
+    headers: corsHeaders,
+  });
+}
+
+export async function GET(req: Request) {
   try {
     const { searchParams } = new URL(req.url);
 
@@ -39,13 +52,14 @@ export async function GET(req: Request, res: Response) {
     });
     return new Response(JSON.stringify({ cars, totalpages }), {
       status: 200,
-      headers: {
-        "Content-Type": "application/json",
-      },
+      headers: { ...corsHeaders, "Content-Type": "application/json" },
     });
   } catch (error) {
     console.error("Error fetching cars:", error);
-    return new Response("Internal Server Error", { status: 500 });
+    return new Response("Internal Server Error", {
+      status: 500,
+      headers: corsHeaders,
+    });
   } finally {
     await prisma.$disconnect();
   }
@@ -77,7 +91,10 @@ export async function POST(req: Request) {
       !pricePerDay ||
       !fuelType
     ) {
-      return new Response("Missing required fields", { status: 400 });
+      return new Response("Missing required fields", {
+        status: 400,
+        headers: corsHeaders,
+      });
     }
 
     const newCar = await prisma.car.create({
@@ -96,13 +113,14 @@ export async function POST(req: Request) {
 
     return new Response(JSON.stringify(newCar), {
       status: 201,
-      headers: {
-        "Content-Type": "application/json",
-      },
+      headers: { ...corsHeaders, "Content-Type": "application/json" },
     });
   } catch (error) {
     console.error("Error creating car:", error);
-    return new Response("Internal Server Error", { status: 500 });
+    return new Response("Internal Server Error", {
+      status: 500,
+      headers: corsHeaders,
+    });
   } finally {
     await prisma.$disconnect();
   }
