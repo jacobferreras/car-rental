@@ -2,7 +2,6 @@
 import CarCard from "@/components/common/CarCard";
 import Image from "next/image";
 import useCards from "@/hooks/useCards";
-import { use } from "react";
 
 export default function Home() {
   const { cars } = useCards({
