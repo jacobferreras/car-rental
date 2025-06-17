@@ -6,6 +6,7 @@ import useCards from "@/hooks/useCards";
 import { useState } from "react";
 import Pagination from "@/components/common/Pagination";
 import useDebounce from "@/hooks/useDebounce";
+import { AddCarButton } from "@/components/common/AddCarButton";
 
 const page = () => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -24,6 +25,9 @@ const page = () => {
   return (
     <div className="flex flex-col min-h-screen pt-12">
       <div className="flex flex-col sm:flex-row xl:flex-row justify-center items-center xl:justify-end xl:items-end xl:gap-0 mb-8 gap-4 pt-12 xl:ml-auto xl:pr-4 xl:mt-24">
+        <div>
+          <AddCarButton />
+        </div>
         <Dropdown
           value={seats.toString()}
           onChange={(e) => {
