@@ -8,11 +8,15 @@ import Pagination from "@/components/common/Pagination";
 import useDebounce from "@/hooks/useDebounce";
 import { AddCarButton } from "@/components/common/AddCarButton";
 import AddCarModal from "@/components/common/AddCarModal";
+import CarDetailsModal from "@/components/ui/CarDetailsModal";
+import { Car } from "../generated/prisma";
 
 const page = () => {
   const [refresh, setRefresh] = useState(0);
+  const [selectedCar, setSelectedCar] = useState<Car | null>(null);
   const [currentPage, setCurrentPage] = useState(1);
   const [openModal, setOpenModal] = useState(false);
+  const [openCarDetailsModal, setOpenCarDetailsModal] = useState(false);
   const [transmission, setTransmission] = useState("");
   const [search, setSearch] = useState("");
   const debounceSearch = useDebounce(search, 400);
@@ -25,8 +29,6 @@ const page = () => {
     search: debounceSearch,
     refresh,
   });
-
-  console.log(openModal);
 
   return (
     <div className="flex flex-col min-h-screen pt-12">
@@ -82,7 +84,14 @@ const page = () => {
         </label>
       </div>
 
-      <CarCards cars={cars} />
+      <CarCards
+        cars={cars}
+        onEdit={(cars) => {
+          setSelectedCar(cars);
+          setOpenCarDetailsModal(true);
+        }}
+      />
+
       <AddCarModal
         open={openModal}
         onClose={() => setOpenModal(false)}
@@ -90,6 +99,15 @@ const page = () => {
           setRefresh((r) => r + 1);
           setCurrentPage(1);
         }}
+      />
+
+      <CarDetailsModal
+        open={openCarDetailsModal}
+        onClose={() => {
+          setSelectedCar(null);
+          setOpenCarDetailsModal(false);
+        }}
+        car={selectedCar}
       />
 
       <div className="flex justify-center items-center mt-8 mb-4">
