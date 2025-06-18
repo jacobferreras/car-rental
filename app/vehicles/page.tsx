@@ -86,8 +86,8 @@ const page = () => {
 
       <CarCards
         cars={cars}
-        onEdit={(cars) => {
-          setSelectedCar(cars);
+        onEdit={(car) => {
+          setSelectedCar(car);
           setOpenCarDetailsModal(true);
         }}
       />
