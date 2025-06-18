@@ -7,7 +7,7 @@ export default function Home() {
   const { cars } = useCards({
     seats: 0,
     transmission: "",
-    limit: 10,
+    limit: 8,
     page: 1,
   });
   return (
