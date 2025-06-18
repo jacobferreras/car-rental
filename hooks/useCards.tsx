@@ -8,6 +8,7 @@ interface Car {
   limit?: number;
   page?: number;
   search?: string;
+  refresh?: number;
 }
 
 const useCards = (props: Car) => {
@@ -27,7 +28,14 @@ const useCards = (props: Car) => {
     };
 
     getCars();
-  }, [props.transmission, props.seats, props.limit, props.page, props.search]);
+  }, [
+    props.transmission,
+    props.seats,
+    props.limit,
+    props.page,
+    props.search,
+    props.refresh,
+  ]);
 
   return { cars, totalpages };
 };
