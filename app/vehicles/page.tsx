@@ -10,6 +10,7 @@ import { AddCarButton } from "@/components/common/AddCarButton";
 import AddCarModal from "@/components/common/AddCarModal";
 
 const page = () => {
+  const [refresh, setRefresh] = useState(0);
   const [currentPage, setCurrentPage] = useState(1);
   const [openModal, setOpenModal] = useState(false);
   const [transmission, setTransmission] = useState("");
@@ -22,6 +23,7 @@ const page = () => {
     limit: 8,
     page: currentPage,
     search: debounceSearch,
+    refresh,
   });
 
   console.log(openModal);
@@ -81,7 +83,14 @@ const page = () => {
       </div>
 
       <CarCards cars={cars} />
-      <AddCarModal open={openModal} onClose={() => setOpenModal(false)} />
+      <AddCarModal
+        open={openModal}
+        onClose={() => setOpenModal(false)}
+        onSuccess={() => {
+          setRefresh((r) => r + 1);
+          setCurrentPage(1);
+        }}
+      />
 
       <div className="flex justify-center items-center mt-8 mb-4">
         <Pagination
