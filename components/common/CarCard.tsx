@@ -1,22 +1,28 @@
 import Image from "next/image";
+import EditCarDetailsButton from "../ui/EditCarDetailsButton";
+// import { Car } from "../../app/generated/prisma";
 
 interface Car {
   id: number;
   make: string;
-  transmission: string;
-  imageUrl: string;
-  pricePerDay: number;
   model: string;
+  year: number;
+  pricePerDay: number;
+  imageUrl: string;
+  status: string;
+  transmission: string;
   fuelType: string;
   seats: number;
-  year: number;
+  createdAt: Date;
+  updatedAt: Date;
 }
 
 interface CarCardProps {
   cars: Car[];
+  onEdit?: (car: Car) => void;
 }
 
-const CarCard = ({ cars }: CarCardProps) => {
+const CarCard = ({ cars, onEdit }: CarCardProps) => {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 xl:gap-4 px-4 mb-4">
       {cars.length === 0 ? (
@@ -52,6 +58,7 @@ const CarCard = ({ cars }: CarCardProps) => {
               </div>
 
               <div className="card-actions justify-end">
+                <EditCarDetailsButton onClick={() => onEdit && onEdit(car)} />
                 <button className="btn btn-primary">Rent Now</button>
               </div>
             </div>
