@@ -12,6 +12,7 @@ const AddCarModal = (props: AddCarModalProps) => {
     props.onClose();
     if (props.onSuccess) props.onSuccess();
   });
+
   if (!props.open) return null;
 
   return (
