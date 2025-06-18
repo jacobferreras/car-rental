@@ -12,7 +12,14 @@ export const addNewCar = async (carData: {
   fuelType: string;
 }) => {
   try {
-    const response = await axios.post("/api/cars", carData);
+    // Convert string fields to numbers if needed
+    const payload = {
+      ...carData,
+      year: Number(carData.year),
+      seats: Number(carData.seats),
+      pricePerDay: Number(carData.pricePerDay),
+    };
+    const response = await axios.post("/api/cars", payload);
     return response.data;
   } catch (error) {
     console.error("Error adding new car:", error);
