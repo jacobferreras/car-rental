@@ -1,15 +1,17 @@
 import Image from "next/image";
 import EditCarDetailsButton from "../ui/EditCarDetailsButton";
+import { Decimal } from "@prisma/client/runtime/library";
 // import { Car } from "../../app/generated/prisma";
+import { CarStatus } from "../../app/generated/prisma";
 
 interface Car {
   id: number;
   make: string;
   model: string;
   year: number;
-  pricePerDay: number;
+  pricePerDay: Decimal;
   imageUrl: string;
-  status: string;
+  status: CarStatus;
   transmission: string;
   fuelType: string;
   seats: number;
@@ -46,7 +48,7 @@ const CarCard = ({ cars, onEdit }: CarCardProps) => {
               <h2 className="card-title">
                 {car.make} ({car.model})
                 <div className="badge badge-secondary">
-                  ₱{car.pricePerDay}/day
+                  ₱{Number(car.pricePerDay)}/day
                 </div>
               </h2>
 

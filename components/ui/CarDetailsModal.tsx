@@ -1,4 +1,5 @@
 import React from "react";
+import { Decimal } from "@prisma/client/runtime/library";
 
 interface CarDetailsModalProps {
   open: boolean;
@@ -10,7 +11,7 @@ interface CarDetailsModalProps {
     transmission: string;
     fuelType: string;
     seats: number;
-    pricePerDay: number;
+    pricePerDay: Decimal;
   } | null;
 }
 
@@ -28,7 +29,7 @@ const CarDetailsModal = ({ open, onClose, car }: CarDetailsModalProps) => {
             <p>Transmission: {car.transmission}</p>
             <p>Fuel Type: {car.fuelType}</p>
             <p>Seats: {car.seats}</p>
-            <p>Price/Day: ₱{car.pricePerDay}</p>
+            <p>Price/Day: ₱{Number(car.pricePerDay)}</p>
           </div>
         ) : (
           <p>No car selected.</p>
