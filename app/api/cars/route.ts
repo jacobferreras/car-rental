@@ -125,3 +125,35 @@ export async function POST(req: Request) {
     await prisma.$disconnect();
   }
 }
+
+export async function PATCH(req: Request) {
+  try {
+    const body = await req.json();
+    const { id, ...updateData } = body;
+
+    if (!id || Object.keys(updateData).length === 0) {
+      return new Response("Missing required fields", {
+        status: 400,
+        headers: corsHeaders,
+      });
+    }
+
+    const updatedCar = await prisma.car.update({
+      where: { id: Number(id) },
+      data: updateData,
+    });
+
+    return new Response(JSON.stringify(updatedCar), {
+      status: 200,
+      headers: { ...corsHeaders, "Content-Type": "application/json" },
+    });
+  } catch (error) {
+    console.error("Error updating car:", error);
+    return new Response("Internal Server Error", {
+      status: 500,
+      headers: corsHeaders,
+    });
+  } finally {
+    await prisma.$disconnect();
+  }
+}
