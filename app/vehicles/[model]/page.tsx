@@ -13,7 +13,7 @@ const page = () => {
 
   return (
     <>
-      <div className="min-h-screen flex flex-col justify-center items-center px-4 pt-32">
+      <div className="mt-24 px-4">
         <div className="card lg:card-side bg-base-100 shadow-sm">
           <figure>
             <Image
