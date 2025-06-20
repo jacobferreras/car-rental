@@ -15,10 +15,7 @@ const EditCarDetailsButton = (props: EditCarDetailsButtonProps) => {
   return (
     <div>
       {isGranted ? (
-        <button
-          className="btn bg-neutral-700 rounded-xl text-white"
-          onClick={props.onClick}
-        >
+        <button className="btn btn-primary  text-white" onClick={props.onClick}>
           Update Car Details
         </button>
       ) : null}

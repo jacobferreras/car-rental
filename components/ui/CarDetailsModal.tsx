@@ -12,6 +12,7 @@ interface CarDetailsModalProps {
     fuelType: string;
     seats: number;
     pricePerDay: Decimal;
+    status: string;
   } | null;
 }
 
@@ -22,7 +23,7 @@ const CarDetailsModal = ({ open, onClose, car }: CarDetailsModalProps) => {
       <div className="modal-box">
         <h3 className="font-bold text-lg">Car Details</h3>
         {car ? (
-          <div>
+          <div className="mb-4">
             <p>Make: {car.make}</p>
             <p>Model: {car.model}</p>
             <p>Year: {car.year}</p>
@@ -30,11 +31,12 @@ const CarDetailsModal = ({ open, onClose, car }: CarDetailsModalProps) => {
             <p>Fuel Type: {car.fuelType}</p>
             <p>Seats: {car.seats}</p>
             <p>Price/Day: ₱{Number(car.pricePerDay)}</p>
+            <p>Status: {car.status}</p>
           </div>
         ) : (
           <p>No car selected.</p>
         )}
-        <button type="button" className="btn" onClick={onClose}>
+        <button type="button" className="btn btn-primary" onClick={onClose}>
           Close
         </button>
       </div>
