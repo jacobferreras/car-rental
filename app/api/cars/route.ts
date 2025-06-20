@@ -71,6 +71,7 @@ export async function POST(req: Request) {
     const {
       make,
       model,
+      description,
       year,
       seats,
       transmission,
@@ -83,6 +84,7 @@ export async function POST(req: Request) {
     if (
       !make ||
       !model ||
+      !description ||
       !year ||
       !seats ||
       !transmission ||
@@ -101,6 +103,7 @@ export async function POST(req: Request) {
       data: {
         make: String(make).trim(),
         model: String(model).trim(),
+        description: String(description).trim(),
         year: Number(year),
         seats: Number(seats),
         transmission: String(transmission).trim(),
