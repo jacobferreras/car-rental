@@ -8,6 +8,7 @@ interface Car {
   id: number;
   make: string;
   model: string;
+  description: string;
   year: number;
   pricePerDay: Decimal;
   imageUrl: string;

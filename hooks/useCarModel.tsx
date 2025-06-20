@@ -16,6 +16,7 @@ interface Car {
   fuelType: string;
   createdAt: string;
   updatedAt: string;
+  description?: string;
 }
 
 const useCarModel = () => {
