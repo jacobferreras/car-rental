@@ -2,6 +2,7 @@ import Image from "next/image";
 import EditCarDetailsButton from "../ui/EditCarDetailsButton";
 import { Decimal } from "@prisma/client/runtime/library";
 import { CarStatus } from "../../app/generated/prisma";
+import { useRouter } from "next/navigation";
 
 interface Car {
   id: number;
@@ -24,6 +25,8 @@ interface CarCardProps {
 }
 
 const CarCard = ({ cars, onEdit }: CarCardProps) => {
+  const router = useRouter();
+
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 xl:gap-4 px-4 mb-4">
       {cars.length === 0 ? (
@@ -60,7 +63,14 @@ const CarCard = ({ cars, onEdit }: CarCardProps) => {
 
               <div className="card-actions justify-end">
                 <EditCarDetailsButton onClick={() => onEdit && onEdit(car)} />
-                <button className="btn btn-primary">Rent Now</button>
+                <button
+                  className="btn btn-primary"
+                  onClick={() =>
+                    router.push(`/vehicles/${encodeURIComponent(car.model)}`)
+                  }
+                >
+                  Rent Now
+                </button>
               </div>
             </div>
           </div>
