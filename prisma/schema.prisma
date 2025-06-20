@@ -12,6 +12,7 @@ model Car {
   id          Int      @id @default(autoincrement())
   make        String
   model       String
+  description String   @default("No description")
   year        Int
   pricePerDay Decimal
   imageUrl    String?
