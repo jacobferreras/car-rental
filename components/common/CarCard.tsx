@@ -1,7 +1,6 @@
 import Image from "next/image";
 import EditCarDetailsButton from "../ui/EditCarDetailsButton";
 import { Decimal } from "@prisma/client/runtime/library";
-// import { Car } from "../../app/generated/prisma";
 import { CarStatus } from "../../app/generated/prisma";
 
 interface Car {
