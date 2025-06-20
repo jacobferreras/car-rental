@@ -12,7 +12,7 @@ const page = () => {
   }
 
   return (
-    <div className="min-h-screen flex justify-center items-center px-4">
+    <div className="min-h-screen flex justify-center items-center">
       <div className="card lg:card-side bg-base-100 shadow-sm">
         <figure>
           <Image
@@ -23,11 +23,14 @@ const page = () => {
             height="1000"
           />
         </figure>
-        <div className="card-body">
-          <h2 className="card-title">{car.make}</h2>
-          <p>Click the button to listen on Spotiwhy app.</p>
-          <div className="card-actions justify-end">
-            <button className="btn btn-primary">Listen</button>
+        <div className="card-body w-full">
+          <h2 className="card-title text-6xl">
+            <span>{car.make}</span>
+            {car.model}
+          </h2>
+          <div>
+            <p>STARTING AT</p>
+            <p className="text-2xl">₱{car.pricePerDay}/Day</p>
           </div>
         </div>
       </div>
