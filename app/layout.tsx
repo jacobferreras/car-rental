@@ -30,10 +30,10 @@ export default function RootLayout({
     <AuthProvider>
       <html lang="en" className="scroll-smooth" data-theme="lofi">
         <body
-          className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+          className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen`}
         >
           <Navbar />
-          <div className="bg-base-300">{children}</div>
+          <div className="flex-1 bg-base-300">{children}</div>
           <Footer />
         </body>
       </html>
