@@ -49,7 +49,7 @@ const Steps = () => {
               {index + 1}
             </span>
             <div className="card-body pt-6">
-              <h2 className="card-title flex justify-center text-xl font-semibold text-indigo-700">
+              <h2 className="card-title flex justify-center text-xl font-semibold text-red-600">
                 {step.title}
               </h2>
               <p className="text-center text-gray-600">{step.desc}</p>
