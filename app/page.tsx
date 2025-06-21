@@ -40,15 +40,9 @@ export default function Home() {
 
       <div>
         <div className="flex flex-col justify-center items-center px-2 mb-4">
-          <h1 className="font-family-mono text-2xl lg:text-5xl font-fold">
+          <h1 className="text-2xl lg:text-5xl font-family-mono font-bold mb-4">
             Our Vehicles
           </h1>
-          <p className="font-family-sans text-lg text-justify lg:text-center">
-            Explore our diverse fleet of vehicles, from compact cars to luxury
-            SUVs, all available for rent at competitive prices. Each car is
-            meticulously maintained to ensure your safety and comfort on the
-            road.
-          </p>
         </div>
 
         <div>
