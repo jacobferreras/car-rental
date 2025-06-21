@@ -7,55 +7,75 @@ const CustomerTestimony = () => {
         id="slide1"
         className="carousel-item relative w-full flex justify-center items-center"
       >
-        <p className="text-center text-base sm:text-xl max-w-xs sm:max-w-xl mx-4 mb-8">
+        <p className="text-center text-md sm:text-xl sm:max-w-xl max-w-xs md:text-2xl md:max-w-2xl lg:text-4xl lg:max-w-4xl mb-8">
           "I had an amazing experience with InstaDrive! The booking process was
           seamless, and the car was in excellent condition. Highly recommend!"
         </p>
 
-        <div className="absolute left-0 right-0 top-1/2 flex -translate-y-1/2 transform justify-between">
+        <div className="absolute left-0 right-0 top-1/2 flex -translate-y-1/2 transform justify-between xl:left-24 xl:right-24">
           <div>
-            <a href="#slide3" className="btn btn-circle btn-xs">
+            <a
+              href="#slide3"
+              className="btn btn-circle btn-xs sm:btn-sm md:btn-md lg:btn-lg"
+            >
               ❮
             </a>
           </div>
 
           <div className="pl-">
-            <a href="#slide2" className="btn btn-circle btn-xs ">
+            <a
+              href="#slide2"
+              className="btn btn-circle btn-xs sm:btn-sm md:btn-md lg:btn-lg"
+            >
               ❯
             </a>
           </div>
         </div>
       </div>
+
       <div
         id="slide2"
         className="carousel-item relative w-full flex justify-center items-center"
       >
-        <p className="text-center text-base sm:text-lg max-w-xs sm:max-w-xl mb-8">
+        <p className="text-center text-md sm:text-lg max-w-xs sm:max-w-xl md:text-2xl md:max-w-2xl lg:text-4xl lg:max-w-4xl mb-8">
           "I had an amazing experience with InstaDrive! The booking process was
           seamless, and the car was in excellent condition. Highly recommend!"
         </p>
-        <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-          <a href="#slide1" className="btn btn-circle btn-xs">
+        <div className="absolute left-0 right-0 top-1/2 flex -translate-y-1/2 transform justify-between xl:left-24 xl:right-24">
+          <a
+            href="#slide1"
+            className="btn btn-circle btn-xs sm:btn-sm md:btn-md lg:btn-lg"
+          >
             ❮
           </a>
-          <a href="#slide3" className="btn btn-circle btn-xs">
+          <a
+            href="#slide3"
+            className="btn btn-circle btn-xs sm:btn-sm md:btn-md lg:btn-lg"
+          >
             ❯
           </a>
         </div>
       </div>
+
       <div
         id="slide3"
         className="carousel-item relative w-full flex justify-center items-center"
       >
-        <p className="text-center text-base sm:text-lg max-w-xs sm:max-w-xl  mb-8">
+        <p className="text-center text-md sm:text-lg max-w-xs sm:max-w-xl md:text-2xl md:max-w-2xl lg:text-4xl lg:max-w-4xl  mb-8">
           "I had an amazing experience with InstaDrive! The booking process was
           seamless, and the car was in excellent condition. Highly recommend!"
         </p>
-        <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-          <a href="#slide2" className="btn btn-circle btn-xs">
+        <div className="absolute left-0 right-0 top-1/2 flex -translate-y-1/2 transform justify-between xl:left-24 xl:right-24">
+          <a
+            href="#slide2"
+            className="btn btn-circle btn-xs sm:btn-sm md:btn-md lg:btn-lg"
+          >
             ❮
           </a>
-          <a href="#slide1" className="btn btn-circle btn-xs">
+          <a
+            href="#slide1"
+            className="btn btn-circle btn-xs sm:btn-sm md:btn-md lg:btn-lg"
+          >
             ❯
           </a>
         </div>
