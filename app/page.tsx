@@ -1,6 +1,7 @@
 "use client";
 import ServiceBenifits from "@/components/ui/home/ServiceBenifits";
 import CustomerTestimony from "@/components/ui/home/CustomerTestimony";
+import Timeline from "@/components/ui/home/Timeline";
 import Image from "next/image";
 import useCards from "@/hooks/useCards";
 import Car from "@/components/ui/home/Car";
@@ -56,6 +57,15 @@ export default function Home() {
         </div>
         <div>
           <CustomerTestimony />
+        </div>
+      </div>
+
+      <div className="flex flex-col justify-center items-center px-2 mb-4 py-24">
+        <div className="text-2xl lg:text-5xl font-family-mono font-bold mb-4 md:mb-8">
+          Simple Steps to Book Your Car
+        </div>
+        <div>
+          <Timeline />
         </div>
       </div>
     </div>
