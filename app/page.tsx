@@ -1,7 +1,7 @@
 "use client";
 import ServiceBenifits from "@/components/ui/home/ServiceBenifits";
 import CustomerTestimony from "@/components/ui/home/CustomerTestimony";
-import Timeline from "@/components/ui/home/Timeline";
+import Steps from "@/components/ui/home/Steps";
 import Image from "next/image";
 import useCards from "@/hooks/useCards";
 import Car from "@/components/ui/home/Car";
@@ -65,7 +65,7 @@ export default function Home() {
           Simple Steps to Book Your Car
         </div>
         <div>
-          <Timeline />
+          <Steps />
         </div>
       </div>
     </div>
