@@ -2,7 +2,7 @@ import React from "react";
 
 const CustomerTestimony = () => {
   return (
-    <div className="carousel w-full">
+    <div className="carousel w-full delay-100 autoplay">
       <div
         id="slide1"
         className="carousel-item relative w-full flex justify-center items-center"
