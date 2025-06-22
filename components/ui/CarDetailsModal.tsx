@@ -18,6 +18,7 @@ interface CarDetailsModalProps {
     seats: number;
     pricePerDay: Decimal;
     status: string;
+    description?: string;
   };
 }
 
@@ -31,6 +32,7 @@ type FormState = {
   seats: string;
   pricePerDay: string;
   status: string;
+  description?: string;
 };
 
 const getInitialFormState = (car?: CarDetailsModalProps["car"]): FormState => ({
@@ -43,6 +45,7 @@ const getInitialFormState = (car?: CarDetailsModalProps["car"]): FormState => ({
   seats: car?.seats?.toString() || "",
   pricePerDay: car?.pricePerDay?.toString() || "",
   status: car?.status || "",
+  description: car?.description || "",
 });
 
 const CarDetailsModal = ({

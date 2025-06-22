@@ -17,8 +17,9 @@ export const updateCar = async (
 ) => {
   try {
     const payload = {
-      id: carId, // PATCH expects id in body
+      id: carId,
       ...carData,
+      description: carData.description ?? "No description",
       year: Number(carData.year),
       seats: Number(carData.seats),
       pricePerDay: Number(carData.pricePerDay),
