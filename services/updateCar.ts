@@ -12,16 +12,18 @@ export const updateCar = async (
     status: string;
     pricePerDay: string | number;
     fuelType: string;
+    description?: string;
   }
 ) => {
   try {
     const payload = {
+      id: carId, // PATCH expects id in body
       ...carData,
       year: Number(carData.year),
       seats: Number(carData.seats),
       pricePerDay: Number(carData.pricePerDay),
     };
-    const response = await axios.put(`/api/cars/${carId}`, payload);
+    const response = await axios.patch(`/api/cars`, payload);
     return response.data;
   } catch (error) {
     console.error("Error updating car:", error);
