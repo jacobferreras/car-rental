@@ -60,8 +60,8 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="flex flex-col justify-center items-center px-2 mb-4 py-24">
-        <div className="text-2xl lg:text-5xl font-family-mono font-bold mb-4 md:mb-8">
+      <div className="flex flex-col justify-center items-center px-2 py-24 bg-[url('/home_bg.jpg')] bg-cover bg-center bg-no-repeat bg-opacity-50">
+        <div className="text-2xl lg:text-5xl font-family-mono font-bold mb-4 md:mb-8 text-red-600">
           Simple Steps to Book Your Car
         </div>
         <div>
