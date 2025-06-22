@@ -1,5 +1,6 @@
-import React from "react";
+"use client";
 import { Decimal } from "@prisma/client/runtime/library";
+import { useState } from "react";
 
 interface CarDetailsModalProps {
   open: boolean;
@@ -17,6 +18,27 @@ interface CarDetailsModalProps {
 }
 
 const CarDetailsModal = ({ open, onClose, car }: CarDetailsModalProps) => {
+  const [initialValues, setInitalValues] = useState({
+    make: car?.make || "",
+    model: car?.model || "",
+    year: car?.year.toString() || "",
+    transmission: car?.transmission || "",
+    fuelType: car?.fuelType || "",
+    seats: car?.seats.toString() || "",
+    pricePerDay: car?.pricePerDay.toString() || "",
+    status: car?.status || "",
+  });
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
+  ) => {
+    const { name, value } = e.target;
+    setInitalValues((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
   if (!open) return null;
   return (
     <div className={`modal ${open ? "modal-open" : ""}`}>
@@ -24,14 +46,29 @@ const CarDetailsModal = ({ open, onClose, car }: CarDetailsModalProps) => {
         <h3 className="font-bold text-lg">Car Details</h3>
         {car ? (
           <div className="mb-4">
-            <p>Make: {car.make}</p>
-            <p>Model: {car.model}</p>
-            <p>Year: {car.year}</p>
-            <p>Transmission: {car.transmission}</p>
-            <p>Fuel Type: {car.fuelType}</p>
-            <p>Seats: {car.seats}</p>
-            <p>Price/Day: ₱{Number(car.pricePerDay)}</p>
-            <p>Status: {car.status}</p>
+            <input
+              name="make"
+              value={initialValues.make}
+              onChange={handleChange}
+              type="text"
+              placeholder={initialValues.make}
+              required
+              className="input rounded-md font-normal mr-5 w-80 bg-neutral-700 text-white"
+            />
+            <input
+              name="make"
+              type="text"
+              placeholder={car.model}
+              required
+              className="input rounded-md font-normal mr-5 w-80 bg-neutral-700 text-white"
+            />
+            <input
+              name="make"
+              type="text"
+              placeholder={car.year.toString()}
+              required
+              className="input rounded-md font-normal mr-5 w-80 bg-neutral-700 text-white"
+            />
           </div>
         ) : (
           <p>No car selected.</p>
