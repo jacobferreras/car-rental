@@ -1,6 +1,6 @@
 "use client";
 import { Decimal } from "@prisma/client/runtime/library";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { updateCar } from "@/services/updateCar";
 
 interface CarDetailsModalProps {
@@ -21,60 +21,121 @@ interface CarDetailsModalProps {
   };
 }
 
+type FormState = {
+  make: string;
+  model: string;
+  year: string;
+  transmission: string;
+  imageUrl: string;
+  fuelType: string;
+  seats: string;
+  pricePerDay: string;
+  status: string;
+};
+
+const getInitialFormState = (car?: CarDetailsModalProps["car"]): FormState => ({
+  make: car?.make || "",
+  model: car?.model || "",
+  year: car?.year?.toString() || "",
+  transmission: car?.transmission || "",
+  imageUrl: car?.imageUrl || "",
+  fuelType: car?.fuelType || "",
+  seats: car?.seats?.toString() || "",
+  pricePerDay: car?.pricePerDay?.toString() || "",
+  status: car?.status || "",
+});
+
 const CarDetailsModal = ({
   open,
   onClose,
   car,
   onSuccess,
 }: CarDetailsModalProps) => {
+  const [form, setForm] = useState<FormState>(getInitialFormState(car));
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const [initialValues, setInitalValues] = useState({
-    make: car?.make || "",
-    model: car?.model || "",
-    year: car?.year.toString() || "",
-    transmission: car?.transmission || "",
-    imageUrl: car?.imageUrl || "",
-    fuelType: car?.fuelType || "",
-    seats: car?.seats.toString() || "",
-    pricePerDay: car?.pricePerDay.toString() || "",
-    status: car?.status || "",
-  });
+  const [touched, setTouched] = useState(false);
+
+  // Sync form state with car prop when modal opens or car changes
+  useEffect(() => {
+    if (open) {
+      setForm(getInitialFormState(car));
+      setError(null);
+      setTouched(false);
+    }
+  }, [open, car]);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
   ) => {
     const { name, value } = e.target;
-    setInitalValues((prev) => ({
+    setForm((prev) => ({
       ...prev,
       [name]: value,
     }));
+    setTouched(true);
+  };
+
+  const validate = () => {
+    if (
+      !form.make ||
+      !form.model ||
+      !form.year ||
+      !form.transmission ||
+      !form.fuelType ||
+      !form.seats ||
+      !form.pricePerDay ||
+      !form.status
+    ) {
+      return "All fields are required.";
+    }
+    if (isNaN(Number(form.year)) || Number(form.year) < 1900) {
+      return "Year must be a valid number.";
+    }
+    if (isNaN(Number(form.seats)) || Number(form.seats) < 1) {
+      return "Seats must be a valid number.";
+    }
+    if (isNaN(Number(form.pricePerDay)) || Number(form.pricePerDay) < 0) {
+      return "Price per day must be a valid number.";
+    }
+    return null;
+  };
+
+  const isFormChanged = () => {
+    const initial = getInitialFormState(car);
+    return Object.keys(form).some(
+      (key) => (form as any)[key] !== (initial as any)[key]
+    );
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setLoading(true);
     setError(null);
+
+    const validationError = validate();
+    if (validationError) {
+      setError(validationError);
+      return;
+    }
+
+    if (!car?.id) {
+      setError("Car ID is required for updating.");
+      return;
+    }
+
+    if (!isFormChanged()) {
+      setError("No changes detected.");
+      return;
+    }
+
+    setLoading(true);
     try {
-      if (!car?.id) {
-        throw new Error("Car ID is required for updating.");
-      }
-      await updateCar(car?.id, initialValues);
+      await updateCar(car.id, form);
+      setLoading(false);
       if (onSuccess) onSuccess();
-      setInitalValues({
-        make: "",
-        model: "",
-        year: "",
-        seats: "",
-        transmission: "",
-        imageUrl: "",
-        status: "",
-        pricePerDay: "",
-        fuelType: "",
-      });
+      onClose();
     } catch (err: any) {
-      setError(err.message || "An error occurred while adding the car.");
-    } finally {
+      setError(err.message || "An error occurred while updating the car.");
       setLoading(false);
     }
   };
@@ -83,91 +144,89 @@ const CarDetailsModal = ({
   return (
     <div className={`modal ${open ? "modal-open" : ""}`}>
       <div className="modal-box">
-        <h3 className="font-bold text-lg">Car Details</h3>
-
+        <h3 className="font-bold text-lg mb-4">Edit Car Details</h3>
         {car ? (
           <form onSubmit={handleSubmit} className="flex flex-col gap-2 mb-4">
             <input
               name="make"
-              value={initialValues.make}
+              value={form.make}
               onChange={handleChange}
               type="text"
-              placeholder={car.make}
-              required
-              className="input rounded-md font-normal mr-5 w-80 bg-neutral-700 text-white"
+              placeholder="Make"
+              className="input rounded-md font-normal w-80 bg-neutral-700 text-white"
             />
             <input
               name="model"
-              value={initialValues.model}
+              value={form.model}
               onChange={handleChange}
               type="text"
-              placeholder={car.model}
-              required
-              className="input rounded-md font-normal mr-5 w-80 bg-neutral-700 text-white"
+              placeholder="Model"
+              className="input rounded-md font-normal w-80 bg-neutral-700 text-white"
             />
             <input
               name="year"
-              value={initialValues.year}
+              value={form.year}
               onChange={handleChange}
-              type="text"
-              placeholder={car.year.toString()}
-              required
-              className="input rounded-md font-normal mr-5 w-80 bg-neutral-700 text-white"
+              type="number"
+              min={1900}
+              placeholder="Year"
+              className="input rounded-md font-normal w-80 bg-neutral-700 text-white"
             />
             <input
               name="seats"
-              value={initialValues.seats}
+              value={form.seats}
               onChange={handleChange}
-              type="text"
-              placeholder={car.seats.toString()}
-              required
-              className="input rounded-md font-normal mr-5 w-80 bg-neutral-700 text-white"
+              type="number"
+              min={1}
+              placeholder="Seats"
+              className="input rounded-md font-normal w-80 bg-neutral-700 text-white"
             />
             <input
               name="transmission"
-              value={initialValues.transmission}
+              value={form.transmission}
               onChange={handleChange}
               type="text"
-              placeholder={car.transmission}
-              required
-              className="input rounded-md font-normal mr-5 w-80 bg-neutral-700 text-white"
+              placeholder="Transmission"
+              className="input rounded-md font-normal w-80 bg-neutral-700 text-white"
             />
             <input
               name="status"
-              value={initialValues.status}
+              value={form.status}
               onChange={handleChange}
               type="text"
-              placeholder={car.status}
-              required
-              className="input rounded-md font-normal mr-5 w-80 bg-neutral-700 text-white"
+              placeholder="Status"
+              className="input rounded-md font-normal w-80 bg-neutral-700 text-white"
             />
             <input
               name="pricePerDay"
-              value={initialValues.pricePerDay}
+              value={form.pricePerDay}
               onChange={handleChange}
-              type="text"
-              placeholder={car.pricePerDay.toString()}
-              required
-              className="input rounded-md font-normal mr-5 w-80 bg-neutral-700 text-white"
+              type="number"
+              min={0}
+              placeholder="Price Per Day"
+              className="input rounded-md font-normal w-80 bg-neutral-700 text-white"
             />
             <input
               name="fuelType"
-              value={initialValues.fuelType}
+              value={form.fuelType}
               onChange={handleChange}
               type="text"
-              placeholder={car.fuelType}
-              required
-              className="input rounded-md font-normal mr-5 w-80 bg-neutral-700 text-white"
+              placeholder="Fuel Type"
+              className="input rounded-md font-normal w-80 bg-neutral-700 text-white"
             />
-
             <div className="flex flex-row gap-2 mt-2">
-              <button type="button" className="btn" onClick={onClose}>
+              <button
+                type="button"
+                className="btn"
+                onClick={onClose}
+                disabled={loading}
+              >
                 Close
               </button>
               <button
                 type="submit"
                 className="btn btn-primary"
-                disabled={loading}
+                disabled={loading || !isFormChanged()}
               >
                 {loading ? "Updating..." : "Update"}
               </button>
