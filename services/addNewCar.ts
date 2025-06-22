@@ -12,7 +12,6 @@ export const addNewCar = async (carData: {
   fuelType: string;
 }) => {
   try {
-    // Convert string fields to numbers if needed
     const payload = {
       ...carData,
       year: Number(carData.year),
