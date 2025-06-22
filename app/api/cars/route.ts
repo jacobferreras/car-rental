@@ -141,6 +141,10 @@ export async function PATCH(req: Request) {
       });
     }
 
+    Object.keys(updateData).forEach(
+      (key) => updateData[key] === undefined && delete updateData[key]
+    );
+
     const updatedCar = await prisma.car.update({
       where: { id: Number(id) },
       data: updateData,
