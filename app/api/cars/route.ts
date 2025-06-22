@@ -4,7 +4,7 @@ const prisma = new PrismaClient();
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "http://localhost:3000",
-  "Access-Control-Allow-Methods": "GET,POST,OPTIONS",
+  "Access-Control-Allow-Methods": "GET,POST,OPTIONS,PATCH",
   "Access-Control-Allow-Headers": "Content-Type, Authorization",
 };
 
