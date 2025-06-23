@@ -59,7 +59,6 @@ const CarDetailsModal = ({
   const [error, setError] = useState<string | null>(null);
   const [touched, setTouched] = useState(false);
 
-  // Sync form state with car prop when modal opens or car changes
   useEffect(() => {
     if (open) {
       setForm(getInitialFormState(car));
@@ -192,14 +191,21 @@ const CarDetailsModal = ({
               placeholder="Transmission"
               className="input rounded-md font-normal w-80 bg-neutral-700 text-white"
             />
-            <input
+            <select
               name="status"
               value={form.status}
               onChange={handleChange}
-              type="text"
-              placeholder="Status"
-              className="input rounded-md font-normal w-80 bg-neutral-700 text-white"
-            />
+              required
+              className="select rounded-md font-normal mr-5 w-80 bg-neutral-700 text-white"
+            >
+              <option value="" className="text-white">
+                Select Status
+              </option>
+              <option value="AVAILABLE">Available</option>
+              <option value="RENTED">Rented</option>
+              <option value="UNAVAILABLE">Unavailable</option>
+              <option value="MAINTENANCE">Maintenance</option>
+            </select>
             <input
               name="pricePerDay"
               value={form.pricePerDay}
