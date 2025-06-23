@@ -108,6 +108,10 @@ const page = () => {
           setOpenCarDetailsModal(false);
         }}
         car={selectedCar}
+        onSuccess={() => {
+          setRefresh((r) => r + 1);
+          setOpenCarDetailsModal(false);
+        }}
       />
 
       <div className="flex justify-center items-center mt-8 mb-4">
