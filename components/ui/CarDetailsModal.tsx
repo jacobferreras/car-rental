@@ -13,13 +13,13 @@ interface CarDetailsModalProps {
     model: string;
     year: number;
     transmission: string;
-    imageUrl: string;
+    imageUrl: string | null;
     fuelType: string;
     seats: number;
     pricePerDay: Decimal;
     status: string;
     description?: string;
-  };
+  } | null;
 }
 
 type FormState = {
