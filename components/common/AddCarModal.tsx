@@ -95,7 +95,7 @@ const AddCarModal = (props: AddCarModalProps) => {
               Select Status
             </option>
             <option value="AVAILABLE">Available</option>
-            <option value="RENTER">Rented</option>
+            <option value="RENTED">Rented</option>
             <option value="UNAVAILABLE">Unavailable</option>
             <option value="MAINTENANCE">Maintenance</option>
           </select>
