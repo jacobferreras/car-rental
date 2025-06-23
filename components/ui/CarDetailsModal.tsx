@@ -13,7 +13,7 @@ interface CarDetailsModalProps {
     model: string;
     year: number;
     transmission: string;
-    imageUrl?: string;
+    imageUrl: string;
     fuelType: string;
     seats: number;
     pricePerDay: Decimal;
