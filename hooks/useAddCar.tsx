@@ -6,6 +6,7 @@ export const useAddCar = (onSuccess?: () => void) => {
   const [form, setForm] = useState({
     make: "",
     model: "",
+    description: "",
     year: "",
     seats: "",
     transmission: "",
@@ -31,12 +32,14 @@ export const useAddCar = (onSuccess?: () => void) => {
     e.preventDefault();
     setLoading(true);
     setError(null);
+    console.log("Submitting form:", form);
     try {
       await addNewCar(form);
       if (onSuccess) onSuccess();
       setForm({
         make: "",
         model: "",
+        description: "",
         year: "",
         seats: "",
         transmission: "",
