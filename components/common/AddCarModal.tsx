@@ -27,7 +27,7 @@ const AddCarModal = (props: AddCarModalProps) => {
             type="text"
             placeholder="Company"
             required
-            className="input rounded-md font-normal mr-5 w-80 bg-neutral-700 text-white"
+            className="input rounded-md font-normal mr-5 w-auto bg-neutral-700 text-white"
           />
           <input
             name="model"
@@ -36,7 +36,16 @@ const AddCarModal = (props: AddCarModalProps) => {
             type="text"
             placeholder="Model"
             required
-            className="input rounded-md font-normal mr-5 w-80 bg-neutral-700 text-white"
+            className="input rounded-md font-normal mr-5 w-auto bg-neutral-700 text-white"
+          />
+          <input
+            name="description"
+            value={form.description}
+            onChange={handleChange}
+            type="text"
+            placeholder="Description"
+            required
+            className="input rounded-md font-normal mr-5 w-auto bg-neutral-700 text-white"
           />
           <input
             name="year"
@@ -45,14 +54,14 @@ const AddCarModal = (props: AddCarModalProps) => {
             type="number"
             placeholder="Year"
             required
-            className="input rounded-md font-normal mr-5 w-80 bg-neutral-700 text-white"
+            className="input rounded-md font-normal mr-5 w-auto bg-neutral-700 text-white"
           />
           <select
             name="seats"
             value={form.seats}
             onChange={handleChange}
             required
-            className="select rounded-md font-normal mr-5 w-80 bg-neutral-700 text-white"
+            className="select rounded-md font-normal mr-5 w-auto bg-neutral-700 text-white"
           >
             <option value="" className="text-white">
               All Seats
@@ -67,7 +76,7 @@ const AddCarModal = (props: AddCarModalProps) => {
             value={form.transmission}
             onChange={handleChange}
             required
-            className="select rounded-md font-normal mr-5 w-80 bg-neutral-700 text-white"
+            className="select rounded-md font-normal mr-5 w-auto bg-neutral-700 text-white"
           >
             <option value="" className="text-white">
               Select Transmission
@@ -82,14 +91,14 @@ const AddCarModal = (props: AddCarModalProps) => {
             type="text"
             placeholder="ImageUrl"
             required
-            className="input rounded-m font-normal mr-5 w-80 bg-neutral-700 text-white"
+            className="input rounded-m font-normal mr-5 w-auto bg-neutral-700 text-white"
           />
           <select
             name="status"
             value={form.status}
             onChange={handleChange}
             required
-            className="select rounded-md font-normal mr-5 w-80 bg-neutral-700 text-white"
+            className="select rounded-md font-normal mr-5 w-auto bg-neutral-700 text-white"
           >
             <option value="" className="text-white">
               Select Status
@@ -106,7 +115,7 @@ const AddCarModal = (props: AddCarModalProps) => {
             type="number"
             placeholder="Price"
             required
-            className="input rounded-md font-normal mr-5 w-80 bg-neutral-700 text-white"
+            className="input rounded-md font-normal mr-5 w-auto bg-neutral-700 text-white"
           />
           <input
             name="fuelType"
@@ -115,7 +124,7 @@ const AddCarModal = (props: AddCarModalProps) => {
             type="text"
             placeholder="Fuel Type"
             required
-            className="input rounded-md font-normal mr-5 w-80 bg-neutral-700 text-white"
+            className="input rounded-md font-normal mr-5 w-auto bg-neutral-700 text-white"
           />
           {error && <div className="text-red-500">{error}</div>}
           <div className="modal-action">
