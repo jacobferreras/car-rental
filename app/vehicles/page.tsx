@@ -7,7 +7,7 @@ import { useState } from "react";
 import Pagination from "@/components/common/Pagination";
 import useDebounce from "@/hooks/useDebounce";
 import { AddCarButton } from "@/components/common/AddCarButton";
-import AddCarModal from "@/components/common/AddCarModal";
+// import AddCarModal from "@/components/common/AddCarModal";
 import CarDetailsModal from "@/components/ui/CarDetailsModal";
 import { Car } from "../generated/prisma";
 
@@ -34,7 +34,7 @@ const page = () => {
     <div className="flex flex-col min-h-screen pt-12">
       <div className="flex flex-col sm:flex-row xl:flex-row justify-center items-center xl:justify-end xl:items-end xl:gap-0 mb-8 gap-4 pt-12 xl:ml-auto xl:pr-4 xl:mt-24">
         <div className="mr-4">
-          <AddCarButton onClick={() => setOpenModal(true)} />
+          <AddCarButton />
         </div>
         <Dropdown
           value={seats.toString()}
@@ -92,14 +92,14 @@ const page = () => {
         }}
       />
 
-      <AddCarModal
+      {/* <AddCarModal
         open={openModal}
         onClose={() => setOpenModal(false)}
         onSuccess={() => {
           setRefresh((r) => r + 1);
           setCurrentPage(1);
         }}
-      />
+      /> */}
 
       <CarDetailsModal
         open={openCarDetailsModal}
