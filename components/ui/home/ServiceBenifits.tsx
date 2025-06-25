@@ -2,13 +2,15 @@ import React from "react";
 
 const ServiceBenifits = () => {
   return (
-    <div className="flex flex-col md:flex-row justify-center items-center px-2 text-center gap-4 lg:gap-8">
-      <div className="flex flex-col">
-        <i className="bi bi-geo-alt-fill text-xl md:text-3xl xl:text-5xl"></i>
-        <h1 className="font-family-mono text-md md:text-lg xl:text-xl font-bold">
-          Availability
-        </h1>
-        <div className="xl:px-16">
+    <div className="flex flex-col md:flex-row justify-center items-center px-4 lg:px-12 text-center gap-4 lg:gap-8 py-12">
+      <div className="card bg-base-100 w-auto md:h-70 xl:h-90 lg:w-96 shadow-sm">
+        <figure className="px-10 pt-10">
+          <i className="bi bi-geo-alt-fill text-xl md:text-3xl xl:text-5xl"></i>
+        </figure>
+        <div className="card-body items-center text-center">
+          <h1 className="font-family-mono text-md md:text-lg xl:text-xl font-bold">
+            Availability
+          </h1>
           <p className="font-family-sans text-xs md:text-md xl:text-lg text-justify ">
             InstaDrive offers a wide selection of vehicles ready to rent
             anytime, with real-time booking and flexible pick-up options.
@@ -18,13 +20,15 @@ const ServiceBenifits = () => {
         </div>
       </div>
 
-      <div className="flex flex-col">
-        <i className="bi bi-car-front-fill text-xl md:text-3xl xl:text-5xl"></i>
-        <h1 className="font-family-mono text-md md:text-lg xl:text-xl font-bold">
-          Comfort
-        </h1>
-        <div className="xl:px-16">
-          <p className="font-family-sans text-xs md:text-md xl:text-lg text-justify">
+      <div className="card bg-base-100 w-auto md:h-70 xl:h-90 lg:w-96 shadow-sm">
+        <figure className="px-10 pt-10">
+          <i className="bi bi-car-front-fill text-xl md:text-3xl xl:text-5xl"></i>
+        </figure>
+        <div className="card-body items-center text-center">
+          <h1 className="font-family-mono text-md md:text-lg xl:text-xl font-bold">
+            Comfort
+          </h1>
+          <p className="font-family-sans text-xs md:text-md xl:text-lg text-justify ">
             Our fleet is well-maintained, clean, and equipped with modern
             features to ensure your driving experience is relaxing and
             enjoyable—no matter the distance.
@@ -32,13 +36,15 @@ const ServiceBenifits = () => {
         </div>
       </div>
 
-      <div className="flex flex-col">
-        <i className="bi bi-wallet-fill text-xl md:text-3xl  xl:text-5xl"></i>
-        <h1 className="font-family-mono text-md md:text-lg xl:text-xl font-bold">
-          Savings
-        </h1>
-        <div className="xl:px-16">
-          <p className="font-family-sans text-xs md:text-md xl:text-lg text-justify">
+      <div className="card bg-base-100 w-auto md:h-70 xl:h-90 lg:w-96 shadow-sm">
+        <figure className="px-10 pt-10">
+          <i className="bi bi-wallet-fill text-xl md:text-3xl  xl:text-5xl"></i>
+        </figure>
+        <div className="card-body items-center text-center">
+          <h1 className="font-family-mono text-md md:text-lg xl:text-xl font-bold">
+            Savings
+          </h1>
+          <p className="font-family-sans text-xs md:text-md xl:text-lg text-justify ">
             Enjoy transparent pricing, zero hidden fees, and exclusive deals. We
             make renting a car budget-friendly, so you get more mileage for your
             money.
