@@ -15,7 +15,7 @@ const CustomerTestimony = () => {
           </p>
 
           <p className="text-center text-md sm:text-xl sm:max-w-xl max-w-xs amd:text-xl md:max-w-xl lg:text-3xl lg:max-w-3xl">
-            -John Cena
+            - John Cena
           </p>
         </div>
 
@@ -52,7 +52,7 @@ const CustomerTestimony = () => {
           </p>
 
           <p className="text-center text-md sm:text-xl sm:max-w-xl max-w-xs amd:text-xl md:max-w-xl lg:text-3xl lg:max-w-3xl">
-            -John Cena
+            - John Cena
           </p>
         </div>
 
@@ -84,7 +84,7 @@ const CustomerTestimony = () => {
           </p>
 
           <p className="text-center text-md sm:text-xl sm:max-w-xl max-w-xs amd:text-xl md:max-w-xl lg:text-3xl lg:max-w-3xl">
-            -John Cena
+            - John Cena
           </p>
         </div>
 
