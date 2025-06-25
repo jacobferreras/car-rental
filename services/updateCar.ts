@@ -12,14 +12,12 @@ export const updateCar = async (
     status: string;
     pricePerDay: string | number;
     fuelType: string;
-    description?: string;
   }
 ) => {
   try {
     const payload = {
       id: carId,
       ...carData,
-      description: carData.description ?? "No description",
       year: Number(carData.year),
       seats: Number(carData.seats),
       pricePerDay: Number(carData.pricePerDay),
