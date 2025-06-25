@@ -15,7 +15,7 @@ const HomeSection = () => {
   });
   return (
     <div>
-      <div className="hero min-h-200 md:min-h-screen  bg-gray-950 pt-4">
+      <div className="hero min-h-150 sm:min-h-screen bg-gray-950 pt-12">
         <div className="flex flex-col justify-center items-center">
           <h1 className="text-3xl md:text-5xl lg:text-7xl text-center text-white font-family-mono font-bold">
             DRIVE YOUR JOURNEY
@@ -33,7 +33,7 @@ const HomeSection = () => {
               alt="InstaDrive Mobile"
               width={1000}
               height={500}
-              className="w-auto lg:w-400"
+              className="w-auto h-full lg:w-400"
             />
           </div>
         </div>
