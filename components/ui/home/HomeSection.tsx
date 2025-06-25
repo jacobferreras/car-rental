@@ -15,29 +15,31 @@ const HomeSection = () => {
   });
   return (
     <div>
-      <div className="hero min-h-screen py-24 xl:py-32">
+      <div className="hero min-h-200 md:min-h-screen  bg-gray-950 pt-4">
         <div className="flex flex-col justify-center items-center">
-          <h1 className="text-3xl md:text-5xl lg:text-6xl text-center font-family-mono font-bold">
+          <h1 className="text-3xl md:text-5xl lg:text-7xl text-center text-white font-family-mono font-bold">
             DRIVE YOUR JOURNEY
-            <br />
-            WITH INSTADRIVE
           </h1>
-          <div className="flex justify-center items-center mb-8">
+          <h2 className="text-3xl md:text-5xl lg:text-6xl text-center text-white font-family-mono font-bold">
+            WITH INSTADRIVE
+          </h2>
+          <div className="flex justify-center items-center mt-4">
             <button className="btn bg-red-600 text-white">Book Now</button>
           </div>
 
-          <div className="mb-8">
+          <div>
             <Image
-              src="/InstaDriveMobile.png"
+              src="/InstaDrive.png"
               alt="InstaDrive Mobile"
               width={1000}
               height={500}
+              className="w-auto lg:w-400"
             />
           </div>
-
-          <ServiceBenifits />
         </div>
       </div>
+
+      <ServiceBenifits />
 
       <div>
         <div className="flex flex-col justify-center items-center px-2 mb-4">
