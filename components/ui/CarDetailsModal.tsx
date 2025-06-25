@@ -22,10 +22,6 @@ interface CarDetailsModalProps {
   } | null;
 }
 
-type CarForm = {
-  car: CarDetailsModalProps["car"];
-};
-
 const CarDetailsModal = ({
   open,
   onClose,
