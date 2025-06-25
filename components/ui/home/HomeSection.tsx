@@ -39,7 +39,9 @@ const HomeSection = () => {
         </div>
       </div>
 
-      <ServiceBenifits />
+      <div className="mb-12">
+        <ServiceBenifits />
+      </div>
 
       <div>
         <div className="flex flex-col justify-center items-center px-2 mb-4">
