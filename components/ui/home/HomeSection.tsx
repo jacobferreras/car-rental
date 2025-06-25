@@ -15,7 +15,7 @@ const HomeSection = () => {
   });
   return (
     <div>
-      <div className="hero min-h-150 sm:min-h-screen bg-gray-950 pt-12">
+      <div className="hero min-h-150 sm:min-h-screen bg-primary pt-12">
         <div className="flex flex-col justify-center items-center">
           <h1 className="text-3xl md:text-5xl lg:text-7xl text-center text-white font-family-mono font-bold">
             DRIVE YOUR JOURNEY
@@ -61,21 +61,21 @@ const HomeSection = () => {
         </div>
       </div>
 
+      <div className="flex flex-col justify-center items-center px-2 py-24 bg-primary">
+        <div className="text-2xl lg:text-5xl font-family-mono font-bold mb-4 md:mb-8 text-white">
+          Simple Steps to Book Your Car
+        </div>
+        <div>
+          <Steps />
+        </div>
+      </div>
+
       <div className="flex flex-col justify-center items-center px-2 mb-4 py-24">
         <div className="text-2xl lg:text-5xl font-family-mono font-bold mb-4 md:mb-8">
           What our customers say
         </div>
         <div>
           <CustomerTestimony />
-        </div>
-      </div>
-
-      <div className="flex flex-col justify-center items-center px-2 py-24 bg-gray-950">
-        <div className="text-2xl lg:text-5xl font-family-mono font-bold mb-4 md:mb-8 text-white">
-          Simple Steps to Book Your Car
-        </div>
-        <div>
-          <Steps />
         </div>
       </div>
     </div>
