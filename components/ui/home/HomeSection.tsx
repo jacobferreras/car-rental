@@ -54,9 +54,9 @@ const HomeSection = () => {
           <Car cars={cars} />
         </div>
 
-        <div className="flex justify-center items-center my-8">
+        <div className="flex justify-center items-center my-8 mb-12">
           <button className="btn btn-primary rounded-xl">
-            View All Vehicles
+            View All Vehicles <i className="bi bi-arrow-right"></i>
           </button>
         </div>
       </div>
