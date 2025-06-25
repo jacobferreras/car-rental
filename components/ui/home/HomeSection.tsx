@@ -10,7 +10,7 @@ const HomeSection = () => {
   const { cars } = useCards({
     seats: 0,
     transmission: "",
-    limit: 8,
+    limit: 4,
     page: 1,
   });
   return (
@@ -53,6 +53,12 @@ const HomeSection = () => {
         <div>
           <Car cars={cars} />
         </div>
+
+        <div className="flex justify-center items-center my-8">
+          <button className="btn btn-primary rounded-xl">
+            View All Vehicles
+          </button>
+        </div>
       </div>
 
       <div className="flex flex-col justify-center items-center px-2 mb-4 py-24">
@@ -64,8 +70,8 @@ const HomeSection = () => {
         </div>
       </div>
 
-      <div className="flex flex-col justify-center items-center px-2 py-24 bg-[url('/home_bg.jpg')] bg-cover bg-center bg-no-repeat bg-opacity-50">
-        <div className="text-2xl lg:text-5xl font-family-mono font-bold mb-4 md:mb-8 text-red-600">
+      <div className="flex flex-col justify-center items-center px-2 py-24 bg-gray-950">
+        <div className="text-2xl lg:text-5xl font-family-mono font-bold mb-4 md:mb-8 text-white">
           Simple Steps to Book Your Car
         </div>
         <div>
