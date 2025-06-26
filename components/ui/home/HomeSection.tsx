@@ -40,6 +40,9 @@ const HomeSection = () => {
       </div>
 
       <div className="mb-12">
+        <div className="flex justify-center items-center text-2xl lg:text-5xl font-family-mono font-bold  text-primary pl-4 pt-12">
+          Why Choose InstaDrive?
+        </div>
         <ServiceBenifits />
       </div>
 
@@ -76,6 +79,23 @@ const HomeSection = () => {
         </div>
         <div>
           <CustomerTestimony />
+        </div>
+      </div>
+
+      <div>
+        <div className="flex flex-col justify-center items-center px-2 py-12 bg-red-800">
+          <div className="text-2xl lg:text-5xl font-family-mono font-bold mb-4 text-white pl-4">
+            Ready to Experience Seamless Travel?
+          </div>
+          <div className="text-md lg:text-xl font-family-sans text-white text-center mb-8 px-4">
+            Browse our extensive fleet and find the perfect car for your next
+            adventure.
+          </div>
+          <div className="flex justify-center items-center">
+            <button className="btn btn-primary rounded-xl">
+              Book Your Ride Now <i className="bi bi-arrow-right"></i>
+            </button>
+          </div>
         </div>
       </div>
     </div>
