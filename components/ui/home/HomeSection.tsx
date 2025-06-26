@@ -62,7 +62,7 @@ const HomeSection = () => {
       </div>
 
       <div className="flex flex-col justify-center items-center px-2 py-24 bg-primary">
-        <div className="text-2xl lg:text-5xl font-family-mono font-bold mb-4 md:mb-8 text-white">
+        <div className="text-2xl lg:text-5xl font-family-mono font-bold mb-4 md:mb-8 text-white pl-4">
           Simple Steps to Book Your Car
         </div>
         <div>
