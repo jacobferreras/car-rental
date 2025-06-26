@@ -15,19 +15,26 @@ const HomeSection = () => {
   });
   return (
     <div>
-      <div className="hero min-h-150 sm:min-h-screen bg-primary pt-12">
-        <div className="flex flex-col justify-center items-center">
-          <h1 className="text-3xl md:text-5xl lg:text-7xl text-center text-white font-family-mono font-bold">
+      <div className="hero min-h-150 sm:min-h-screen pt-12 relative hero-overlay bg-overlay-opacity-60">
+        <Image
+          src="/Home_BG.png"
+          alt="Background"
+          fill
+          className=" z-0"
+          priority
+        />
+        <div className="flex flex-col justify-center items-center absolute">
+          <h1 className="text-3xl md:text-5xl lg:text-7xl text-center text-white font-family-mono font-bold z-20">
             DRIVE YOUR JOURNEY
           </h1>
-          <h2 className="text-3xl md:text-5xl lg:text-6xl text-center text-white font-family-mono font-bold">
+          <h2 className="text-3xl md:text-5xl lg:text-6xl text-center text-white font-family-mono font-bold z-20">
             WITH INSTADRIVE
           </h2>
           <div className="flex justify-center items-center mt-4">
-            <button className="btn bg-red-600 text-white">Book Now</button>
+            <button className="btn bg-red-600 text-white z-20">Book Now</button>
           </div>
 
-          <div>
+          {/* <div>
             <Image
               src="/InstaDrive.png"
               alt="InstaDrive Mobile"
@@ -35,7 +42,7 @@ const HomeSection = () => {
               height={500}
               className="w-auto h-full lg:w-400"
             />
-          </div>
+          </div> */}
         </div>
       </div>
 
