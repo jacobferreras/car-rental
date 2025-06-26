@@ -10,17 +10,17 @@ const HomeSection = () => {
   const { cars } = useCards({
     seats: 0,
     transmission: "",
-    limit: 4,
+    limit: 8,
     page: 1,
   });
   return (
     <div>
-      <div className="hero min-h-150 sm:min-h-screen pt-12 relative hero-overlay bg-overlay-opacity-60">
+      <div className="hero min-h-screen relative hero-overlay bg-overlay-opacity-60">
         <Image
-          src="/Home_BG.png"
+          src="/Car.png"
           alt="Background"
           fill
-          className=" z-0"
+          className="object-cover z-0"
           priority
         />
         <div className="flex flex-col justify-center items-center absolute">
@@ -47,7 +47,7 @@ const HomeSection = () => {
       </div>
 
       <div className="mb-12">
-        <div className="flex justify-center items-center text-2xl lg:text-5xl font-family-mono font-bold  text-primary pl-4 pt-12">
+        <div className="flex justify-center items-center text-2xl lg:text-5xl font-family-mono font-bold  text-white pl-4 pt-12">
           Why Choose InstaDrive?
         </div>
         <ServiceBenifits />
@@ -55,7 +55,7 @@ const HomeSection = () => {
 
       <div>
         <div className="flex flex-col justify-center items-center px-2 mb-4">
-          <h1 className="text-2xl lg:text-5xl font-family-mono font-bold mb-4">
+          <h1 className="text-2xl lg:text-5xl text-white font-family-mono font-bold mb-4">
             Our Vehicles
           </h1>
         </div>
@@ -71,7 +71,7 @@ const HomeSection = () => {
         </div>
       </div>
 
-      <div className="flex flex-col justify-center items-center px-2 py-24 bg-primary">
+      <div className="flex flex-col justify-center items-center px-2 py-24 bg-[url('/Inside.png')] bg-cover bg-no-repeat bg-center">
         <div className="text-2xl lg:text-5xl font-family-mono font-bold mb-4 md:mb-8 text-white pl-4">
           Simple Steps to Book Your Car
         </div>
