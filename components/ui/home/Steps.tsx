@@ -1,25 +1,5 @@
 import React from "react";
 
-const Arrow = () => (
-  <div className="flex justify-center animate-bounce">
-    <svg width="32" height="32" fill="none" viewBox="0 0 32 32">
-      <defs>
-        <linearGradient id="arrow-gradient" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stopColor="#ef4444" />
-          <stop offset="100%" stopColor="#b91c1c" />
-        </linearGradient>
-      </defs>
-      <path
-        d="M16 7v18m0 0l-7-7m7 7l7-7"
-        stroke="url(#arrow-gradient)"
-        strokeWidth="2.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  </div>
-);
-
 const steps = [
   {
     title: "Select",
@@ -41,10 +21,10 @@ const steps = [
 
 const Steps = () => {
   return (
-    <div className="flex flex-col justify-center items-center mb-8 gap-6">
+    <div className="flex flex-col lg:flex-row justify-center items-center mb-8 gap-6 px-4">
       {steps.map((step, index) => (
         <React.Fragment key={step.title}>
-          <div className="relative card w-full max-w-md bg-white/80 border border-blue-100 shadow-xl transition-transform hover:scale-105">
+          <div className="relative card w-full h-30 max-w-md bg-white/80 border border-blue-100 shadow-xl transition-transform hover:scale-105">
             <span className="absolute -top-4 -left-4 bg-gradient-to-br from-red-500 to-red-800 text-white rounded-full w-10 h-10 flex items-center justify-center text-lg font-bold shadow-md border-2 border-white">
               {index + 1}
             </span>
@@ -55,7 +35,6 @@ const Steps = () => {
               <p className="text-center text-gray-600">{step.desc}</p>
             </div>
           </div>
-          {index < steps.length - 1 && <Arrow />}
         </React.Fragment>
       ))}
     </div>
