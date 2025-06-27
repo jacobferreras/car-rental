@@ -65,7 +65,7 @@ const HomeSection = () => {
         </div>
 
         <div className="flex justify-center items-center my-8 mb-12">
-          <button className="btn btn-primary rounded-xl">
+          <button className="btn bg-base-100 rounded-xl">
             View All Vehicles <i className="bi bi-arrow-right"></i>
           </button>
         </div>
@@ -99,7 +99,7 @@ const HomeSection = () => {
             adventure.
           </div>
           <div className="flex justify-center items-center">
-            <button className="btn btn-primary rounded-xl">
+            <button className="btn bg-base-100 rounded-xl">
               Book Your Ride Now <i className="bi bi-arrow-right"></i>
             </button>
           </div>
