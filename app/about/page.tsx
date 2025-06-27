@@ -1,8 +1,12 @@
+import AboutSection from "@/components/ui/about/AboutSection";
+
 const page = () => {
   return (
-    <div className="flex justify-center items-center min-h-screen">
-      <h1>about page</h1>
-    </div>
+    <>
+      <div>
+        <AboutSection />
+      </div>
+    </>
   );
 };
 
