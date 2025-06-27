@@ -33,16 +33,6 @@ const HomeSection = () => {
           <div className="flex justify-center items-center mt-4">
             <button className="btn bg-red-600 text-white z-20">Book Now</button>
           </div>
-
-          {/* <div>
-            <Image
-              src="/InstaDrive.png"
-              alt="InstaDrive Mobile"
-              width={1000}
-              height={500}
-              className="w-auto h-full lg:w-400"
-            />
-          </div> */}
         </div>
       </div>
 
