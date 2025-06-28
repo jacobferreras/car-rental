@@ -53,7 +53,7 @@ const AboutSection = () => {
         </div>
       </div>
 
-      <div className="flex flex-row items-center justify-center py-10 px-4 gap-4">
+      <div className="flex flex-col md:flex-row items-center justify-center py-10 px-4 gap-4 bg-[url('/Mission.png')] bg-cover bg-no-repeat bg-center ">
         <MissionAndVisionCard
           title="Our Mission"
           description="To redefine the car rental experience by providing a seamless, transparent, and customer-centric service that exceeds expectations at every turn. We aim to empower our customers with the freedom to drive their dreams, backed by a commitment to quality and innovation."
