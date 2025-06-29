@@ -7,7 +7,7 @@ interface MissionAndVisionCardProps {
 const MissionAndVisionCard = (props: MissionAndVisionCardProps) => {
   return (
     <>
-      <div className="card bg-base-100 w-auto md:h-90 xl:h-90 lg:w-110 shadow-sm">
+      <div className="card bg-base-100 w-auto md:h-90 xl:h-90 lg:w-110 xl: shadow-sm">
         <div className="card-header flex justify-center items-center pt-4 h-20 md:h-24 lg:h-32 xl:h-40">
           <i
             className={`${props.iconClass} text-xl text-red-600 md:text-3xl xl:text-5xl`}
