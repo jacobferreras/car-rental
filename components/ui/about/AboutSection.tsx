@@ -25,12 +25,12 @@ const AboutSection = () => {
       </div>
 
       <div className="flex flex-col items-center justify-center py-10 px-4 mb-12">
-        <div className="flex flex-col md:flex-row justify-between items-start max-w-6xl w-full md:gap-12">
+        <div className="flex flex-col md:flex-row justify-between items-start max-w-6xl w-full md:gap-12 lg:gap-16 xl:gap-20 px-12">
           <div>
             <h1 className="mb-4 text-xl md:text-2xl lg:text-4xl">
               Our Journey
             </h1>
-            <p className="text-lg md:text-xl lg:text-2xl w-100">
+            <p className="text-lg md:text-xl lg:text-2xl md:w-100">
               Founded in 2025, InstaDrive was born from a passion for premium
               automobiles and a commitment to unparalleled customer service. We
               noticed a gap in the market for a car rental experience that truly
@@ -40,20 +40,20 @@ const AboutSection = () => {
             </p>
           </div>
           <div>
-            <figure className="lg:pt-6">
+            <figure className="md:pt-4 lg:pt-6">
               <Image
                 src="/Journey.png"
                 alt="About Us"
                 width={800}
                 height={600}
-                className="rounded-xl mt-8 "
+                className="rounded-xl mt-8 md:h-70 lg:h-100"
               />
             </figure>
           </div>
         </div>
       </div>
 
-      <div className="flex flex-col md:flex-row items-center justify-center py-10 px-4 gap-4 bg-[url('/Mission.png')] bg-cover bg-no-repeat bg-center ">
+      <div className="flex flex-col md:flex-row items-center justify-center py-10 px-4 gap-8 bg-[url('/Mission.png')] bg-cover bg-no-repeat bg-center ">
         <MissionAndVisionCard
           title="Our Mission"
           description="To redefine the car rental experience by providing a seamless, transparent, and customer-centric service that exceeds expectations at every turn. We aim to empower our customers with the freedom to drive their dreams, backed by a commitment to quality and innovation."
@@ -68,6 +68,7 @@ const AboutSection = () => {
 
       <div className="flex flex-col items-center justify-center py-10 px-4 mb-12">
         <h1 className="mb-4 text-xl md:text-2xl lg:text-4xl">Meet Our Team</h1>
+        <div></div>
       </div>
     </>
   );
