@@ -25,7 +25,7 @@ const AboutSection = () => {
       </div>
 
       <div className="flex flex-col items-center justify-center py-10 px-4 mb-12">
-        <div className="flex flex-row justify-between items-start max-w-6xl w-full gap-24">
+        <div className="flex flex-col md:flex-row justify-between items-start max-w-6xl w-full md:gap-12">
           <div>
             <h1 className="mb-4 text-xl md:text-2xl lg:text-4xl">
               Our Journey
@@ -40,7 +40,7 @@ const AboutSection = () => {
             </p>
           </div>
           <div>
-            <figure className="pt-6">
+            <figure className="lg:pt-6">
               <Image
                 src="/Journey.png"
                 alt="About Us"
@@ -64,6 +64,10 @@ const AboutSection = () => {
           description="To be the leading car rental service known for our exceptional quality, innovative solutions, and unwavering commitment to customer satisfaction. We envision a future where every journey is effortless, enjoyable, and tailored to the unique needs of our customers, setting new standards in the industry."
           iconClass="bi bi-eye-fill"
         />
+      </div>
+
+      <div className="flex flex-col items-center justify-center py-10 px-4 mb-12">
+        <h1 className="mb-4 text-xl md:text-2xl lg:text-4xl">Meet Our Team</h1>
       </div>
     </>
   );
