@@ -5,6 +5,7 @@ import Steps from "@/components/ui/home/Steps";
 import Image from "next/image";
 import useCards from "@/hooks/useCards";
 import Car from "@/components/ui/home/Car";
+import { useState } from "react";
 
 const HomeSection = () => {
   const { cars } = useCards({
@@ -13,6 +14,7 @@ const HomeSection = () => {
     limit: 8,
     page: 1,
   });
+
   return (
     <div>
       <div className="hero min-h-screen relative hero-overlay bg-overlay-opacity-60">
