@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import MissionAndVisionCard from "./MissionAndVisionCard";
 import OurteamCard from "./OurteamCard";
+import CoreValueCard from "./CoreValueCard";
 
 const AboutSection = () => {
   return (
@@ -54,7 +55,7 @@ const AboutSection = () => {
         </div>
       </div>
 
-      <div className="flex flex-col md:flex-row items-center justify-center py-10 px-4 gap-8 bg-[url('/Mission.png')] bg-cover bg-no-repeat bg-center ">
+      <div className="flex flex-col md:flex-row items-center justify-center py-10 px-4 gap-8 bg-[url('/Mission.png')] bg-cover bg-no-repeat bg-center">
         <MissionAndVisionCard
           title="Our Mission"
           description="To redefine the car rental experience by providing a seamless, transparent, and customer-centric service that exceeds expectations at every turn. We aim to empower our customers with the freedom to drive their dreams, backed by a commitment to quality and innovation."
@@ -70,7 +71,7 @@ const AboutSection = () => {
       <div className="flex flex-col items-center justify-center py-10 px-4 mb-12">
         <h1 className="mb-4 text-xl md:text-2xl lg:text-4xl">Meet Our Team</h1>
         <div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl w-full">
+          <div className="grid grid-cols-1 md:grid-cols-2  gap-8 max-w-6xl w-full">
             <OurteamCard
               imageUrl="/CEO.jpg"
               name="John Doe"
@@ -89,6 +90,47 @@ const AboutSection = () => {
               position="Head of Marketing"
               description="Alice is passionate about creating innovative marketing strategies that connect with our customers and enhance their experience with InstaDrive."
             />
+            <OurteamCard
+              imageUrl="/Fleet.jpg"
+              name="Bob Brown"
+              position="Customer Support Manager"
+              description="Bob leads our customer support team, ensuring that every inquiry is handled with care and professionalism, making sure our customers feel valued and supported."
+            />
+          </div>
+        </div>
+      </div>
+
+      <div className="flex flex-col md:flex-row items-center justify-center py-10 px-4 gap-8 bg-[url('/Corevalues.png')] bg-cover bg-no-repeat bg-center">
+        <CoreValueCard
+          title="Integrity"
+          description="We believe in honesty and transparency in all our dealings. Our customers can trust that we will always provide clear information about our services, pricing, and policies."
+          iconClass="bi bi-shield-check"
+        />
+        <CoreValueCard
+          title="Innovation"
+          description="We are committed to continuously improving our services and adopting the latest technologies to enhance the customer experience. Our goal is to make car rental as seamless and efficient as possible."
+          iconClass="bi bi-lightbulb"
+        />
+        <CoreValueCard
+          title="Excellence"
+          description="We strive for excellence in everything we do, from the quality of our vehicles to the level of service we provide. Our team is dedicated to ensuring that every customer has a memorable and enjoyable experience."
+          iconClass="bi bi-gem"
+        />
+      </div>
+
+      <div>
+        <div className="flex flex-col justify-center items-center px-2 py-12 bg-red-600">
+          <div className="text-2xl lg:text-5xl font-family-mono font-bold mb-4 text-white pl-4">
+            Ready to Experience Seamless Travel?
+          </div>
+          <div className="text-md lg:text-xl font-family-sans text-white text-center mb-8 px-4">
+            Browse our extensive fleet and find the perfect car for your next
+            adventure.
+          </div>
+          <div className="flex justify-center items-center">
+            <button className="btn bg-base-100 rounded-xl">
+              Book Your Ride Now <i className="bi bi-arrow-right"></i>
+            </button>
           </div>
         </div>
       </div>
