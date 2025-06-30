@@ -107,7 +107,6 @@ const AboutSection = () => {
             Our Core Values
           </h1>
         </div>
-
         <div className="flex flex-col md:flex-row items-center justify-center py-10 px-4 gap-8 relative z-10">
           <CoreValueCard
             title="Integrity"
