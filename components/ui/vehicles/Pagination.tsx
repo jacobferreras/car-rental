@@ -18,7 +18,7 @@ const Pagination = ({
       {Array.from({ length: totalPages }, (_, idx) => (
         <input
           key={idx + 1}
-          className="join-item btn btn-square"
+          className="join-item btn btn-square bg-base-200"
           type="radio"
           name="options"
           aria-label={(idx + 1).toString()}
