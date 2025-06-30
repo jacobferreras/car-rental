@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import MissionAndVisionCard from "./MissionAndVisionCard";
+import OurteamCard from "./OurteamCard";
 
 const AboutSection = () => {
   return (
@@ -25,7 +26,7 @@ const AboutSection = () => {
       </div>
 
       <div className="flex flex-col items-center justify-center py-10 px-4 mb-12">
-        <div className="flex flex-col md:flex-row justify-between items-start max-w-6xl w-full md:gap-12 lg:gap-16 xl:gap-20 px-12">
+        <div className="flex flex-col md:flex-row justify-between items-start max-w-6xl w-full md:gap-12 lg:gap-16 xl:gap-20 lg:px-12">
           <div>
             <h1 className="mb-4 text-xl md:text-2xl lg:text-4xl">
               Our Journey
@@ -68,7 +69,28 @@ const AboutSection = () => {
 
       <div className="flex flex-col items-center justify-center py-10 px-4 mb-12">
         <h1 className="mb-4 text-xl md:text-2xl lg:text-4xl">Meet Our Team</h1>
-        <div></div>
+        <div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl w-full">
+            <OurteamCard
+              imageUrl="/CEO.jpg"
+              name="John Doe"
+              position="CEO & Founder"
+              description="John is the visionary behind InstaDrive, dedicated to providing a premium car rental experience that combines luxury and convenience. His leadership ensures that every customer receives exceptional service and quality."
+            />
+            <OurteamCard
+              imageUrl="/Head.jpg"
+              name="Jane Smith"
+              position="Chief Operating Officer"
+              description="Jane is dedicated to ensuring that every aspect of our operations runs smoothly, from fleet management to customer service, making sure that our clients have the best experience possible."
+            />
+            <OurteamCard
+              imageUrl="/Customer.jpg"
+              name="Alice Johnson"
+              position="Head of Marketing"
+              description="Alice is passionate about creating innovative marketing strategies that connect with our customers and enhance their experience with InstaDrive."
+            />
+          </div>
+        </div>
       </div>
     </>
   );
