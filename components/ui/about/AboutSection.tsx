@@ -100,22 +100,31 @@ const AboutSection = () => {
         </div>
       </div>
 
-      <div className="flex flex-col md:flex-row items-center justify-center py-10 px-4 gap-8 bg-[url('/Corevalues.png')] bg-cover bg-no-repeat bg-center">
-        <CoreValueCard
-          title="Integrity"
-          description="We believe in honesty and transparency in all our dealings. Our customers can trust that we will always provide clear information about our services, pricing, and policies."
-          iconClass="bi bi-shield-check"
-        />
-        <CoreValueCard
-          title="Innovation"
-          description="We are committed to continuously improving our services and adopting the latest technologies to enhance the customer experience. Our goal is to make car rental as seamless and efficient as possible."
-          iconClass="bi bi-lightbulb"
-        />
-        <CoreValueCard
-          title="Excellence"
-          description="We strive for excellence in everything we do, from the quality of our vehicles to the level of service we provide. Our team is dedicated to ensuring that every customer has a memorable and enjoyable experience."
-          iconClass="bi bi-gem"
-        />
+      <div className="bg-[url('/Corevalues.png')] bg-cover bg-no-repeat bg-center relative">
+        <div className="absolute inset-0 bg-black opacity-60 z-0"></div>
+        <div className="flex flex-col justify-center items-center relative pt-12 z-10">
+          <h1 className="text-2xl lg:text-5xl font-family-mono font-bold mb-4 text-center absolute z-20">
+            Our Core Values
+          </h1>
+        </div>
+
+        <div className="flex flex-col md:flex-row items-center justify-center py-10 px-4 gap-8 relative z-10">
+          <CoreValueCard
+            title="Integrity"
+            description="We believe in honesty and transparency in all our dealings. Our customers can trust that we will always provide clear information about our services, pricing, and policies."
+            iconClass="bi bi-shield-check"
+          />
+          <CoreValueCard
+            title="Innovation"
+            description="We are committed to continuously improving our services and adopting the latest technologies to enhance the customer experience. Our goal is to make car rental as seamless and efficient as possible."
+            iconClass="bi bi-lightbulb"
+          />
+          <CoreValueCard
+            title="Excellence"
+            description="We strive for excellence in everything we do, from the quality of our vehicles to the level of service we provide. Our team is dedicated to ensuring that every customer has a memorable and enjoyable experience."
+            iconClass="bi bi-gem"
+          />
+        </div>
       </div>
 
       <div>
