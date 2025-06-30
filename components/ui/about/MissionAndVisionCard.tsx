@@ -10,7 +10,7 @@ const MissionAndVisionCard = (props: MissionAndVisionCardProps) => {
       <div className="card bg-base-100 w-auto md:h-100 xl:h-90 lg:w-110 xl:w-130 shadow-sm">
         <div className="card-header flex justify-center items-center pt-8">
           <i
-            className={`${props.iconClass} text-xl text-red-600 md:text-3xl xl:text-5xl`}
+            className={`${props.iconClass} text-2xl text-red-600 md:text-3xl xl:text-5xl`}
           ></i>
         </div>
 
