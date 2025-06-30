@@ -50,7 +50,7 @@ const CarCard = ({ cars, onEdit }: CarCardProps) => {
             <div className="card-body">
               <h2 className="card-title">
                 {car.make} ({car.model})
-                <div className="badge badge-secondary">
+                <div className="badge bg-red-600">
                   ₱{Number(car.pricePerDay)}/day
                 </div>
               </h2>
@@ -65,7 +65,7 @@ const CarCard = ({ cars, onEdit }: CarCardProps) => {
               <div className="card-actions justify-end">
                 <EditCarDetailsButton onClick={() => onEdit && onEdit(car)} />
                 <button
-                  className="btn btn-primary"
+                  className="btn bg-base-300"
                   onClick={() =>
                     router.push(`/vehicles/${encodeURIComponent(car.model)}`)
                   }
