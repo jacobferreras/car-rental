@@ -1,9 +1,9 @@
-import React from "react";
+import ContanctSection from "@/components/ui/contact/ContanctSection";
 
 const page = () => {
   return (
-    <div className="flex justify-center items-center min-h-screen">
-      <h1>contact page</h1>
+    <div>
+      <ContanctSection />
     </div>
   );
 };
