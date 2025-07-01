@@ -14,11 +14,52 @@ const ContanctSection = () => {
         <div className="absolute inset-0 bg-black opacity-60 z-0"></div>
         <div className="flex flex-col justify-center items-center absolute z-20">
           <h1 className="text-3xl md:text-5xl lg:text-7xl text-center text-white font-family-mono font-bold">
-            ABOUT INSTADRIVE
+            GET IN TOUCH
           </h1>
-          <h2 className="text-3xl md:text-5xl lg:text-6xl text-center text-white font-family-mono font-bold">
-            WITH INSTADRIVE
+          <h2 className="text-xl md:text-2xl text-center text-white font-family-mono font-bold">
+            WE'RE HERE TO HELP! REACH OUT TO US FOR ANY INQUIRIES, SUPPORT OR
+            FEEDBACK
           </h2>
+        </div>
+      </div>
+
+      <div className="px-4 mb-12">
+        <div className="card w-auto lg:w-96 bg-base-100 card-xl shadow-sm">
+          <div className="card-body">
+            <h2 className="card-title">Contact Information</h2>
+            <p className="text-lg font-bold">
+              <span className="inline-flex items-center mr-2">
+                <i className="bi bi-geo-alt text-red-600"></i>
+              </span>
+              Our Office Addres
+            </p>
+            <p>123 Main Street, Suite 456, Cityville, State 12345, Country</p>
+
+            <p className="text-lg font-bold">
+              <span className="inline-flex items-center mr-2">
+                <i className="bi bi-telephone text-red-600"></i>
+              </span>
+              Phone Number
+            </p>
+            <div className="flex flex-col gap-2">
+              <a href="tel:+1234567890" className="text-blue-500">
+                +1 (234) 567-890
+              </a>
+              <a href="tel:+1234567890" className="text-blue-500">
+                +1 (234) 567-890
+              </a>
+            </div>
+
+            <p className="text-lg font-bold">
+              <span className="inline-flex items-center mr-2">
+                <i className="bi bi-envelope text-red-600"></i>
+              </span>
+              Email Address
+            </p>
+            <div className="flex flex-col gap-2">
+              <h1>InstaDrive@Info.com(General Inquiries)</h1>
+            </div>
+          </div>
         </div>
       </div>
     </>
