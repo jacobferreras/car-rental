@@ -1,4 +1,5 @@
 import Image from "next/image";
+import ContactForm from "./ContactForm";
 
 const ContanctSection = () => {
   return (
@@ -23,8 +24,8 @@ const ContanctSection = () => {
         </div>
       </div>
 
-      <div className="px-4 mb-12">
-        <div className="card w-auto lg:w-96 bg-base-100 card-xl shadow-sm">
+      <div className="px-4 mb-12 flex flex-col lg:flex-row justify-center items-center gap-4">
+        <div className="card w-auto lg:w-96 bg-base-100 card-xl shadow-sm mb-4">
           <div className="card-body">
             <h2 className="card-title">Contact Information</h2>
             <p className="text-lg font-bold">
@@ -61,6 +62,8 @@ const ContanctSection = () => {
             </div>
           </div>
         </div>
+
+        <ContactForm />
       </div>
 
       <div>
