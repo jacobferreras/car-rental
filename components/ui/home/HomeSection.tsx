@@ -5,7 +5,6 @@ import Steps from "@/components/ui/home/Steps";
 import Image from "next/image";
 import useCards from "@/hooks/useCards";
 import Car from "@/components/ui/home/Car";
-import { useState } from "react";
 
 const HomeSection = () => {
   const { cars } = useCards({
@@ -17,7 +16,7 @@ const HomeSection = () => {
 
   return (
     <div>
-      <div className="hero min-h-screen relative hero-overlay bg-overlay-opacity-60">
+      <div className="hero min-h-screen relative hero-overlay bg-overlay-opacity-60 mb-12">
         <Image
           src="/Car.png"
           alt="Background"
@@ -45,7 +44,7 @@ const HomeSection = () => {
         <ServiceBenifits />
       </div>
 
-      <div>
+      <div className="mb-12">
         <div className="flex flex-col justify-center items-center px-2 mb-4">
           <h1 className="text-2xl lg:text-5xl text-white font-family-mono font-bold mb-4">
             Our Vehicles
@@ -63,7 +62,7 @@ const HomeSection = () => {
         </div>
       </div>
 
-      <div className="flex flex-col justify-center items-center px-2 py-24 bg-[url('/Inside.png')] bg-cover bg-no-repeat bg-center">
+      <div className="flex flex-col justify-center items-center px-2 py-24 bg-[url('/Inside.png')] bg-cover bg-no-repeat bg-center mb-12">
         <div className="text-2xl lg:text-5xl font-family-mono font-bold mb-4 md:mb-8 text-white pl-4">
           Simple Steps to Book Your Car
         </div>
@@ -72,7 +71,7 @@ const HomeSection = () => {
         </div>
       </div>
 
-      <div className="flex flex-col justify-center items-center px-2 mb-4 py-24">
+      <div className="flex flex-col justify-center items-center px-2 mb-12 py-24">
         <div className="text-2xl lg:text-5xl font-family-mono font-bold mb-4 md:mb-8">
           What our customers say
         </div>
