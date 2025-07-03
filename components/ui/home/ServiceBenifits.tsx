@@ -3,7 +3,7 @@ import React from "react";
 const ServiceBenifits = () => {
   return (
     <div className="flex flex-col md:flex-row justify-center items-center px-4 lg:px-12 text-center gap-4 lg:gap-8 py-12">
-      <div className="card bg-base-100 w-auto md:h-70 xl:h-90 lg:w-96 shadow-sm">
+      <div className="card bg-base-100 w-auto md:h-70 xl:h-90 lg:w-96 shadow-md shadow-red-500/50 hover:shadow-xl">
         <figure className="px-10 pt-10">
           <i className="bi bi-clock text-red-600 text-xl md:text-3xl xl:text-5xl"></i>
         </figure>
@@ -20,7 +20,7 @@ const ServiceBenifits = () => {
         </div>
       </div>
 
-      <div className="card bg-base-100 w-auto md:h-70 xl:h-90 lg:w-96 shadow-sm">
+      <div className="card bg-base-100 w-auto md:h-70 xl:h-90 lg:w-96 shadow-md shadow-red-500/50 hover:shadow-xl">
         <figure className="px-10 pt-10">
           <i className="bi bi-car-front-fill text-xl text-red-600 md:text-3xl xl:text-5xl"></i>
         </figure>
@@ -36,7 +36,7 @@ const ServiceBenifits = () => {
         </div>
       </div>
 
-      <div className="card bg-base-100 w-auto md:h-70 xl:h-90 lg:w-96 shadow-sm">
+      <div className="card bg-base-100 w-auto md:h-70 xl:h-90 lg:w-96 shadow-md shadow-red-500/50 hover:shadow-xl">
         <figure className="px-10 pt-10">
           <i className="bi bi-currency-dollar text-xl text-red-600 md:text-3xl  xl:text-5xl"></i>
         </figure>
