@@ -38,7 +38,7 @@ const CarCard = ({ cars, onEdit }: CarCardProps) => {
         cars.map((car: Car) => (
           <div
             key={car.id}
-            className="card bg-base-100 w-auto shadow-md shadow-red-500/50 hover:shadow-xl"
+            className="card bg-base-100  shadow-md shadow-red-500/50 hover:shadow-xl"
           >
             <figure>
               <Image
