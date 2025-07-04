@@ -24,18 +24,21 @@ interface CarCardProps {
   onEdit?: (car: Car) => void;
 }
 
-const HomeCarCard = ({ cars, onEdit }: CarCardProps) => {
+const CarCard = ({ cars, onEdit }: CarCardProps) => {
   const router = useRouter();
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 px-70 gap-6 mb-4">
+    <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 xl:gap-4 xl:px-88 px-4 mb-4">
       {cars.length === 0 ? (
         <div className="col-span-4 text-center min-h-150 flex items-center justify-center">
           <p className="text-gray-500">No cars available</p>
         </div>
       ) : (
         cars.map((car: Car) => (
-          <div key={car.id} className="card bg-base-100 w-78 shadow-sm">
+          <div
+            key={car.id}
+            className="card bg-base-100 w-auto lg:w-70 shadow-sm"
+          >
             <figure>
               <Image
                 src={car.imageUrl.trim()}
@@ -72,4 +75,4 @@ const HomeCarCard = ({ cars, onEdit }: CarCardProps) => {
   );
 };
 
-export default HomeCarCard;
+export default CarCard;
