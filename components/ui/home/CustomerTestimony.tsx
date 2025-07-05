@@ -16,24 +16,6 @@ const CustomerTestimony = () => {
           delay: 3000,
           disableOnInteraction: false,
         }}
-        breakpoints={{
-          640: {
-            slidesPerView: 1,
-            spaceBetween: 20,
-          },
-          768: {
-            slidesPerView: 2,
-            spaceBetween: 30,
-          },
-          1024: {
-            slidesPerView: 2,
-            spaceBetween: 20,
-          },
-          1536: {
-            slidesPerView: 3,
-            spaceBetween: 10,
-          },
-        }}
       >
         <SwiperSlide className="carousel-item w-full flex justify-center items-center flex-col gap-4">
           <div className="card w-96 bg-base-100 card-md shadow-sm mb-8">
