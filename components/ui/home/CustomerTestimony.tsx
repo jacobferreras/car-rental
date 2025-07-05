@@ -16,7 +16,7 @@ const CustomerTestimony = () => {
                 Highly recommend!"
               </p>
 
-              <p className="text-center text-md sm:text-xl sm:max-w-xl max-w-xs amd:text-xl md:max-w-xl lg:text-3xl lg:max-w-3xl">
+              <p className="text-center text-md sm:text-xl sm:max-w-xl max-w-xs md:text-xl md:max-w-xl lg:text-3xl lg:max-w-3xl">
                 - John Cena
               </p>
             </div>
@@ -57,7 +57,7 @@ const CustomerTestimony = () => {
                 Highly recommend!"
               </p>
 
-              <p className="text-center text-md sm:text-xl sm:max-w-xl max-w-xs amd:text-xl md:max-w-xl lg:text-3xl lg:max-w-3xl">
+              <p className="text-center text-md sm:text-xl sm:max-w-xl max-w-xs md:text-xl md:max-w-xl lg:text-3xl lg:max-w-3xl">
                 - John Cena
               </p>
             </div>
@@ -93,7 +93,7 @@ const CustomerTestimony = () => {
                 Highly recommend!"
               </p>
 
-              <p className="text-center text-md sm:text-xl sm:max-w-xl max-w-xs amd:text-xl md:max-w-xl lg:text-3xl lg:max-w-3xl">
+              <p className="text-center text-md sm:text-xl sm:max-w-xl max-w-xs md:text-xl md:max-w-xl lg:text-3xl lg:max-w-3xl">
                 - John Cena
               </p>
             </div>
