@@ -6,7 +6,7 @@ import "swiper/css/navigation";
 
 const CustomerTestimony = () => {
   return (
-    <div className="w-full max-w-6xl mx-auto">
+    <div className="container mx-auto px-4">
       <Swiper
         modules={[Pagination, Autoplay, Navigation]}
         spaceBetween={10}
@@ -16,8 +16,9 @@ const CustomerTestimony = () => {
           delay: 3000,
           disableOnInteraction: false,
         }}
+        className="h-[400px]"
       >
-        <SwiperSlide className="carousel-item w-full flex justify-center items-center flex-col gap-4">
+        <SwiperSlide className="flex justify-center items-center">
           <div className="card w-96 bg-base-100 card-md shadow-sm mb-8">
             <div className="card-body">
               <h2 className="card-title">Medium Card</h2>
@@ -31,7 +32,7 @@ const CustomerTestimony = () => {
             </div>
           </div>
         </SwiperSlide>
-        <SwiperSlide className="carousel-item w-full flex justify-center items-center flex-col gap-4">
+        <SwiperSlide className="flex justify-center items-center">
           <div className="card w-96 bg-base-100 card-md shadow-sm">
             <div className="card-body">
               <h2 className="card-title">Medium Card</h2>
@@ -45,7 +46,7 @@ const CustomerTestimony = () => {
             </div>
           </div>
         </SwiperSlide>
-        <SwiperSlide className="carousel-item w-full flex justify-center items-center flex-col gap-4">
+        <SwiperSlide className="flex justify-center items-center">
           <div className="card w-96 bg-base-100 card-md shadow-sm">
             <div className="card-body">
               <h2 className="card-title">Medium Card</h2>
@@ -59,7 +60,7 @@ const CustomerTestimony = () => {
             </div>
           </div>
         </SwiperSlide>
-        <SwiperSlide className="carousel-item w-full flex justify-center items-center flex-col gap-4">
+        <SwiperSlide className="flex justify-center items-center">
           <div className="card w-96 bg-base-100 card-md shadow-sm">
             <div className="card-body">
               <h2 className="card-title">Medium Card</h2>
