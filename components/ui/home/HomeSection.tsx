@@ -4,7 +4,7 @@ import CustomerTestimony from "@/components/ui/home/CustomerTestimony";
 import Steps from "@/components/ui/home/Steps";
 import Image from "next/image";
 import useCards from "@/hooks/useCards";
-import Car from "@/components/ui/home/Car";
+import Car from "@/components/ui/home/HomeCarCard";
 
 const HomeSection = () => {
   const { cars } = useCards({
