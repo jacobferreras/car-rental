@@ -71,13 +71,8 @@ const HomeSection = () => {
         </div>
       </div>
 
-      <div className="flex flex-col justify-center items-center px-2 mb-12 py-24">
-        <div className="text-2xl lg:text-5xl font-family-mono font-bold mb-4 md:mb-8">
-          What our customers say
-        </div>
-        <div>
-          <CustomerTestimony />
-        </div>
+      <div className="flex justify-center items-center">
+        <CustomerTestimony />
       </div>
 
       <div>
