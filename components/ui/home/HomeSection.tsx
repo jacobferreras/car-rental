@@ -71,7 +71,7 @@ const HomeSection = () => {
         </div>
       </div>
 
-      <div className="flex justify-center items-center py-24">
+      <div className="justify-center items-center py-24 px-24">
         <CustomerTestimony />
       </div>
 
