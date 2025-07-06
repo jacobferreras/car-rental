@@ -19,6 +19,14 @@ const CustomerTestimony = () => {
           delay: 3000,
           disableOnInteraction: false,
         }}
+        breakpoints={{
+          640: {
+            slidesPerView: 1,
+          },
+          768: {
+            slidesPerView: 2,
+          },
+        }}
       >
         <SwiperSlide className="flex justify-center items-center h-full ">
           <div className="card w-auto bg-base-100 card-md shadow-sm mb-12">
@@ -36,10 +44,12 @@ const CustomerTestimony = () => {
         <SwiperSlide className="flex justify-center items-center h-full">
           <div className="card w-auto bg-base-100 card-md shadow-sm mb-12">
             <div className="card-body">
-              <h2 className="card-title">Medium Card</h2>
-              <p>
+              <h2 className="card-title justify-center items-center text-center">
                 A card component has a figure, a body part, and inside body
                 there are title and actions parts
+              </h2>
+              <p className="justify-center items-center text-center">
+                - John Doe
               </p>
             </div>
           </div>
@@ -47,10 +57,12 @@ const CustomerTestimony = () => {
         <SwiperSlide className="flex justify-center items-center h-full">
           <div className="card w-auto bg-base-100 card-md shadow-sm mb-12">
             <div className="card-body">
-              <h2 className="card-title">Medium Card</h2>
-              <p>
+              <h2 className="card-title justify-center items-center text-center">
                 A card component has a figure, a body part, and inside body
                 there are title and actions parts
+              </h2>
+              <p className="justify-center items-center text-center">
+                - John Doe
               </p>
             </div>
           </div>
@@ -58,10 +70,12 @@ const CustomerTestimony = () => {
         <SwiperSlide className="flex justify-center items-center h-full">
           <div className="card w-auto bg-base-100 card-md shadow-sm mb-12">
             <div className="card-body">
-              <h2 className="card-title">Medium Card</h2>
-              <p>
+              <h2 className="card-title justify-center items-center text-center">
                 A card component has a figure, a body part, and inside body
                 there are title and actions parts
+              </h2>
+              <p className="justify-center items-center text-center">
+                - John Doe
               </p>
             </div>
           </div>
