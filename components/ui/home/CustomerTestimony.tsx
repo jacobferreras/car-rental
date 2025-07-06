@@ -6,7 +6,7 @@ import "swiper/css/navigation";
 
 const CustomerTestimony = () => {
   return (
-    <div className="container mx-auto px-2">
+    <div className="container mx-auto px-2 md:px-4 lg:px-8 xl:px-12">
       <div className="text-2xl lg:text-5xl font-family-mono font-bold mb-4 md:mb-8 text-center">
         What our customers say
       </div>
