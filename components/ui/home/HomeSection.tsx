@@ -10,7 +10,7 @@ const HomeSection = () => {
   const { cars } = useCards({
     seats: 0,
     transmission: "",
-    limit: 8,
+    limit: 6,
     page: 1,
   });
 
@@ -51,7 +51,7 @@ const HomeSection = () => {
           </h1>
         </div>
 
-        <div>
+        <div className="flex justify-center items-center">
           <Car cars={cars} />
         </div>
 
