@@ -6,7 +6,10 @@ import "swiper/css/navigation";
 
 const CustomerTestimony = () => {
   return (
-    <div className="container mx-auto px-4">
+    <div className="container mx-auto px-2">
+      <div className="text-2xl lg:text-5xl font-family-mono font-bold mb-4 md:mb-8 text-center">
+        What our customers say
+      </div>
       <Swiper
         modules={[Pagination, Autoplay, Navigation]}
         spaceBetween={10}
@@ -16,10 +19,9 @@ const CustomerTestimony = () => {
           delay: 3000,
           disableOnInteraction: false,
         }}
-        className="h-[400px]"
       >
-        <SwiperSlide className="flex justify-center items-center">
-          <div className="card w-96 bg-base-100 card-md shadow-sm mb-8">
+        <SwiperSlide className="flex justify-center items-center h-full ">
+          <div className="card w-auto bg-base-100 card-md shadow-sm mb-12">
             <div className="card-body">
               <h2 className="card-title">Medium Card</h2>
               <p>
@@ -32,8 +34,8 @@ const CustomerTestimony = () => {
             </div>
           </div>
         </SwiperSlide>
-        <SwiperSlide className="flex justify-center items-center">
-          <div className="card w-96 bg-base-100 card-md shadow-sm">
+        <SwiperSlide className="flex justify-center items-center h-full">
+          <div className="card w-auto bg-base-100 card-md shadow-sm mb-12">
             <div className="card-body">
               <h2 className="card-title">Medium Card</h2>
               <p>
@@ -46,8 +48,8 @@ const CustomerTestimony = () => {
             </div>
           </div>
         </SwiperSlide>
-        <SwiperSlide className="flex justify-center items-center">
-          <div className="card w-96 bg-base-100 card-md shadow-sm">
+        <SwiperSlide className="flex justify-center items-center h-full">
+          <div className="card w-auto bg-base-100 card-md shadow-sm mb-12">
             <div className="card-body">
               <h2 className="card-title">Medium Card</h2>
               <p>
@@ -60,8 +62,8 @@ const CustomerTestimony = () => {
             </div>
           </div>
         </SwiperSlide>
-        <SwiperSlide className="flex justify-center items-center">
-          <div className="card w-96 bg-base-100 card-md shadow-sm">
+        <SwiperSlide className="flex justify-center items-center h-full">
+          <div className="card w-auto bg-base-100 card-md shadow-sm mb-12">
             <div className="card-body">
               <h2 className="card-title">Medium Card</h2>
               <p>
