@@ -70,10 +70,10 @@ const CustomerTestimony = () => {
                 <img
                   src="/Fleet.jpg"
                   alt="Customer"
-                  className="rounded-full w-20 h-20 object-cover"
+                  className="rounded-full w-16 h-16 object-cover"
                 />
               </figure>
-              <p className="justify-center items-center text-center text-3xl font-family-mono font-bold">
+              <p className="justify-center items-center text-center text-xl font-family-mono font-bold">
                 John Doe
               </p>
             </div>
@@ -120,10 +120,10 @@ const CustomerTestimony = () => {
                 <img
                   src="/Fleet.jpg"
                   alt="Customer"
-                  className="rounded-full w-20 h-20 object-cover"
+                  className="rounded-full w-16 h-16 object-cover"
                 />
               </figure>
-              <p className="justify-center items-center text-center text-3xl font-family-mono font-bold">
+              <p className="justify-center items-center text-center text-xl font-family-mono font-bold">
                 John Doe
               </p>
             </div>
@@ -177,10 +177,10 @@ const CustomerTestimony = () => {
                 <img
                   src="/Fleet.jpg"
                   alt="Customer"
-                  className="rounded-full w-20 h-20 object-cover"
+                  className="rounded-full w-16 h-16 object-cover"
                 />
               </figure>
-              <p className="justify-center items-center text-center text-3xl font-family-mono font-bold">
+              <p className="justify-center items-center text-center text-xl font-family-mono font-bold">
                 John Doe
               </p>
             </div>
