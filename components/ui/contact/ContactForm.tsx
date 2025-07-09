@@ -65,6 +65,7 @@ const ContactForm = () => {
           >
             {/* {isLoading ? "Sending..." : "Send Message"} */}
             Send
+            <i className="bi bi-send-fill"></i>
           </button>
         </fieldset>
       </form>
