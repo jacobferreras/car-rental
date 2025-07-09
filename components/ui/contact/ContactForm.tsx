@@ -64,6 +64,7 @@ const ContactForm = () => {
             // disabled={isLoading}
           >
             {/* {isLoading ? "Sending..." : "Send Message"} */}
+            Send
           </button>
         </fieldset>
       </form>
