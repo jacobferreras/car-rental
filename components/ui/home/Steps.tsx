@@ -32,7 +32,9 @@ const Steps = () => {
               <h2 className="card-title flex justify-center text-xl font-semibold text-red-600">
                 {step.title}
               </h2>
-              <p className="text-center text-gray-600">{step.desc}</p>
+              <p className="text-center text-black font-semibold">
+                {step.desc}
+              </p>
             </div>
           </div>
         </React.Fragment>
