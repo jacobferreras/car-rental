@@ -62,7 +62,7 @@ const HomeSection = () => {
         </div>
       </div>
 
-      <div className="flex flex-col justify-center items-center px-2 py-24 bg-[url('/Inside.png')] bg-cover bg-no-repeat bg-center mb-12">
+      <div className="flex flex-col justify-center items-center px-2 py-24 bg-[url('/Inside.png')] bg-cover bg-no-repeat bg-center mb-12 rounded-2xl">
         <div className="text-2xl lg:text-5xl font-family-mono font-bold mb-4 md:mb-8 text-white pl-4">
           Simple Steps to Book Your Car
         </div>
