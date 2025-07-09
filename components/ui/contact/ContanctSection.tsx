@@ -73,15 +73,18 @@ const ContanctSection = () => {
       <div>
         <div className="flex flex-col justify-center items-center px-2 py-12 bg-red-600">
           <div className="text-2xl lg:text-5xl font-family-mono font-bold mb-4 text-white pl-4">
-            Ready to Experience Seamless Travel?
+            Need Quick Answers?
           </div>
           <div className="text-md lg:text-xl font-family-sans text-white text-center mb-8 px-4">
-            Browse our extensive fleet and find the perfect car for your next
-            adventure.
+            For common questions, check our comprehensive FAQ section or browse
+            our support resources.
           </div>
-          <div className="flex justify-center items-center">
+          <div className="flex justify-center items-center gap-4">
             <button className="btn bg-base-100 rounded-xl">
-              Book Your Ride Now <i className="bi bi-arrow-right"></i>
+              Visit Our FAQ <i className="bi bi-patch-question-fill"></i>
+            </button>
+            <button className="btn bg-base-100 rounded-xl">
+              Support Center <i className="bi bi-info-circle"></i>
             </button>
           </div>
         </div>
