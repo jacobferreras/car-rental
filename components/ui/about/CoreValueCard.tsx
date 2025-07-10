@@ -15,7 +15,7 @@ const CoreValueCard = (props: CoreValueCardProps) => {
         </div>
 
         <div className="card-body items-center text-center">
-          <h1 className="font-family-mono text-md md:text-lg xl:text-3xl font-bold">
+          <h1 className="font-bold font-family-mono text-md md:text-lg xl:text-3xl">
             {props.title}
           </h1>
           <p className="font-family-sans text-xs md:text-lg xl:text-xl text-justify ">
