@@ -17,10 +17,10 @@ const AboutSection = () => {
         />
         <div className="absolute inset-0 bg-black opacity-60 z-0"></div>
         <div className="flex flex-col justify-center items-center absolute z-20">
-          <h1 className="text-3xl md:text-5xl lg:text-7xl text-center text-white font-family-mono font-bold">
+          <h1 className="text-3xl md:text-5xl lg:text-7xl text-center text-white font-bold font-family-mono">
             ABOUT INSTADRIVE
           </h1>
-          <h2 className="text-3xl md:text-5xl lg:text-6xl text-center text-white font-family-mono font-bold">
+          <h2 className="text-3xl md:text-5xl lg:text-6xl text-center text-white font-bold font-family-mono">
             WITH INSTADRIVE
           </h2>
         </div>
@@ -29,10 +29,10 @@ const AboutSection = () => {
       <div className="flex flex-col items-center justify-center py-10 px-4 mb-12">
         <div className="flex flex-col md:flex-row justify-between items-start max-w-6xl w-full md:gap-12 lg:gap-16 xl:gap-20 lg:px-12">
           <div>
-            <h1 className="mb-4 text-xl md:text-2xl lg:text-4xl">
+            <h1 className="mb-4 text-xl md:text-2xl lg:text-4xl font-bold font-family-mono">
               Our Journey
             </h1>
-            <p className="text-lg md:text-xl lg:text-2xl md:w-100">
+            <p className="text-lg md:text-xl lg:text-2xl md:w-100 font-family-sans">
               Founded in 2025, InstaDrive was born from a passion for premium
               automobiles and a commitment to unparalleled customer service. We
               noticed a gap in the market for a car rental experience that truly
@@ -68,8 +68,10 @@ const AboutSection = () => {
         />
       </div>
 
-      <div className="flex flex-col items-center justify-center py-10 px-4 mb-12">
-        <h1 className="mb-4 text-xl md:text-2xl lg:text-4xl">Meet Our Team</h1>
+      <div className="flex flex-col items-center justify-center py-24 px-4 mb-12">
+        <h1 className="mb-8 text-xl md:text-2xl lg:text-5xl font-bold font-family-mono">
+          Meet Our Team
+        </h1>
         <div>
           <div className="grid grid-cols-1 md:grid-cols-2  gap-8 max-w-6xl w-full">
             <OurteamCard
