@@ -33,7 +33,7 @@ const VehicleSection = () => {
 
   return (
     <>
-      <div className="hero min-h-180 relative mb-12">
+      <div className="hero min-h-200 relative">
         <Image
           src="/Fleet.png"
           alt="Background"
