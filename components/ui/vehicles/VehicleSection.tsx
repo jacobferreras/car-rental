@@ -10,6 +10,7 @@ import { AddCarButton } from "@/components/ui/vehicles/AddCarButton";
 import AddCarModal from "@/components/ui/vehicles/AddCarModal";
 import CarDetailsModal from "@/components/ui/CarDetailsModal";
 import { Car } from "../../../app/generated/prisma";
+import Image from "next/image";
 
 const VehicleSection = () => {
   const [refresh, setRefresh] = useState(0);
@@ -31,114 +32,135 @@ const VehicleSection = () => {
   });
 
   return (
-    <div className="flex flex-col min-h-screen pt-12">
-      <div className="flex flex-col sm:flex-row xl:flex-row justify-center items-center xl:justify-end xl:items-end xl:gap-0 mb-8 gap-4 pt-12 xl:ml-auto xl:pr-4 xl:mt-24">
-        <div className="mr-4">
-          <AddCarButton onClick={() => setOpenModal(true)} />
+    <>
+      <div className="hero min-h-100 relative mb-12">
+        <Image
+          src="/Fleet.png"
+          alt="Background"
+          fill
+          className="object-cover z-0"
+          priority
+        />
+        <div className="absolute inset-0 bg-black opacity-60 z-0"></div>
+        <div className="flex flex-col justify-center items-center absolute z-20">
+          <h1 className="text-3xl md:text-5xl lg:text-7xl text-center text-white font-bold font-family-mono">
+            ABOUT INSTADRIVE
+          </h1>
+          <h2 className="text-3xl md:text-5xl lg:text-6xl text-center text-white font-bold font-family-mono">
+            WITH INSTADRIVE
+          </h2>
         </div>
-        <Dropdown
-          value={seats.toString()}
-          onChange={(e) => {
-            setSeats(Number(e.target.value));
-            setCurrentPage(1);
-          }}
-        />
+      </div>
 
-        <DropdownTransmission
-          value={transmission}
-          onChange={(e) => {
-            setTransmission(e.target.value);
-            setCurrentPage(1);
-          }}
-        />
-
-        <label className="input w-auto">
-          <svg
-            className="h-[1em] opacity-50"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-          >
-            <g
-              strokeLinejoin="round"
-              strokeLinecap="round"
-              strokeWidth="2.5"
-              fill="none"
-              stroke="currentColor"
-            >
-              <circle cx="11" cy="11" r="8"></circle>
-              <path d="m21 21-4.3-4.3"></path>
-            </g>
-          </svg>
-          <input
-            type="search"
-            className="grow"
-            placeholder="Search"
-            value={search}
+      <div className="flex flex-col min-h-screen pt-12">
+        <div className="flex flex-col sm:flex-row xl:flex-row justify-center items-center xl:justify-end xl:items-end xl:gap-0 mb-8 gap-4 pt-12 xl:ml-auto xl:pr-4 xl:mt-24">
+          <div className="mr-4">
+            <AddCarButton onClick={() => setOpenModal(true)} />
+          </div>
+          <Dropdown
+            value={seats.toString()}
             onChange={(e) => {
-              setSearch(e.target.value);
+              setSeats(Number(e.target.value));
               setCurrentPage(1);
             }}
           />
-          <kbd className="kbd kbd-sm">⌘</kbd>
-          <kbd className="kbd kbd-sm">K</kbd>
-        </label>
-      </div>
 
-      <CarCards
-        cars={cars}
-        onEdit={(car) => {
-          setSelectedCar(car);
-          setOpenCarDetailsModal(true);
-        }}
-      />
+          <DropdownTransmission
+            value={transmission}
+            onChange={(e) => {
+              setTransmission(e.target.value);
+              setCurrentPage(1);
+            }}
+          />
 
-      <AddCarModal
-        open={openModal}
-        onClose={() => setOpenModal(false)}
-        onSuccess={() => {
-          setRefresh((r) => r + 1);
-          setCurrentPage(1);
-        }}
-      />
+          <label className="input w-auto">
+            <svg
+              className="h-[1em] opacity-50"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+            >
+              <g
+                strokeLinejoin="round"
+                strokeLinecap="round"
+                strokeWidth="2.5"
+                fill="none"
+                stroke="currentColor"
+              >
+                <circle cx="11" cy="11" r="8"></circle>
+                <path d="m21 21-4.3-4.3"></path>
+              </g>
+            </svg>
+            <input
+              type="search"
+              className="grow"
+              placeholder="Search"
+              value={search}
+              onChange={(e) => {
+                setSearch(e.target.value);
+                setCurrentPage(1);
+              }}
+            />
+            <kbd className="kbd kbd-sm">⌘</kbd>
+            <kbd className="kbd kbd-sm">K</kbd>
+          </label>
+        </div>
 
-      <CarDetailsModal
-        open={openCarDetailsModal}
-        onClose={() => {
-          setSelectedCar(null);
-          setOpenCarDetailsModal(false);
-        }}
-        car={selectedCar}
-        onSuccess={() => {
-          setRefresh((r) => r + 1);
-          setOpenCarDetailsModal(false);
-        }}
-      />
-
-      <div className="flex justify-center items-center mt-8 mb-4">
-        <Pagination
-          currentPage={currentPage}
-          totalPages={totalpages}
-          onPageChange={setCurrentPage}
+        <CarCards
+          cars={cars}
+          onEdit={(car) => {
+            setSelectedCar(car);
+            setOpenCarDetailsModal(true);
+          }}
         />
-      </div>
 
-      <div>
-        <div className="flex flex-col justify-center items-center px-2 py-12 bg-red-600">
-          <div className="text-2xl lg:text-5xl font-family-mono font-bold mb-4 text-white pl-4">
-            Ready to Experience Seamless Travel?
-          </div>
-          <div className="text-md lg:text-xl font-family-sans text-white text-center mb-8 px-4">
-            Browse our extensive fleet and find the perfect car for your next
-            adventure.
-          </div>
-          <div className="flex justify-center items-center">
-            <button className="btn bg-base-100 rounded-xl">
-              Book Your Ride Now <i className="bi bi-arrow-right"></i>
-            </button>
+        <AddCarModal
+          open={openModal}
+          onClose={() => setOpenModal(false)}
+          onSuccess={() => {
+            setRefresh((r) => r + 1);
+            setCurrentPage(1);
+          }}
+        />
+
+        <CarDetailsModal
+          open={openCarDetailsModal}
+          onClose={() => {
+            setSelectedCar(null);
+            setOpenCarDetailsModal(false);
+          }}
+          car={selectedCar}
+          onSuccess={() => {
+            setRefresh((r) => r + 1);
+            setOpenCarDetailsModal(false);
+          }}
+        />
+
+        <div className="flex justify-center items-center mt-8 mb-4">
+          <Pagination
+            currentPage={currentPage}
+            totalPages={totalpages}
+            onPageChange={setCurrentPage}
+          />
+        </div>
+
+        <div>
+          <div className="flex flex-col justify-center items-center px-2 py-12 bg-red-600">
+            <div className="text-2xl lg:text-5xl font-family-mono font-bold mb-4 text-white pl-4">
+              Ready to Experience Seamless Travel?
+            </div>
+            <div className="text-md lg:text-xl font-family-sans text-white text-center mb-8 px-4">
+              Browse our extensive fleet and find the perfect car for your next
+              adventure.
+            </div>
+            <div className="flex justify-center items-center">
+              <button className="btn bg-base-100 rounded-xl">
+                Book Your Ride Now <i className="bi bi-arrow-right"></i>
+              </button>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
