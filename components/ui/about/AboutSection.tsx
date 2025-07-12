@@ -7,7 +7,7 @@ import CoreValueCard from "./CoreValueCard";
 const AboutSection = () => {
   return (
     <>
-      <div className="hero min-h-100 relative mb-12">
+      <div className="hero min-h-200 relative mb-12">
         <Image
           src="/About.png"
           alt="Background"
