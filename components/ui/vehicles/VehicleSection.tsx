@@ -33,7 +33,7 @@ const VehicleSection = () => {
 
   return (
     <>
-      <div className="hero min-h-100 relative mb-12">
+      <div className="hero min-h-180 relative mb-12">
         <Image
           src="/Fleet.png"
           alt="Background"
@@ -52,7 +52,7 @@ const VehicleSection = () => {
         </div>
       </div>
 
-      <div className="flex flex-col min-h-screen pt-12">
+      <div className="flex flex-col">
         <div className="flex flex-col sm:flex-row xl:flex-row justify-center items-center xl:justify-end xl:items-end xl:gap-0 mb-8 gap-4 pt-12 xl:ml-auto xl:pr-4 xl:mt-24">
           <div className="mr-4">
             <AddCarButton onClick={() => setOpenModal(true)} />
