@@ -28,7 +28,7 @@ const HomeCarCard = ({ cars, onEdit }: CarCardProps) => {
   const router = useRouter();
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 px-4 mb-4">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 px-4 mb-4">
       {cars.length === 0 ? (
         <div className="col-span-4 text-center min-h-150 flex items-center justify-center">
           <p className="text-gray-500">No cars available</p>
