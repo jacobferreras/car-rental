@@ -10,7 +10,7 @@ const HomeSection = () => {
   const { cars } = useCards({
     seats: 0,
     transmission: "",
-    limit: 6,
+    limit: 8,
     page: 1,
   });
 
