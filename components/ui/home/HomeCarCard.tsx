@@ -50,7 +50,7 @@ const HomeCarCard = ({ cars, onEdit }: CarCardProps) => {
             </figure>
 
             <div className="card-body">
-              <h2 className="card-title text-2xl font-bold">
+              <h2 className="card-title sm:text-sm md:text-md lg:text-lg xl:text-xl font-bold">
                 {car.make} ({car.model})
                 <div className="badge bg-red-600 text-white">
                   ₱{Number(car.pricePerDay)}/day
