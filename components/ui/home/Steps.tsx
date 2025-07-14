@@ -24,7 +24,7 @@ const Steps = () => {
     <div className="flex flex-col lg:flex-row justify-center items-center mb-8 gap-6 px-4">
       {steps.map((step, index) => (
         <React.Fragment key={step.title}>
-          <div className="relative card w-full h-30 max-w-md bg-white/80 border border-blue-100 shadow-xl transition-transform hover:scale-105">
+          <div className="relative card w-full h-30 lg:h-48 max-w-md bg-white/80 border border-blue-100 shadow-xl transition-transform hover:scale-105">
             <span className="absolute -top-4 -left-4 bg-gradient-to-br from-red-500 to-red-800 text-white rounded-full w-10 h-10 flex items-center justify-center text-lg font-bold shadow-md border-2 border-white">
               {index + 1}
             </span>
@@ -32,7 +32,7 @@ const Steps = () => {
               <h2 className="card-title flex justify-center text-xl font-semibold text-red-600">
                 {step.title}
               </h2>
-              <p className="text-center text-black font-semibold">
+              <p className="text-center text-black font-semibold sm:text-sm md:text-md lg:text-lg xl:text-xl">
                 {step.desc}
               </p>
             </div>
