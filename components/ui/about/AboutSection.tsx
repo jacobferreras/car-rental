@@ -26,32 +26,30 @@ const AboutSection = () => {
         </div>
       </div>
 
-      <div className="flex flex-col items-center justify-center py-10 px-4 mb-12">
-        <div className="flex flex-col md:flex-row justify-between items-start max-w-6xl w-full md:gap-12 lg:gap-16 xl:gap-20 lg:px-12">
-          <div>
-            <h1 className="mb-4 text-xl md:text-2xl lg:text-4xl font-bold font-family-mono">
-              Our Journey
-            </h1>
-            <p className="text-lg md:text-xl lg:text-2xl md:w-100 font-family-sans">
-              Founded in 2025, InstaDrive was born from a passion for premium
-              automobiles and a commitment to unparalleled customer service. We
-              noticed a gap in the market for a car rental experience that truly
-              combined luxury, convenience, and transparency. From humble
-              beginnings with a small fleet, we've grown into a trusted name,
-              serving countless customers who demand nothing but the best.
-            </p>
-          </div>
-          <div>
-            <figure className="md:pt-4 lg:pt-6">
-              <Image
-                src="/Journey.png"
-                alt="About Us"
-                width={800}
-                height={600}
-                className="rounded-xl mt-8 md:h-70 lg:h-100"
-              />
-            </figure>
-          </div>
+      <div className="flex flex-col md:flex-row items-center justify-center py-10 mb-8 gap-24">
+        <div>
+          <h1 className="mb-4 text-xl md:text-2xl lg:text-4xl xl:text-5xl font-bold font-family-mono">
+            Our Journey
+          </h1>
+          <p className="text-lg md:text-xl lg:text-2xl md:w-100 font-family-sans">
+            Founded in 2025, InstaDrive was born from a passion for premium
+            automobiles and a commitment to unparalleled customer service. We
+            noticed a gap in the market for a car rental experience that truly
+            combined luxury, convenience, and transparency. From humble
+            beginnings with a small fleet, we've grown into a trusted name,
+            serving countless customers who demand nothing but the best.
+          </p>
+        </div>
+        <div>
+          <figure className="md:pt-4 lg:pt-6">
+            <Image
+              src="/Journey.png"
+              alt="About Us"
+              width={800}
+              height={600}
+              className="rounded-xl mt-8 md:h-70 lg:h-96"
+            />
+          </figure>
         </div>
       </div>
 
