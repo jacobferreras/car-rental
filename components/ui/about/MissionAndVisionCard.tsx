@@ -15,7 +15,7 @@ const MissionAndVisionCard = (props: MissionAndVisionCardProps) => {
         </div>
 
         <div className="card-body items-center text-center">
-          <h1 className="font-family-mono text-md md:text-lg xl:text-3xl font-bold">
+          <h1 className="font-family-mono text-lg md:text-xl xl:text-3xl font-bold">
             {props.title}
           </h1>
           <p className="font-family-sans text-md md:text-lg xl:text-xl text-justify ">
