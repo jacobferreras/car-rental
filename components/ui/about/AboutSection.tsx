@@ -26,7 +26,7 @@ const AboutSection = () => {
         </div>
       </div>
 
-      <div className="flex flex-col md:flex-row items-center justify-center py-10 mb-8 gap-24">
+      <div className="flex flex-col md:flex-row items-center justify-center py-10 mb-8 px-4 md:gap-x-12 gap-x-24">
         <div>
           <h1 className="mb-4 text-xl md:text-2xl lg:text-4xl xl:text-5xl font-bold font-family-mono">
             Our Journey
