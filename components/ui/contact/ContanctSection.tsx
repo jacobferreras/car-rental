@@ -4,7 +4,7 @@ import ContactForm from "./ContactForm";
 const ContanctSection = () => {
   return (
     <>
-      <div className="hero min-h-200 relative mb-12">
+      <div className="hero min-h-100 md:min-h-150 relative mb-12">
         <Image
           src="/Contact.png"
           alt="Background"
