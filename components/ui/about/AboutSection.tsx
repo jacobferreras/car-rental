@@ -71,7 +71,7 @@ const AboutSection = () => {
           Meet Our Team
         </h1>
         <div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 xl:gap-x-10 w-full">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 xl:gap-x-4 w-full">
             <OurteamCard
               imageUrl="/CEO.jpg"
               name="John Doe"
