@@ -29,7 +29,7 @@ const CarCard = ({ cars, onEdit }: CarCardProps) => {
   const router = useRouter();
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 xl:gap-4 px-4 mb-4">
+    <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 xl:gap-x-12  px-4 mb-4">
       {cars.length === 0 ? (
         <div className="col-span-4 text-center min-h-150 flex items-center justify-center">
           <p className="text-gray-500">No cars available</p>
@@ -38,7 +38,7 @@ const CarCard = ({ cars, onEdit }: CarCardProps) => {
         cars.map((car: Car) => (
           <div
             key={car.id}
-            className="card bg-base-100  shadow-md shadow-red-500/50 hover:shadow-xl"
+            className="card bg-base-100 w-96 shadow-md shadow-red-500/50 hover:shadow-xl"
           >
             <figure>
               <Image
