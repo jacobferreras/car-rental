@@ -105,13 +105,15 @@ const VehicleSection = () => {
           </label>
         </div>
 
-        <CarCards
-          cars={cars}
-          onEdit={(car) => {
-            setSelectedCar(car);
-            setOpenCarDetailsModal(true);
-          }}
-        />
+        <div className="flex flex-col justify-center items-center px-2 mb-4">
+          <CarCards
+            cars={cars}
+            onEdit={(car) => {
+              setSelectedCar(car);
+              setOpenCarDetailsModal(true);
+            }}
+          />
+        </div>
 
         <AddCarModal
           open={openModal}
