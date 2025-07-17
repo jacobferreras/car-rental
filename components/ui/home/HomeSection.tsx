@@ -5,6 +5,7 @@ import Steps from "@/components/ui/home/Steps";
 import Image from "next/image";
 import useCards from "@/hooks/useCards";
 import Car from "@/components/ui/home/HomeCarCard";
+import Link from "next/link";
 
 const HomeSection = () => {
   const { cars } = useCards({
@@ -32,7 +33,11 @@ const HomeSection = () => {
             WITH INSTADRIVE
           </h2>
           <div className="flex justify-center items-center mt-4">
-            <button className="btn bg-red-600 text-white z-20">Book Now</button>
+            <Link href="/vehicles">
+              <button className="btn bg-red-600 text-white z-20">
+                Book Now
+              </button>
+            </Link>
           </div>
         </div>
       </div>
@@ -56,9 +61,11 @@ const HomeSection = () => {
         </div>
 
         <div className="flex justify-center items-center my-8 mb-12">
-          <button className="btn bg-base-100 rounded-xl">
-            View All Vehicles <i className="bi bi-arrow-right"></i>
-          </button>
+          <Link href="/vehicles">
+            <button className="btn bg-base-100 rounded-xl">
+              View All Vehicles <i className="bi bi-arrow-right"></i>
+            </button>
+          </Link>
         </div>
       </div>
 
@@ -85,9 +92,11 @@ const HomeSection = () => {
             adventure.
           </div>
           <div className="flex justify-center items-center">
-            <button className="btn bg-base-100 rounded-xl">
-              Book Your Ride Now <i className="bi bi-arrow-right"></i>
-            </button>
+            <Link href="/vehicles">
+              <button className="btn bg-base-100 rounded-xl">
+                Book Your Ride Now <i className="bi bi-arrow-right"></i>
+              </button>
+            </Link>
           </div>
         </div>
       </div>
