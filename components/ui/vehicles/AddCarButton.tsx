@@ -24,7 +24,7 @@ export const AddCarButton = (props: AddCarButtonProps) => {
     <div>
       {isGranted ? (
         <button
-          className="btn bg-neutral-700 rounded-xl text-white"
+          className="btn bg-neutral-700 rounded-xl text-white md:text-sm w-25"
           onClick={props.onClick}
         >
           Add Car
