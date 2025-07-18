@@ -53,7 +53,7 @@ const VehicleSection = () => {
       </div>
 
       <div className="flex flex-col">
-        <div className="flex flex-col sm:flex-row xl:flex-row justify-center items-center xl:justify-end xl:items-end xl:gap-0 mb-8 gap-4 pt-12 xl:ml-auto xl:pr-4 xl:mt-24">
+        <div className="flex flex-col sm:flex-row xl:flex-row justify-center items-center xl:justify-end xl:items-end xl:gap-0 mb-8 gap-4 pt-12 xl:ml-auto xl:pr-6 xl:mt-24 md:px-4">
           <div className="mr-4">
             <AddCarButton onClick={() => setOpenModal(true)} />
           </div>
@@ -105,7 +105,7 @@ const VehicleSection = () => {
           </label>
         </div>
 
-        <div className="flex flex-col justify-center items-center px-2 mb-4">
+        <div className="flex flex-col justify-center items-center mb-4">
           <CarCards
             cars={cars}
             onEdit={(car) => {
