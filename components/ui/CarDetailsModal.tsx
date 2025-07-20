@@ -181,7 +181,7 @@ const CarDetailsModal = ({
               </button>
               <button
                 type="submit"
-                className="btn bg-base-300"
+                className="btn bg-red-600"
                 disabled={loading}
               >
                 {loading ? "Updating..." : "Update"}
