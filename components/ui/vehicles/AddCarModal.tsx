@@ -136,11 +136,7 @@ const AddCarModal = (props: AddCarModalProps) => {
             >
               Close
             </button>
-            <button
-              type="submit"
-              className="btn text-red-500"
-              disabled={loading}
-            >
+            <button type="submit" className="btn bg-red-600" disabled={loading}>
               {loading ? "Adding..." : "Add Car"}
             </button>
           </div>
