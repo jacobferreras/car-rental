@@ -138,7 +138,7 @@ const AddCarModal = (props: AddCarModalProps) => {
             </button>
             <button
               type="submit"
-              className="btn btn-primary"
+              className="btn text-red-500"
               disabled={loading}
             >
               {loading ? "Adding..." : "Add Car"}
