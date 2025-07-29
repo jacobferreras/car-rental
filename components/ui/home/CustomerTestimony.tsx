@@ -58,7 +58,7 @@ const StarRating = ({ rating }: { rating: number }) => {
 
 const CustomerTestimony = () => {
   return (
-    <div className="container mx-auto px-2 md:px-4 lg:px-8 xl:px-32">
+    <div className="container mx-auto px-2 md:px-4 lg:px-8 xl:px-32 ">
       <div className="text-2xl lg:text-5xl font-family-mono font-bold mb-4 md:mb-8 text-center">
         What our customers say
       </div>
@@ -92,7 +92,7 @@ const CustomerTestimony = () => {
             key={testimonial.id}
             className="flex justify-center items-center h-full"
           >
-            <div className="card w-auto max-w-md bg-base-100 card-md shadow-sm">
+            <div className="card w-auto max-w-md bg-[#1c2634] card-md shadow-sm">
               <div className="card-body">
                 <h2 className="card-title justify-center items-center text-center">
                   "{testimonial.quote}"
