@@ -70,7 +70,7 @@ const HomeSection = () => {
         <ServiceBenifits />
       </div>
 
-      <div className="flex flex-col justify-center items-center px-2 py-24 bg-[url('/Inside.png')] bg-cover bg-no-repeat bg-center mb-12 rounded-2xl ">
+      <div className="flex flex-col justify-center items-center px-2 py-24 bg-[url('/Inside.png')] bg-cover bg-no-repeat bg-center rounded-2xl ">
         <div className="text-2xl lg:text-5xl font-family-mono font-bold mb-4 md:mb-8 text-white pl-4">
           Simple Steps to Book Your Car
         </div>
@@ -79,12 +79,12 @@ const HomeSection = () => {
         </div>
       </div>
 
-      <div className="justify-center items-center py-24">
+      <div className="justify-center items-center py-24 bg-[#111827]">
         <CustomerTestimony />
       </div>
 
       <div>
-        <div className="flex flex-col justify-center items-center px-2 py-12 bg-red-600">
+        <div className="flex flex-col justify-center items-center px-2 py-12 bg-[#1d2735]">
           <div className="text-2xl lg:text-5xl font-family-mono font-bold mb-4 text-white pl-4">
             Ready to Experience Seamless Travel?
           </div>
