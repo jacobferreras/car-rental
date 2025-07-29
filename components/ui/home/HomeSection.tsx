@@ -42,7 +42,7 @@ const HomeSection = () => {
         </div>
       </div>
 
-      <div className="mb-12">
+      <div className="mb-12 bg-[#111827]">
         <div className="flex justify-center items-center text-2xl lg:text-5xl font-family-mono font-bold  text-white pl-4 pt-12">
           Why Choose InstaDrive?
         </div>
