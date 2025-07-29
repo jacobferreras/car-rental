@@ -8,7 +8,7 @@ interface OurteamCardProps {
 const OurteamCard = (props: OurteamCardProps) => {
   return (
     <>
-      <div className="card bg-base-100 w-auto lg:w-70 lg:h-130 shadow-sm">
+      <div className="card bg-base-100 w-auto lg:w-70 lg:h-140 shadow-sm">
         <figure className="px-10 pt-10">
           <img
             src={props.imageUrl}
