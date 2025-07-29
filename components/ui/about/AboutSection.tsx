@@ -7,7 +7,7 @@ import CoreValueCard from "./CoreValueCard";
 const AboutSection = () => {
   return (
     <>
-      <div className="hero min-h-100 md:min-h-150 relative mb-12">
+      <div className="hero min-h-100 md:min-h-150 relative">
         <Image
           src="/About.png"
           alt="Background"
@@ -15,7 +15,7 @@ const AboutSection = () => {
           className="object-cover z-0"
           priority
         />
-        <div className="absolute inset-0 bg-black opacity-60 z-0"></div>
+        <div className="absolute inset-0 bg-black opacity-10 z-0"></div>
         <div className="flex flex-col justify-center items-center absolute z-20">
           <h1 className="text-3xl md:text-5xl lg:text-7xl text-center text-white font-bold font-family-mono">
             ABOUT INSTADRIVE
