@@ -8,12 +8,12 @@ interface OurteamCardProps {
 const OurteamCard = (props: OurteamCardProps) => {
   return (
     <>
-      <div className="card bg-base-100 w-auto lg:w-120 xl:w-154 shadow-sm">
+      <div className="card bg-base-100 w-auto lg:w-70 lg:h-130 shadow-sm">
         <figure className="px-10 pt-10">
           <img
             src={props.imageUrl}
             alt={props.name}
-            className="rounded-full w-52 h-52 object-cover"
+            className="rounded-full w-52 h-52 object-cover lg:w-35 lg:h-35"
           />
         </figure>
         <div className="card-body items-center text-center">
