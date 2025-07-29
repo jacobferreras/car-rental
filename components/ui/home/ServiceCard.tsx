@@ -6,10 +6,10 @@ interface ServiceCardProps {
 
 const ServiceCard = (props: ServiceCardProps) => {
   return (
-    <div className="card bg-base-100 w-auto md:h-70  lg:h-90 md:w-106 shadow-md shadow-red-500/50 hover:shadow-xl">
+    <div className="card bg-[#303a49] w-auto md:h-70  lg:h-90 md:w-106 shadow-md shadow-blue-600/50 hover:shadow-xl">
       <figure className="px-10 pt-10">
         <i
-          className={`${props.icon} text-red-600 text-xl md:text-3xl xl:text-5xl`}
+          className={`${props.icon} text-[#93c5fd] text-xl md:text-3xl xl:text-5xl`}
         ></i>
       </figure>
       <div className="card-body items-center text-center">
