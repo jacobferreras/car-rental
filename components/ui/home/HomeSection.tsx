@@ -56,7 +56,7 @@ const HomeSection = () => {
 
         <div className="flex justify-center items-centers py-12">
           <Link href="/vehicles">
-            <button className="btn bg-base-100 rounded-xl">
+            <button className="btn bg-[#1d4ed8] rounded-xl">
               View All Vehicles <i className="bi bi-arrow-right"></i>
             </button>
           </Link>
@@ -94,7 +94,7 @@ const HomeSection = () => {
           </div>
           <div className="flex justify-center items-center">
             <Link href="/vehicles">
-              <button className="btn bg-base-100 rounded-xl">
+              <button className="btn bg-[#1d4ed8] rounded-xl">
                 Book Your Ride Now <i className="bi bi-arrow-right"></i>
               </button>
             </Link>
