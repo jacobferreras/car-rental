@@ -17,7 +17,7 @@ const HomeSection = () => {
 
   return (
     <div>
-      <div className="hero min-h-screen relative hero-overlay bg-overlay-opacity-60 mb-12">
+      <div className="hero min-h-screen relative hero-overlay bg-overlay-opacity-60 ">
         <Image
           src="/Car.png"
           alt="Background"
@@ -25,7 +25,8 @@ const HomeSection = () => {
           className="object-cover z-0"
           priority
         />
-        <div className="flex flex-col justify-center items-center absolute">
+        <div className="absolute inset-0 bg-[#0b0e13] opacity-70 z-0"></div>
+        <div className="flex flex-col justify-center items-center absolute z-20">
           <h1 className="text-3xl md:text-5xl lg:text-7xl text-center text-white font-family-mono font-bold z-20">
             DRIVE YOUR JOURNEY
           </h1>
@@ -42,14 +43,7 @@ const HomeSection = () => {
         </div>
       </div>
 
-      <div className="mb-12 bg-[#111827]">
-        <div className="flex justify-center items-center text-2xl lg:text-5xl font-family-mono font-bold  text-white pl-4 pt-12">
-          Why Choose InstaDrive?
-        </div>
-        <ServiceBenifits />
-      </div>
-
-      <div className="mb-12">
+      <div className="pt-16 bg-[#111827]">
         <div className="flex flex-col justify-center items-center px-2 mb-4">
           <h1 className="text-2xl lg:text-5xl text-white font-family-mono font-bold mb-4">
             Our Vehicles
@@ -60,13 +54,20 @@ const HomeSection = () => {
           <Car cars={cars} />
         </div>
 
-        <div className="flex justify-center items-center my-8 mb-12">
+        <div className="flex justify-center items-centers py-12">
           <Link href="/vehicles">
             <button className="btn bg-base-100 rounded-xl">
               View All Vehicles <i className="bi bi-arrow-right"></i>
             </button>
           </Link>
         </div>
+      </div>
+
+      <div className="bg-[#1f2937]">
+        <div className="flex justify-center items-center text-2xl lg:text-5xl font-family-mono font-bold  text-white pl-4 pt-12">
+          Why Choose InstaDrive?
+        </div>
+        <ServiceBenifits />
       </div>
 
       <div className="flex flex-col justify-center items-center px-2 py-24 bg-[url('/Inside.png')] bg-cover bg-no-repeat bg-center mb-12 rounded-2xl ">
