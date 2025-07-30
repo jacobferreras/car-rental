@@ -15,7 +15,7 @@ const AboutSection = () => {
           className="object-cover z-0"
           priority
         />
-        <div className="absolute inset-0 bg-black opacity-10 z-0"></div>
+        <div className="absolute inset-0 bg-[#0b0e13] opacity-70 z-0"></div>
         <div className="flex flex-col justify-center items-center absolute z-20">
           <h1 className="text-3xl md:text-5xl lg:text-7xl text-center text-white font-bold font-family-mono">
             ABOUT INSTADRIVE
@@ -26,7 +26,7 @@ const AboutSection = () => {
         </div>
       </div>
 
-      <div className="flex flex-col md:flex-row items-center justify-center py-10 mb-8 px-4 md:gap-x-12 gap-x-24">
+      <div className="flex flex-col md:flex-row items-center justify-center py-24 px-4 md:gap-x-12 gap-x-24 bg-[#111827]">
         <div>
           <h1 className="mb-4 text-xl md:text-2xl lg:text-4xl xl:text-5xl font-bold font-family-mono">
             Our Journey
@@ -53,7 +53,7 @@ const AboutSection = () => {
         </div>
       </div>
 
-      <div className="flex flex-col md:flex-row items-center justify-center py-10 px-4 gap-8 bg-[url('/Mission.png')] bg-cover bg-no-repeat bg-center">
+      {/* <div className="flex flex-col md:flex-row items-center justify-center py-10 px-4 gap-8 bg-[url('/Mission.png')] bg-cover bg-no-repeat bg-center">
         <MissionAndVisionCard
           title="Our Mission"
           description="To redefine the car rental experience by providing a seamless, transparent, and customer-centric service that exceeds expectations at every turn. We aim to empower our customers with the freedom to drive their dreams, backed by a commitment to quality and innovation."
@@ -64,9 +64,9 @@ const AboutSection = () => {
           description="To be the leading car rental service known for our exceptional quality, innovative solutions, and unwavering commitment to customer satisfaction. We envision a future where every journey is effortless, enjoyable, and tailored to the unique needs of our customers, setting new standards in the industry."
           iconClass="bi bi-eye-fill"
         />
-      </div>
+      </div> */}
 
-      <div className="flex flex-col items-center justify-center py-24 px-4 mb-12">
+      <div className="flex flex-col items-center justify-center py-24 px-4 bg-[#1f2937]">
         <h1 className="mb-8 text-xl md:text-2xl lg:text-5xl font-bold font-family-mono">
           Meet Our Team
         </h1>
@@ -127,7 +127,7 @@ const AboutSection = () => {
       </div>
 
       <div>
-        <div className="flex flex-col justify-center items-center px-2 py-12 bg-red-600">
+        <div className="flex flex-col justify-center items-center px-2 py-24 bg-red-600">
           <div className="text-2xl lg:text-5xl font-family-mono font-bold mb-4 text-white pl-4">
             Ready to Experience Seamless Travel?
           </div>
