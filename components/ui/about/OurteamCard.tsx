@@ -8,7 +8,7 @@ interface OurteamCardProps {
 const OurteamCard = (props: OurteamCardProps) => {
   return (
     <>
-      <div className="card bg-base-100 w-auto lg:w-70 lg:h-140 shadow-sm">
+      <div className="card bg-[#303a49] w-auto lg:w-70 lg:h-140 shadow-sm">
         <figure className="px-10 pt-10">
           <img
             src={props.imageUrl}
@@ -20,7 +20,7 @@ const OurteamCard = (props: OurteamCardProps) => {
           <h2 className="card-title font-bold font-family-mono">
             {props.name}
           </h2>
-          <p className="text-red-600 font-bold font-family-mono text-lg">
+          <p className="text-[#558cd2] font-bold font-family-mono text-lg">
             {props.position}
           </p>
           <p className="text-justify font-family-sans text-lg">
