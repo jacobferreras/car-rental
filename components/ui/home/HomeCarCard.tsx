@@ -49,17 +49,18 @@ const HomeCarCard = ({ cars, onEdit }: CarCardProps) => {
               />
             </figure>
 
-            <div className="card-body">
+            <div className="card-body justify-center">
               <h2 className="card-title sm:text-sm md:text-md lg:text-lg xl:text-xl font-bold">
                 {car.make} ({car.model})
-                <div className="badge bg-red-600 text-white">
-                  ₱{Number(car.pricePerDay)}/day
-                </div>
               </h2>
 
-              <div className="card-actions justify-start">
+              <h2 className="text-[#60a5fa] font-bold text-2xl justify-center">
+                ₱{Number(car.pricePerDay)}/day
+              </h2>
+
+              <div className="card-actions">
                 <button
-                  className="btn bg-base-300"
+                  className="btn bg-[#1d4ed8] w-60 rounded-lg"
                   onClick={() =>
                     router.push(`/vehicles/${encodeURIComponent(car.model)}`)
                   }
