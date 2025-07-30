@@ -57,16 +57,36 @@ const Navbar = () => {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1 font-bold font-family-sans">
           <li>
-            <Link href="/">Home</Link>
+            <Link
+              href="/"
+              className="hover:underline hover:text-blue-500 hover:bg-transparent"
+            >
+              Home
+            </Link>
           </li>
           <li>
-            <Link href="/vehicles">Vehicles</Link>
+            <Link
+              href="/vehicles"
+              className="hover:underline hover:text-blue-500 hover:bg-transparent"
+            >
+              Vehicles
+            </Link>
           </li>
           <li>
-            <Link href="/about">About Us</Link>
+            <Link
+              href="/about"
+              className="hover:underline hover:text-blue-500 hover:bg-transparent"
+            >
+              About Us
+            </Link>
           </li>
           <li>
-            <Link href="/contact">Contact Us</Link>
+            <Link
+              href="/contact"
+              className="hover:underline hover:text-blue-500 hover:bg-transparent"
+            >
+              Contact Us
+            </Link>
           </li>
         </ul>
       </div>
