@@ -7,10 +7,10 @@ interface CoreValueCardProps {
 const CoreValueCard = (props: CoreValueCardProps) => {
   return (
     <>
-      <div className="card bg-base-100 w-auto md:h-110 xl:h-90 lg:w-120 xl:w-100 shadow-sm">
+      <div className="card bg-[#303a49] w-auto md:h-110 xl:h-90 lg:w-120 xl:w-100 shadow-sm">
         <div className="card-header flex justify-center items-center pt-8">
           <i
-            className={`${props.iconClass} text-2xl text-red-600 md:text-3xl xl:text-5xl`}
+            className={`${props.iconClass} text-2xl text-[#93c5fd] md:text-3xl xl:text-5xl`}
           ></i>
         </div>
 
