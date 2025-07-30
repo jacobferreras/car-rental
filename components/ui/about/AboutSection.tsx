@@ -101,7 +101,7 @@ const AboutSection = () => {
       </div>
 
       <div className="bg-[url('/Corevalues.png')] bg-cover bg-no-repeat bg-center relative">
-        <div className="absolute inset-0 bg-black opacity-60 z-0"></div>
+        <div className="absolute inset-0 bg-[#0b0e13] opacity-60 z-0"></div>
         <div className="flex flex-col justify-center items-center relative pt-12 z-10">
           <h1 className="text-2xl lg:text-5xl font-family-mono font-bold mb-4 text-center absolute z-20">
             Our Core Values
@@ -127,7 +127,7 @@ const AboutSection = () => {
       </div>
 
       <div>
-        <div className="flex flex-col justify-center items-center px-2 py-24 bg-red-600">
+        <div className="flex flex-col justify-center items-center px-2 py-24 bg-[#1d2735]">
           <div className="text-2xl lg:text-5xl font-family-mono font-bold mb-4 text-white pl-4">
             Ready to Experience Seamless Travel?
           </div>
