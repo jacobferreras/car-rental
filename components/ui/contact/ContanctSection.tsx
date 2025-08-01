@@ -71,7 +71,7 @@ const ContanctSection = () => {
       </div>
 
       <div>
-        <div className="flex flex-col justify-center items-center px-2 py-24 bg-red-600">
+        <div className="flex flex-col justify-center items-center px-2 py-24 bg-[#18202f]">
           <div className="text-2xl lg:text-5xl font-family-mono font-bold mb-4 text-white pl-4">
             Need Quick Answers?
           </div>
