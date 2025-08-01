@@ -26,7 +26,7 @@ const ContanctSection = () => {
 
       <div className="px-4 py-24 lg:flex md:flex-row md:justify-center md:items-center md:gap-8 bg-[#111827]">
         <div className="pt-4">
-          <div className="card w-auto lg:w-96 h-112 bg-base-100 card-xl shadow-sm mb-4">
+          <div className="card w-auto lg:w-96 h-112 bg-[#303a49] card-xl shadow-sm mb-4">
             <div className="card-body">
               <h2 className="card-title">Contact Information</h2>
               <p className="text-lg font-bold">
