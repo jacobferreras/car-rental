@@ -19,7 +19,7 @@ const ServiceCard = (props: ServiceCardProps) => {
         >
           {props.title}
         </h1>
-        <p className="font-family-sans sm:text-sm md:text-md lg:text-lg xl:text-xl text-justify ">
+        <p className="font-family-sans sm:text-sm md:text-md lg:text-lg xl:text-xl">
           {props.description}
         </p>
       </div>
