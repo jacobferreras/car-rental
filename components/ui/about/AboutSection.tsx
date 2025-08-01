@@ -100,9 +100,9 @@ const AboutSection = () => {
         </div>
       </div>
 
-      <div className="bg-[url('/Corevalues.png')] bg-cover bg-no-repeat bg-center relative">
+      <div className="bg-[url('/Corevalues.png')] bg-cover bg-no-repeat bg-center relative py-24">
         <div className="absolute inset-0 bg-[#0b0e13] opacity-60 z-0"></div>
-        <div className="flex flex-col justify-center items-center relative pt-12 z-10">
+        <div className="flex flex-col justify-center items-center relative  z-10">
           <h1 className="text-2xl lg:text-5xl font-family-mono font-bold mb-4 text-center absolute z-20">
             Our Core Values
           </h1>
