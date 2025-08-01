@@ -136,7 +136,7 @@ const AboutSection = () => {
             adventure.
           </div>
           <div className="flex justify-center items-center">
-            <button className="btn bg-base-100 rounded-xl">
+            <button className="btn bg-[#1d4ed8] rounded-xl">
               Book Your Ride Now <i className="bi bi-arrow-right"></i>
             </button>
           </div>
