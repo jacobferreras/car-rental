@@ -13,7 +13,7 @@ const OurteamCard = (props: OurteamCardProps) => {
           <img
             src={props.imageUrl}
             alt={props.name}
-            className="rounded-full w-52 h-52 object-cover lg:w-35 lg:h-35"
+            className="rounded-full w-52 h-52 object-cover lg:w-35 lg:h-35 border-4 border-[#558cd2]"
           />
         </figure>
         <div className="card-body items-center text-center">
@@ -23,9 +23,7 @@ const OurteamCard = (props: OurteamCardProps) => {
           <p className="text-[#558cd2] font-bold font-family-mono text-lg">
             {props.position}
           </p>
-          <p className="text-justify font-family-sans text-lg">
-            {props.description}
-          </p>
+          <p className="font-family-sans text-lg">{props.description}</p>
         </div>
       </div>
     </>
