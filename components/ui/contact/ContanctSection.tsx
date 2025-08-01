@@ -4,7 +4,7 @@ import ContactForm from "./ContactForm";
 const ContanctSection = () => {
   return (
     <>
-      <div className="hero min-h-100 md:min-h-150 relative mb-12">
+      <div className="hero min-h-100 md:min-h-150 relative">
         <Image
           src="/Contact.png"
           alt="Background"
@@ -12,7 +12,7 @@ const ContanctSection = () => {
           className="object-cover z-0"
           priority
         />
-        <div className="absolute inset-0 bg-black opacity-60 z-0"></div>
+        <div className="absolute inset-0 bg-[#0b0e13] opacity-70 z-0"></div>
         <div className="flex flex-col justify-center items-center absolute z-20">
           <h1 className="text-3xl md:text-5xl lg:text-7xl text-center text-white font-family-mono font-bold">
             GET IN TOUCH
@@ -24,7 +24,7 @@ const ContanctSection = () => {
         </div>
       </div>
 
-      <div className="px-4 mb-12 lg:flex md:flex-row md:justify-center md:items-center md:gap-8">
+      <div className="px-4 py-24 lg:flex md:flex-row md:justify-center md:items-center md:gap-8 bg-[#111827]">
         <div className="pt-4">
           <div className="card w-auto lg:w-96 h-112 bg-base-100 card-xl shadow-sm mb-4">
             <div className="card-body">
@@ -71,7 +71,7 @@ const ContanctSection = () => {
       </div>
 
       <div>
-        <div className="flex flex-col justify-center items-center px-2 py-12 bg-red-600">
+        <div className="flex flex-col justify-center items-center px-2 py-24 bg-red-600">
           <div className="text-2xl lg:text-5xl font-family-mono font-bold mb-4 text-white pl-4">
             Need Quick Answers?
           </div>
