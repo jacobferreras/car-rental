@@ -31,7 +31,7 @@ const ContanctSection = () => {
               <h2 className="card-title">Contact Information</h2>
               <p className="text-lg font-bold">
                 <span className="inline-flex items-center mr-2">
-                  <i className="bi bi-geo-alt text-red-600"></i>
+                  <i className="bi bi-geo-alt text-[#93c5fd]"></i>
                 </span>
                 Our Office Addres
               </p>
@@ -39,7 +39,7 @@ const ContanctSection = () => {
 
               <p className="text-lg font-bold">
                 <span className="inline-flex items-center mr-2">
-                  <i className="bi bi-telephone text-red-600"></i>
+                  <i className="bi bi-telephone text-[#93c5fd]"></i>
                 </span>
                 Phone Number
               </p>
@@ -54,7 +54,7 @@ const ContanctSection = () => {
 
               <p className="text-lg font-bold">
                 <span className="inline-flex items-center mr-2">
-                  <i className="bi bi-envelope text-red-600"></i>
+                  <i className="bi bi-envelope text-[#93c5fd]"></i>
                 </span>
                 Email Address
               </p>
