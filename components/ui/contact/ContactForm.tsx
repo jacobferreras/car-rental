@@ -14,7 +14,7 @@ const ContactForm = () => {
   return (
     <>
       <form>
-        <fieldset className="fieldset bg-[#303a49] border-base-300 rounded-box w-auto md:w-100 lg:w-166 xl:w-224 border p-4 shadow-md shadow-red-500/50 hover:shadow-xl transition-shadow duration-300 ease-in-out">
+        <fieldset className="fieldset bg-[#303a49] border-base-300 rounded-box w-auto md:w-100 lg:w-166 xl:w-224 border p-4 shadow-md shadow-blue-500/50 hover:shadow-xl transition-shadow duration-300 ease-in-out">
           <label className="label">Name</label>
           <input
             type="text"
