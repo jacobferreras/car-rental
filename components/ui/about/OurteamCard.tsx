@@ -17,13 +17,22 @@ const OurteamCard = (props: OurteamCardProps) => {
           />
         </figure>
         <div className="card-body items-center text-center">
-          <h2 className="card-title font-bold font-family-mono">
-            {props.name}
-          </h2>
-          <p className="text-[#558cd2] font-bold font-family-mono text-lg">
-            {props.position}
-          </p>
-          <p className="font-family-sans text-lg">{props.description}</p>
+          <div>
+            {" "}
+            <h2 className="card-title font-bold font-family-mono">
+              {props.name}
+            </h2>
+          </div>
+
+          <div className="mb-4">
+            <p className="text-[#558cd2] font-bold font-family-mono text-lg">
+              {props.position}
+            </p>
+          </div>
+
+          <div>
+            <p className="font-family-sans text-lg">{props.description}</p>
+          </div>
         </div>
       </div>
     </>
