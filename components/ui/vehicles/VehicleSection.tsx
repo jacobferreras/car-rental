@@ -41,7 +41,7 @@ const VehicleSection = () => {
           className="object-cover z-0"
           priority
         />
-        <div className="absolute inset-0 bg-black opacity-60 z-0"></div>
+        <div className="absolute inset-0 bg-[#0b0e13] opacity-70 z-0"></div>
         <div className="flex flex-col justify-center items-center absolute z-20">
           <h1 className="text-3xl md:text-5xl lg:text-7xl text-center text-white font-bold font-family-mono">
             ABOUT INSTADRIVE
@@ -52,7 +52,7 @@ const VehicleSection = () => {
         </div>
       </div>
 
-      <div className="flex flex-col">
+      <div className="flex flex-col bg-[#111827]">
         <div className="flex flex-col sm:flex-row xl:flex-row justify-center items-center xl:justify-end xl:items-end xl:gap-0 mb-8 gap-4 pt-12 xl:ml-auto xl:pr-6 xl:mt-24 md:px-4">
           <div className="mr-4">
             <AddCarButton onClick={() => setOpenModal(true)} />
