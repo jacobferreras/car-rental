@@ -38,7 +38,7 @@ const CarCard = ({ cars, onEdit }: CarCardProps) => {
         cars.map((car: Car) => (
           <div
             key={car.id}
-            className="card bg-base-100 shadow-md shadow-red-500/50 hover:shadow-xl"
+            className="card bg-[#1c2634] shadow-md shadow-blue-500/50 hover:shadow-xl"
           >
             <figure>
               <Image
@@ -58,17 +58,10 @@ const CarCard = ({ cars, onEdit }: CarCardProps) => {
                 </div>
               </h2>
 
-              <div className="card-actions justify-start">
-                <div className="badge badge-outline">{car.year}</div>
-                <div className="badge badge-outline">{car.transmission}</div>
-                <div className="badge badge-outline">{car.fuelType}</div>
-                <div className="badge badge-outline">{car.seats} Seater</div>
-              </div>
-
               <div className="card-actions justify-end">
                 <EditCarDetailsButton onClick={() => onEdit && onEdit(car)} />
                 <button
-                  className="btn bg-base-300"
+                  className="btn bg-[#1d4ed8]"
                   onClick={() =>
                     router.push(`/vehicles/${encodeURIComponent(car.model)}`)
                   }
