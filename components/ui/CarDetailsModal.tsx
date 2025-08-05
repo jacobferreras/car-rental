@@ -2,7 +2,6 @@
 import { Decimal } from "@prisma/client/runtime/library";
 import { useState, useEffect, use } from "react";
 import { updateCar } from "@/services/updateCar";
-import { Car } from "@/app/generated/prisma";
 
 interface CarDetailsModalProps {
   open: boolean;
@@ -16,7 +15,7 @@ interface CarDetailsModalProps {
     transmission: string;
     imageUrl: string | null;
     fuelType: string;
-    seats: number;
+    type: string;
     pricePerDay: number | Decimal;
     status: string;
   } | null;
@@ -35,7 +34,7 @@ const CarDetailsModal = ({
     make: car?.make || "",
     model: car?.model || "",
     year: car?.year || 2023,
-    seats: car?.seats || 4,
+    type: car?.type || "",
     transmission: car?.transmission || "Automatic",
     status: car?.status || "AVAILABLE",
     pricePerDay: car?.pricePerDay || 0,
@@ -49,7 +48,7 @@ const CarDetailsModal = ({
         make: car.make,
         model: car.model,
         year: car.year,
-        seats: car.seats,
+        type: car.type,
         transmission: car.transmission,
         status: car.status,
         pricePerDay: car.pricePerDay,
@@ -78,7 +77,7 @@ const CarDetailsModal = ({
         make: form.make,
         model: form.model,
         year: Number(form.year),
-        seats: Number(form.seats),
+        type: form.type,
         transmission: form.transmission,
         status: form.status,
         pricePerDay: Number(form.pricePerDay),
@@ -94,7 +93,6 @@ const CarDetailsModal = ({
       setError("Failed to update car details. Please try again.");
     }
   };
-  console.log(form.make);
 
   return (
     <div className={`modal ${open ? "modal-open" : ""}`}>
@@ -124,22 +122,40 @@ const CarDetailsModal = ({
               min={1900}
               className="input rounded-md font-normal w-80 bg-neutral-700 text-white"
             />
-            <input
-              name="seats"
-              value={form.seats}
+
+            <select
+              name="type"
+              value={form.type}
               onChange={handleChange}
-              type="number"
-              min={1}
-              className="input rounded-md font-normal w-80 bg-neutral-700 text-white"
-            />
-            <input
+              required
+              className="select rounded-md font-normal mr-5 w-80 bg-neutral-700 text-white"
+            >
+              <option value="" className="text-white">
+                Type
+              </option>
+              <option value="SEDAN">Sedan</option>
+              <option value="SUV">SUV</option>
+              <option value="HATCHBACK">Hatchback</option>
+              <option value="COUPE">Coupe</option>
+              <option value="CONVERTIBLE">Convertible</option>
+              <option value="PICKUP">Pickup</option>
+              <option value="VAN">Van</option>
+            </select>
+
+            <select
               name="transmission"
               value={form.transmission}
               onChange={handleChange}
-              type="text"
-              placeholder="Transmission"
-              className="input rounded-md font-normal w-80 bg-neutral-700 text-white"
-            />
+              required
+              className="select rounded-md font-normal mr-5 w-80 bg-neutral-700 text-white"
+            >
+              <option value="" className="text-white">
+                Transmission
+              </option>
+              <option value="MANUAL">Manual</option>
+              <option value="AUTOMATIC">Automatic</option>
+            </select>
+
             <select
               name="status"
               value={form.status}
@@ -155,6 +171,7 @@ const CarDetailsModal = ({
               <option value="UNAVAILABLE">Unavailable</option>
               <option value="MAINTENANCE">Maintenance</option>
             </select>
+
             <input
               name="pricePerDay"
               value={form.pricePerDay.toString()}
@@ -163,13 +180,23 @@ const CarDetailsModal = ({
               min={0}
               className="input rounded-md font-normal w-80 bg-neutral-700 text-white"
             />
-            <input
+
+            <select
               name="fuelType"
               value={form.fuelType}
               onChange={handleChange}
-              type="text"
-              className="input rounded-md font-normal w-80 bg-neutral-700 text-white"
-            />
+              required
+              className="select rounded-md font-normal mr-5 w-80 bg-neutral-700 text-white"
+            >
+              <option value="" className="text-white">
+                Fuel Type
+              </option>
+              <option value="PETROL">Petrol</option>
+              <option value="DIESEL">Diesel</option>
+              <option value="ELECTRIC">Electric</option>
+              <option value="HYBRID">Hybrid</option>
+            </select>
+
             <div className="flex flex-row gap-2 mt-2">
               <button
                 type="button"
