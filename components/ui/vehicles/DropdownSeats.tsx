@@ -13,12 +13,15 @@ const Dropdown = (props: DropdownProps) => {
       className="select rounded-xl font-normal mr-5 w-50 bg-neutral-700 text-white"
     >
       <option value="" className="text-white">
-        All Seats
+        Car Type
       </option>
-      <option value="2">2 Seater</option>
-      <option value="4">4 Seater</option>
-      <option value="5">5 Seater</option>
-      <option value="7">7 Seater</option>
+      <option value="SEDAN">Sedan</option>
+      <option value="SUV">SUV</option>
+      <option value="HATCHBACK">Hatchback</option>
+      <option value="COUPE">Coupe</option>
+      <option value="CONVERTIBLE">Convertible</option>
+      <option value="PICKUP">Pickup</option>
+      <option value="VAN">Van</option>
     </select>
   );
 };
