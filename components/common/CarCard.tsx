@@ -1,7 +1,12 @@
 import Image from "next/image";
 import EditCarDetailsButton from "../ui/EditCarDetailsButton";
 import { Decimal } from "@prisma/client/runtime/library";
-import { CarStatus } from "../../app/generated/prisma";
+import {
+  CarStatus,
+  CarType,
+  FuelType,
+  Transmission,
+} from "../../app/generated/prisma";
 import { useRouter } from "next/navigation";
 
 interface Car {
@@ -13,9 +18,9 @@ interface Car {
   pricePerDay: Decimal;
   imageUrl: string;
   status: CarStatus;
-  transmission: string;
-  fuelType: string;
-  seats: number;
+  transmission: Transmission;
+  fuelType: FuelType;
+  type: CarType;
   createdAt: Date;
   updatedAt: Date;
 }
