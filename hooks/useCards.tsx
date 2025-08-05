@@ -3,7 +3,7 @@ import { useState, useEffect, use } from "react";
 import { fetchCars } from "@/services/fetchCars";
 
 interface Car {
-  seats?: number;
+  seats?: string;
   transmission?: string;
   limit?: number;
   page?: number;
