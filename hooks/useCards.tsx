@@ -3,7 +3,7 @@ import { useState, useEffect, use } from "react";
 import { fetchCars } from "@/services/fetchCars";
 
 interface Car {
-  seats?: string;
+  type?: string;
   transmission?: string;
   limit?: number;
   page?: number;
@@ -30,7 +30,7 @@ const useCards = (props: Car) => {
     getCars();
   }, [
     props.transmission,
-    props.seats,
+    props.type,
     props.limit,
     props.page,
     props.search,
