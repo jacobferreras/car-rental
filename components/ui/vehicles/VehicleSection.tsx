@@ -21,9 +21,9 @@ const VehicleSection = () => {
   const [transmission, setTransmission] = useState("");
   const [search, setSearch] = useState("");
   const debounceSearch = useDebounce(search, 400);
-  const [seats, setSeats] = useState("");
+  const [type, setType] = useState("");
   const { cars, totalpages } = useCards({
-    seats,
+    type,
     transmission,
     limit: 8,
     page: currentPage,
@@ -58,9 +58,9 @@ const VehicleSection = () => {
             <AddCarButton onClick={() => setOpenModal(true)} />
           </div>
           <Dropdown
-            value={seats}
+            value={type}
             onChange={(e) => {
-              setSeats(e.target.value);
+              setType(e.target.value);
               setCurrentPage(1);
             }}
           />
