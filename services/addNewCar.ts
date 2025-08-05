@@ -4,7 +4,7 @@ export const addNewCar = async (carData: {
   make: string;
   model: string;
   year: string | number;
-  seats: string | number;
+  type: string;
   transmission: string;
   imageUrl: string;
   status: string;
@@ -15,7 +15,7 @@ export const addNewCar = async (carData: {
     const payload = {
       ...carData,
       year: Number(carData.year),
-      seats: Number(carData.seats),
+      type: carData.type,
       pricePerDay: Number(carData.pricePerDay),
     };
     const response = await axios.post("/api/cars", payload);

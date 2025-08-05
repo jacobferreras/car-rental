@@ -6,7 +6,7 @@ export const updateCar = async (
     make: string;
     model: string;
     year: string | number;
-    seats: string | number;
+    type: string;
     transmission: string;
     imageUrl: string;
     status: string;
@@ -19,7 +19,7 @@ export const updateCar = async (
       id: carId,
       ...carData,
       year: Number(carData.year),
-      seats: Number(carData.seats),
+      type: carData.type,
       pricePerDay: Number(carData.pricePerDay),
     };
     const response = await axios.patch(`/api/cars`, payload);
