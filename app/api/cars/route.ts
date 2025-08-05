@@ -1,4 +1,4 @@
-import { PrismaClient } from "../../generated/prisma/client";
+import { CarType, PrismaClient } from "../../generated/prisma/client";
 
 const prisma = new PrismaClient();
 
@@ -21,15 +21,18 @@ export async function GET(req: Request) {
 
     const limit = parseInt(searchParams.get("limit") || "10", 10);
     const page = parseInt(searchParams.get("page") || "1", 10);
-    const seater = parseInt(searchParams.get("seats") || "0", 10);
+    const type = searchParams.get("type") || "";
     const transmission = searchParams.get("transmission") || "";
     const search = searchParams.get("search") || "";
 
     const skip = (page - 1) * limit;
 
     const where: any = {};
-    if (seater > 0) {
-      where.seats = seater;
+    if (type) {
+      const validCarTypes = Object.values(CarType);
+      if (validCarTypes.includes(type.toUpperCase() as CarType)) {
+        where.type = type.toUpperCase() as CarType;
+      }
     }
     if (transmission) {
       where.transmission = { equals: transmission, mode: "insensitive" };
@@ -105,8 +108,8 @@ export async function POST(req: Request) {
         model: String(model).trim(),
         description: String(description).trim(),
         year: Number(year),
-        seats: Number(seats),
-        transmission: String(transmission).trim(),
+        type: CarType.SUV, // Default type, can be changed based on your logic
+        transmission,
         imageUrl: String(imageUrl).trim(),
         status,
         pricePerDay: parseFloat(pricePerDay),
