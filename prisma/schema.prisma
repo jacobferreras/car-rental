@@ -17,9 +17,9 @@ model Car {
   pricePerDay Decimal
   imageUrl    String?
   status      CarStatus  @default(AVAILABLE)
-  transmission String
-  fuelType     String
-  seats        Int
+  transmission Transmission @default(MANUAL)
+  fuelType     FuelType   @default(PETROL)
+  type        CarType @default(SEDAN)
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
 }
@@ -29,4 +29,26 @@ enum CarStatus {
   RENTED
   MAINTENANCE
   UNAVAILABLE
+}
+
+enum FuelType {
+  PETROL
+  DIESEL
+  ELECTRIC
+  HYBRID
+}
+
+enum Transmission {
+  MANUAL
+  AUTOMATIC
+}
+
+enum CarType {
+  SEDAN
+  SUV
+  HATCHBACK
+  COUPE
+  CONVERTIBLE
+  PICKUP
+  VAN
 }
