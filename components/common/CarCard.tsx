@@ -56,12 +56,15 @@ const CarCard = ({ cars, onEdit }: CarCardProps) => {
             </figure>
 
             <div className="card-body">
-              <h2 className="card-title">
+              <h2 className="card-title sm:text-sm md:text-md lg:text-lg xl:text-xl font-bold">
                 {car.make} ({car.model})
-                <div className="badge bg-red-600">
-                  ₱{Number(car.pricePerDay)}/day
-                </div>
               </h2>
+
+              <h2 className="text-[#60a5fa] font-bold text-2xl justify-center">
+                ₱{Number(car.pricePerDay)}/day
+              </h2>
+
+              <p className="text-gray-500">{car.description}</p>
 
               <div className="card-actions justify-end">
                 <EditCarDetailsButton onClick={() => onEdit && onEdit(car)} />
