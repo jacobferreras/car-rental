@@ -1,4 +1,8 @@
-import { CarType, PrismaClient } from "../../generated/prisma/client";
+import {
+  CarType,
+  PrismaClient,
+  Transmission,
+} from "../../generated/prisma/client";
 
 const prisma = new PrismaClient();
 
@@ -30,12 +34,15 @@ export async function GET(req: Request) {
     const where: any = {};
     if (type) {
       const validCarTypes = Object.values(CarType);
-      if (validCarTypes.includes(type.toUpperCase() as CarType)) {
+      if (validCarTypes.includes(type.toUpperCase() as CarType))
         where.type = type.toUpperCase() as CarType;
-      }
     }
     if (transmission) {
-      where.transmission = { equals: transmission, mode: "insensitive" };
+      const validTransmissions = Object.values(Transmission);
+      if (
+        validTransmissions.includes(transmission.toUpperCase() as Transmission)
+      )
+        where.transmission = transmission.toUpperCase() as Transmission;
     }
     if (search) {
       where.OR = [
