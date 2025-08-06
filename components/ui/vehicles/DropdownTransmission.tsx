@@ -15,8 +15,8 @@ const Dropdown = (props: DropdownProps) => {
       <option value="" className="text-white">
         Select Transmission
       </option>
-      <option value="Manual">Manual Transmission</option>
-      <option value="Automatic">Automatic Transmission</option>
+      <option value="MANUAL">Manual Transmission</option>
+      <option value="AUTOMATIC">Automatic Transmission</option>
     </select>
   );
 };
