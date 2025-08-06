@@ -58,6 +58,8 @@ const HomeCarCard = ({ cars, onEdit }: CarCardProps) => {
                 ₱{Number(car.pricePerDay)}/day
               </h2>
 
+              <p className="text-gray-500">{car.description}</p>
+
               <div className="card-actions">
                 <button
                   className="btn bg-[#1d4ed8] w-60 rounded-lg"
