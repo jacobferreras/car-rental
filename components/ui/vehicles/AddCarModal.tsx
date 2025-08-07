@@ -17,7 +17,7 @@ const AddCarModal = (props: AddCarModalProps) => {
 
   return (
     <div className={`modal ${props.open ? "modal-open" : ""}`}>
-      <div className="modal-box">
+      <div className="modal-box bg-[#1c2634]">
         <h3 className="font-bold text-lg">Please put the car details</h3>
         <form className="flex flex-col gap-2" onSubmit={handleSubmit}>
           <input
@@ -58,7 +58,7 @@ const AddCarModal = (props: AddCarModalProps) => {
           />
           <select
             name="seats"
-            value={form.seats}
+            value={form.type}
             onChange={handleChange}
             required
             className="select rounded-md font-normal mr-5 w-auto bg-neutral-700 text-white"
@@ -136,7 +136,11 @@ const AddCarModal = (props: AddCarModalProps) => {
             >
               Close
             </button>
-            <button type="submit" className="btn bg-red-600" disabled={loading}>
+            <button
+              type="submit"
+              className="btn bg-[#1d4ed8]"
+              disabled={loading}
+            >
               {loading ? "Adding..." : "Add Car"}
             </button>
           </div>
