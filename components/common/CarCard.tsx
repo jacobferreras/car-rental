@@ -72,7 +72,7 @@ const CarCard = ({ cars, onEdit }: CarCardProps) => {
                 <p className="text-gray-500">{car.description}</p>
               </div>
 
-              <div className="justify-start">
+              <div className="justify-start flex gap-2">
                 <EditCarDetailsButton onClick={() => onEdit && onEdit(car)} />
                 <button
                   className="btn bg-[#1d4ed8]"
