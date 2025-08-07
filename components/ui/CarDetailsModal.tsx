@@ -96,7 +96,7 @@ const CarDetailsModal = ({
 
   return (
     <div className={`modal ${open ? "modal-open" : ""}`}>
-      <div className="modal-box">
+      <div className="modal-box bg-[#1c2634]">
         <h3 className="font-bold text-lg mb-4">Edit Car Details</h3>
         {car ? (
           <form onSubmit={handleSubmit} className="flex flex-col gap-2 mb-4">
@@ -208,7 +208,7 @@ const CarDetailsModal = ({
               </button>
               <button
                 type="submit"
-                className="btn bg-red-600"
+                className="btn bg-[#1d4ed8]"
                 disabled={loading}
               >
                 {loading ? "Updating..." : "Update"}
