@@ -83,7 +83,7 @@ export async function POST(req: Request) {
       model,
       description,
       year,
-      seats,
+      type,
       transmission,
       imageUrl,
       status,
@@ -96,7 +96,7 @@ export async function POST(req: Request) {
       !model ||
       !description ||
       !year ||
-      !seats ||
+      !type ||
       !transmission ||
       !imageUrl ||
       !status ||
