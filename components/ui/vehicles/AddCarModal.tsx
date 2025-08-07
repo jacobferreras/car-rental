@@ -65,7 +65,7 @@ const AddCarModal = (props: AddCarModalProps) => {
             value={form.type}
             onChange={handleChange}
             required
-            className="select rounded-md font-normal mr-5 w-80 bg-neutral-700 text-white"
+            className="select rounded-md font-normal mr-5 w-auto bg-neutral-700 text-white"
           >
             <option value="" className="text-white">
               Type
@@ -89,9 +89,10 @@ const AddCarModal = (props: AddCarModalProps) => {
             <option value="" className="text-white">
               Select Transmission
             </option>
-            <option value="manual">Manual</option>
-            <option value="automatic">Automatic</option>
+            <option value="MANUAL">Manual</option>
+            <option value="AUTOMATIC">Automatic</option>
           </select>
+
           <input
             name="imageUrl"
             value={form.imageUrl}
@@ -101,6 +102,7 @@ const AddCarModal = (props: AddCarModalProps) => {
             required
             className="input rounded-m font-normal mr-5 w-auto bg-neutral-700 text-white"
           />
+
           <select
             name="status"
             value={form.status}
@@ -116,6 +118,7 @@ const AddCarModal = (props: AddCarModalProps) => {
             <option value="UNAVAILABLE">Unavailable</option>
             <option value="MAINTENANCE">Maintenance</option>
           </select>
+
           <input
             name="pricePerDay"
             value={form.pricePerDay}
@@ -125,15 +128,23 @@ const AddCarModal = (props: AddCarModalProps) => {
             required
             className="input rounded-md font-normal mr-5 w-auto bg-neutral-700 text-white"
           />
-          <input
+
+          <select
             name="fuelType"
             value={form.fuelType}
             onChange={handleChange}
-            type="text"
-            placeholder="Fuel Type"
             required
-            className="input rounded-md font-normal mr-5 w-auto bg-neutral-700 text-white"
-          />
+            className="select rounded-md font-normal mr-5 w-auto bg-neutral-700 text-white"
+          >
+            <option value="" className="text-white">
+              Select Fuel Type
+            </option>
+            <option value="PETROL">Petrol</option>
+            <option value="DIESEL">Diesel</option>
+            <option value="ELECTRIC">Electric</option>
+            <option value="HYBRID">Hybrid</option>
+          </select>
+
           {error && <div className="text-red-500">{error}</div>}
           <div className="modal-action">
             <button
