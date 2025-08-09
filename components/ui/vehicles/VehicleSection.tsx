@@ -8,7 +8,7 @@ import Pagination from "@/components/ui/vehicles/Pagination";
 import useDebounce from "@/hooks/useDebounce";
 import { AddCarButton } from "@/components/ui/vehicles/AddCarButton";
 import AddCarModal from "@/components/ui/vehicles/AddCarModal";
-import CarDetailsModal from "@/components/ui/CarDetailsModal";
+import CarDetailsModal from "@/components/ui/vehicles/CarDetailsModal";
 import { Car } from "../../../app/generated/prisma";
 import Image from "next/image";
 

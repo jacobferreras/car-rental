@@ -1,5 +1,5 @@
 import Image from "next/image";
-import EditCarDetailsButton from "../ui/EditCarDetailsButton";
+import EditCarDetailsButton from "../ui/vehicles/EditCarDetailsButton";
 import { Decimal } from "@prisma/client/runtime/library";
 import {
   CarStatus,
