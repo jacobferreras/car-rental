@@ -57,7 +57,7 @@ const CarCard = ({ cars, onEdit }: CarCardProps) => {
 
             <div className="card-body justify-items-start">
               <div>
-                <h2 className="card-title sm:text-sm md:text-md lg:text-lg xl:text-xl font-bold">
+                <h2 className="card-title sm:text-sm md:text-md lg:text-lg xl:text-3xl font-bold">
                   {car.make} ({car.model})
                 </h2>
               </div>
