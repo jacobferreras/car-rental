@@ -146,7 +146,7 @@ const AddCarModal = (props: AddCarModalProps) => {
           </select>
 
           {error && <div className="text-red-500">{error}</div>}
-          <div className="modal-action">
+          <div className="modal-action justify-start">
             <button
               type="button"
               className="btn"
