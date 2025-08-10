@@ -6,6 +6,8 @@ import Image from "next/image";
 import useCards from "@/hooks/useCards";
 import Car from "@/components/ui/home/HomeCarCard";
 import Link from "next/link";
+import Home from "@/app/page";
+import HomeBookingCard from "./HomeBookingCard";
 
 const HomeSection = () => {
   const { cars } = useCards({
@@ -34,11 +36,7 @@ const HomeSection = () => {
             WITH INSTADRIVE
           </h2>
           <div className="flex justify-center items-center mt-4">
-            <Link href="/vehicles">
-              <button className="btn bg-red-600 text-white z-20">
-                Book Now
-              </button>
-            </Link>
+            <HomeBookingCard />
           </div>
         </div>
       </div>
