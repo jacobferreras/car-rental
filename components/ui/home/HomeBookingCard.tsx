@@ -3,7 +3,7 @@ import React from "react";
 
 const HomeBookingCard = () => {
   return (
-    <div className="card card-border bg-[#090b0f] bg-opacity-50 w-96">
+    <div className="card card-border bg-[#090b0f] bg-opacity-50 w-auto lg:w-106">
       <div className="card-body">
         <h1 className="card-title justify-center text-[#5897e4]">
           Find Your Perfect Car
@@ -16,6 +16,10 @@ const HomeBookingCard = () => {
           <div>
             <h2 className="text-[#5897e4]">Drop-off Date</h2>
             <DateInput />
+          </div>
+
+          <div className="pt-5">
+            <button className="btn bg-[#1d4ed8]">Medium</button>
           </div>
         </div>
       </div>
