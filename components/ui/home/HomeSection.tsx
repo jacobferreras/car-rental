@@ -1,7 +1,6 @@
 "use client";
 import ServiceBenifits from "@/components/ui/home/ServiceBenifits";
 import CustomerTestimony from "@/components/ui/home/CustomerTestimony";
-import Steps from "@/components/ui/home/Steps";
 import Image from "next/image";
 import useCards from "@/hooks/useCards";
 import Car from "@/components/ui/home/HomeCarCard";
@@ -35,7 +34,7 @@ const HomeSection = () => {
           <h2 className="text-3xl md:text-5xl lg:text-6xl text-center text-white font-family-mono font-bold z-20">
             WITH INSTADRIVE
           </h2>
-          <div className="flex justify-center items-center mt-4">
+          <div className="flex justify-center items-center mt-4 px-4">
             <HomeBookingCard />
           </div>
         </div>
