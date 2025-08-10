@@ -51,7 +51,7 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl">daisyUI</a>
+        <a className="btn btn-ghost text-xl">InstaDrive</a>
       </div>
 
       <div className="navbar-center hidden lg:flex">
@@ -59,7 +59,7 @@ const Navbar = () => {
           <li>
             <Link
               href="/"
-              className="hover:underline hover:text-blue-500 hover:bg-transparent text-lg"
+              className="hover:underline hover:text-blue-500 hover:bg-transparent text-md"
             >
               Home
             </Link>
@@ -67,7 +67,7 @@ const Navbar = () => {
           <li>
             <Link
               href="/vehicles"
-              className="hover:underline hover:text-blue-500 hover:bg-transparent text-lg"
+              className="hover:underline hover:text-blue-500 hover:bg-transparent text-md"
             >
               Vehicles
             </Link>
@@ -75,7 +75,7 @@ const Navbar = () => {
           <li>
             <Link
               href="/about"
-              className="hover:underline hover:text-blue-500 hover:bg-transparent text-lg"
+              className="hover:underline hover:text-blue-500 hover:bg-transparent text-md"
             >
               About Us
             </Link>
@@ -83,7 +83,7 @@ const Navbar = () => {
           <li>
             <Link
               href="/contact"
-              className="hover:underline hover:text-blue-500 hover:bg-transparent text-lg"
+              className="hover:underline hover:text-blue-500 hover:bg-transparent text-md"
             >
               Contact Us
             </Link>
