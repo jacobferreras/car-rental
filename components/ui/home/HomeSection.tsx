@@ -9,7 +9,7 @@ import Link from "next/link";
 
 const HomeSection = () => {
   const { cars } = useCards({
-    seats: 0,
+    type: "",
     transmission: "",
     limit: 8,
     page: 1,
@@ -19,7 +19,7 @@ const HomeSection = () => {
     <div>
       <div className="hero min-h-screen relative hero-overlay bg-overlay-opacity-60 ">
         <Image
-          src="/Car.png"
+          src="/HomeBg.png"
           alt="Background"
           fill
           className="object-cover z-0"
