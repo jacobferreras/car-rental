@@ -35,7 +35,7 @@ const HomeSection = () => {
             Experience unparalleled luxury and performance with our exclusive
             fleet of premium vehicles, curated for the discerning driver.
           </p>
-          <div className="flex justify-center items-center mt-4 px-4">
+          <div className="flex justify-center items-center mt-4">
             <HomeBookingCard />
           </div>
         </div>
