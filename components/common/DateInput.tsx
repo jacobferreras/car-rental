@@ -5,7 +5,7 @@ const DateInput = () => {
     <div>
       <input
         type="date"
-        className="input input-bordered w-full sm:w-54 lg:w-78"
+        className="input input-bordered w-full sm:w-54 lg:w-78 bg-[#1f2937]"
       />
     </div>
   );
