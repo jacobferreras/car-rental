@@ -3,9 +3,9 @@ import React from "react";
 
 const HomeBookingCard = () => {
   return (
-    <div className="card card-border bg-[#090b0f] bg-opacity-50 w-auto sm:w-106 ">
+    <div className="card card-border bg-[#090b0f] bg-opacity-50 w-auto sm:w-150 ">
       <div className="card-body">
-        <h1 className="card-title justify-center text-[#5897e4]">
+        <h1 className="card-title justify-center text-[#5897e4] sm:text-2xl md:text-3xl">
           Find Your Perfect Car
         </h1>
         <div className="flex flex-col sm:flex-row gap-4">
