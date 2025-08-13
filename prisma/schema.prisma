@@ -22,6 +22,16 @@ model Car {
   type        CarType @default(SEDAN)
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
+
+  details     CarDetails?
+}
+
+model CarDetails {
+  id  Int     @id @default(autoincrement())
+  carId Int   @unique
+  car Car      @relation(fields: [carId], references: [id], onDelete: Cascade)
+
+  
 }
 
 enum CarStatus {
