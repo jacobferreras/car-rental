@@ -27,11 +27,19 @@ model Car {
 }
 
 model CarDetails {
-  id  Int     @id @default(autoincrement())
-  carId Int   @unique
-  car Car      @relation(fields: [carId], references: [id], onDelete: Cascade)
+  id          Int     @id @default(autoincrement())
+  carId       Int   @unique
+  car         Car      @relation(fields: [carId], references: [id], onDelete: Cascade)
 
-  
+  engine      String?
+  horsepower  Int?
+  mileage     Int?
+  color       String?
+
+  frontImage      String?
+  backImage       String?
+  interiorImage   String?
+  rearImage       String?
 }
 
 enum CarStatus {
