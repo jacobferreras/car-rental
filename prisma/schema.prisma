@@ -35,7 +35,6 @@ model CarDetails {
   horsepower  Int?
   mileage     Int?
   color       String?
-
   frontImage      String?
   backImage       String?
   interiorImage   String?
