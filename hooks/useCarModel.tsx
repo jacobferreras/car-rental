@@ -1,4 +1,3 @@
-import React, { use } from "react";
 import { fetchCarModel } from "@/services/fetchCarModel";
 import { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
@@ -37,6 +36,7 @@ const useCarModel = () => {
       getCarModel();
     }
   }, [model]);
+
   return { car, setCar };
 };
 
