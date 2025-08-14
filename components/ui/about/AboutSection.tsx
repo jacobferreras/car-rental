@@ -3,6 +3,7 @@ import Image from "next/image";
 import MissionAndVisionCard from "./MissionAndVisionCard";
 import OurteamCard from "./OurteamCard";
 import CoreValueCard from "./CoreValueCard";
+import Link from "next/link";
 
 const AboutSection = () => {
   return (
@@ -136,9 +137,11 @@ const AboutSection = () => {
             adventure.
           </div>
           <div className="flex justify-center items-center">
-            <button className="btn bg-[#1d4ed8] rounded-xl">
-              Book Your Ride Now <i className="bi bi-arrow-right"></i>
-            </button>
+            <Link href="/vehicles">
+              <button className="btn bg-[#1d4ed8] rounded-xl">
+                Book Your Ride Now <i className="bi bi-arrow-right"></i>
+              </button>
+            </Link>
           </div>
         </div>
       </div>
