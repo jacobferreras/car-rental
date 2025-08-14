@@ -12,18 +12,27 @@ const VehicleDetails = () => {
   return (
     <div className="min-h-screen bg-[#030712]">
       <div className="pt-24 pb-12">
-        <div className="rounded-xl card justify-center items-center mx-4 bg-[#1f2937] ">
-          <figure className="px-10 pt-10">
-            <img src={car.imageUrl} alt="Shoes" className="rounded-xl" />
-          </figure>
-          <div className="card-body items-center text-center">
-            <h2 className="card-title">Card Title</h2>
-            <p>
-              A card component has a figure, a body part, and inside body there
-              are title and actions parts
-            </p>
-            <div className="card-actions">
-              <button className="btn btn-primary">Buy Now</button>
+        <div className="rounded-xl mx-4 bg-[#1f2937] ">
+          <h1 className="pl-6 pt-4 text-2xl font-bold">Vehicle Details</h1>
+          <div className="h-px w-full bg-gray-600 my-4" />
+          <div className="flex flex-row pb-8">
+            <figure className="pl-4 pt-10">
+              <img
+                src={car.imageUrl}
+                alt="Shoes"
+                className="rounded-xl w-200 pl-2"
+              />
+            </figure>
+            <div className="card-body items-start">
+              <h1 className="card-title">
+                {car.make} {car.model}
+              </h1>
+              <h2>₱{car.pricePerDay}/day</h2>
+              <h2>Description</h2>
+              <p className="text-start">{car.description}</p>
+              <div className="card-actions">
+                <button className="btn btn-primary">Buy Now</button>
+              </div>
             </div>
           </div>
         </div>
