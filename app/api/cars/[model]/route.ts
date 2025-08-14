@@ -11,8 +11,6 @@ export async function GET(
       where: { model: { equals: params.model, mode: "insensitive" } },
     });
 
-    console.log("Fetching car details for model:", params.model);
-
     if (!car) {
       return new Response("Car not found", { status: 404 });
     }
