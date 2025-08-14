@@ -26,9 +26,6 @@ const VehicleDetails = () => {
               <button className="btn btn-primary">Buy Now</button>
             </div>
           </div>
-
-          <div className="text-6xl py-4">Car Details</div>
-          <p>{car.color}</p>
         </div>
       </div>
     </div>
