@@ -16,6 +16,11 @@ interface Car {
   createdAt: string;
   updatedAt: string;
   description?: string;
+  color?: string;
+  mileage?: number;
+  engine?: string;
+  horsepower?: number;
+  torque?: number;
 }
 
 const useCarModel = () => {
