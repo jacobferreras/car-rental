@@ -20,7 +20,10 @@ interface Car {
   mileage?: number;
   engine?: string;
   horsepower?: number;
-  torque?: number;
+  frontImage?: string;
+  backImage?: string;
+  interiorImage?: string;
+  rearImage?: string;
 }
 
 const useCarModel = () => {
