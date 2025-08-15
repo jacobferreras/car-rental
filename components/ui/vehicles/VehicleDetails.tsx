@@ -24,12 +24,14 @@ const VehicleDetails = () => {
               />
             </figure>
             <div className="card-body items-start">
-              <h1 className="card-title">
+              <h1 className="card-title text-4xl">
                 {car.make} {car.model}
               </h1>
-              <h2>₱{car.pricePerDay}/day</h2>
-              <h2>Description</h2>
-              <p className="text-start w-150">{car.description}</p>
+              <h2 className="text-3xl text-[#60a5fa]">
+                ₱{car.pricePerDay}/day
+              </h2>
+              <h2 className="text-3xl">Description</h2>
+              <p className="text-start w-200 text-2xl">{car.description}</p>
               <div className="card-actions">
                 <button className="btn btn-primary">Buy Now</button>
               </div>
