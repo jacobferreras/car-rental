@@ -31,10 +31,10 @@ const VehicleDetails = () => {
                 ₱{car.pricePerDay}/day
               </h2>
               <h2 className="text-3xl">Description</h2>
-              <p className="text-start w-200 text-2xl">{car.description}</p>
-              <div className="card-actions">
-                <button className="btn btn-primary">Buy Now</button>
-              </div>
+              <p className="text-start w-200 text-2xl text-[#d1d5db]">
+                {car.description}
+              </p>
+              <h2 className="text-3xl">Key Specification</h2>
             </div>
           </div>
         </div>
