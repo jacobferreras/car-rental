@@ -35,6 +35,18 @@ const VehicleDetails = () => {
                 {car.description}
               </p>
               <h2 className="text-3xl">Key Specification</h2>
+              <p className="text-start w-200 text-2xl text-[#d1d5db]">
+                Engine: {car.engine}
+              </p>
+              <p className="text-start w-200 text-2xl text-[#d1d5db]">
+                Horse Power: {car.horsepower}hp
+              </p>
+              <p className="text-start w-200 text-2xl text-[#d1d5db]">
+                Mileage: {car.mileage}miles
+              </p>
+              <p className="text-start w-200 text-2xl text-[#d1d5db]">
+                Color: {car.color}
+              </p>
             </div>
           </div>
         </div>
