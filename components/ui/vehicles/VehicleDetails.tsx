@@ -16,7 +16,7 @@ const VehicleDetails = () => {
           <h1 className="pl-6 pt-4 text-2xl font-bold">Vehicle Details</h1>
           <div className="h-px w-full bg-gray-600 my-4" />
           <div className="flex flex-row pb-8">
-            <figure className="pl-4 pt-10">
+            <figure className="pl-4 pt-10 w-full">
               <img
                 src={car.imageUrl}
                 alt="Shoes"
