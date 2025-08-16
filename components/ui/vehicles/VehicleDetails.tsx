@@ -38,7 +38,7 @@ const VehicleDetails = () => {
               </div>
 
               <div className="mb-4">
-                <h2 className="text-2xl mb-2">Key Specification</h2>
+                <h2 className="text-2xl mb-2z">Key Specification</h2>
                 <p className="text-start w-200 text-lg text-[#d1d5db]">
                   Engine: {car.engine}
                 </p>
