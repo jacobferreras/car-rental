@@ -10,6 +10,7 @@ export const addNewCar = async (carData: {
   status: string;
   pricePerDay: string | number;
   fuelType: string;
+  description?: string;
 }) => {
   try {
     const payload = {
