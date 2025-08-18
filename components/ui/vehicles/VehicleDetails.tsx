@@ -1,6 +1,6 @@
 "use client";
 import useCarModel from "@/hooks/useCarModel";
-import Image from "next/image";
+import Link from "next/link";
 
 const VehicleDetails = () => {
   const { car } = useCarModel();
@@ -13,7 +13,15 @@ const VehicleDetails = () => {
     <div className="min-h-screen bg-[#030712]">
       <div className="pt-24 pb-12">
         <div className="rounded-xl mx-12 bg-[#1f2937] ">
-          <h1 className="pl-6 pt-4 text-2xl font-bold">Vehicle Details</h1>
+          <h1 className="pl-6 pt-4 text-2xl font-bold">
+            {" "}
+            <span>
+              <Link href="/vehicles">
+                <i className="bi bi-arrow-left-circle-fill mr-2"></i>
+              </Link>
+            </span>
+            Vehicle Details
+          </h1>
           <div className="h-px w-full bg-gray-600 my-4" />
           <div className="flex flex-col md:flex-row pb-8 gap-8">
             <figure className="pl-4 pt-10 w-auto  md:w-200">
