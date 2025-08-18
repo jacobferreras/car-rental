@@ -23,6 +23,14 @@ interface Car {
   type: CarType;
   createdAt: Date;
   updatedAt: Date;
+  color: string;
+  mileage: number;
+  engine: string;
+  horsepower: number;
+  frontImage: string;
+  backImage: string;
+  interiorImage: string;
+  rearImage: string;
 }
 
 interface CarCardProps {
