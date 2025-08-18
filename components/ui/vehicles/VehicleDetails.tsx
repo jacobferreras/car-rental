@@ -61,9 +61,7 @@ const VehicleDetails = () => {
                 </p>
               </div>
 
-              <button className="btn bg-[#1d4ed8] rounded-xl">
-                Book Your Ride Now <i className="bi bi-arrow-right"></i>
-              </button>
+              <button className="btn bg-[#1d4ed8] rounded-xl">Book Now</button>
             </div>
           </div>
         </div>
