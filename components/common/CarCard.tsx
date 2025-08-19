@@ -53,15 +53,30 @@ const CarCard = ({ cars, onEdit }: CarCardProps) => {
             key={car.id}
             className="card bg-[#1c2634] shadow-md shadow-blue-500/50 hover:shadow-xl"
           >
-            <figure>
-              <Image
-                src={car.imageUrl.trim()}
-                alt={car.make}
-                className="h-60"
-                width="500"
-                height="500"
-              />
-            </figure>
+            {car.status === "AVAILABLE" ? (
+              <figure>
+                <Image
+                  src={car.imageUrl.trim()}
+                  alt={car.make}
+                  className="h-60"
+                  width="500"
+                  height="500"
+                />
+              </figure>
+            ) : (
+              <figure className="relative">
+                <Image
+                  src={car.imageUrl.trim()}
+                  alt={car.make}
+                  className="h-60 opacity-20"
+                  width="500"
+                  height="500"
+                />
+                <figcaption className="absolute justify-center items-center text-white font-bold text-2xl px-2 py-1">
+                  This car is currently unavailable
+                </figcaption>
+              </figure>
+            )}
 
             <div className="card-body justify-items-start">
               <div>
