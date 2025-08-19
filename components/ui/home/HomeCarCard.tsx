@@ -15,14 +15,14 @@ interface Car {
   transmission: string;
   fuelType: string;
   type: CarType;
-  color: string;
-  engine: string;
-  mileage: number;
-  horsepower: number;
-  frontImage: string;
-  backImage: string;
-  interiorImage: string;
-  rearImage: string;
+  color: string | null;
+  engine: string | null;
+  mileage: number | null;
+  horsepower: number | null;
+  frontImage: string | null;
+  backImage: string | null;
+  interiorImage: string | null;
+  rearImage: string | null;
   createdAt: Date;
   updatedAt: Date;
 }
