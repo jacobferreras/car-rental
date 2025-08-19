@@ -7,7 +7,9 @@ import prisma from "@/prisma/client";
 import HomeCarCard from "@/components/ui/home/HomeCarCard";
 
 const HomeSection = async () => {
-  const cars = await prisma.car.findMany();
+  const cars = await prisma.car.findMany({
+    take: 8,
+  });
 
   return (
     <div>
