@@ -1,13 +1,13 @@
 import Image from "next/image";
 import EditCarDetailsButton from "../ui/vehicles/EditCarDetailsButton";
 import { Decimal } from "@prisma/client/runtime/library";
+import Link from "next/link";
 import {
   CarStatus,
   CarType,
   FuelType,
   Transmission,
 } from "../../app/generated/prisma";
-import { useRouter } from "next/navigation";
 
 interface Car {
   id: number;
@@ -39,8 +39,6 @@ interface CarCardProps {
 }
 
 const CarCard = ({ cars, onEdit }: CarCardProps) => {
-  const router = useRouter();
-
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 px-4 mb-4">
       {cars.length === 0 ? (
@@ -97,14 +95,15 @@ const CarCard = ({ cars, onEdit }: CarCardProps) => {
 
               <div className="justify-start flex gap-2">
                 <EditCarDetailsButton onClick={() => onEdit && onEdit(car)} />
-                <button
-                  className="btn bg-[#1d4ed8]"
-                  onClick={() =>
-                    router.push(`/vehicles/${encodeURIComponent(car.model)}`)
-                  }
-                >
-                  Rent Now
-                </button>
+                <Link href={`/vehicles/${encodeURIComponent(car.model)}`}>
+                  {car.status === "AVAILABLE" ? (
+                    <button className="btn bg-[#1d4ed8]">Rent Now</button>
+                  ) : (
+                    <button className="btn bg-gray-500" disabled>
+                      Unavailable
+                    </button>
+                  )}
+                </Link>
               </div>
             </div>
           </div>
