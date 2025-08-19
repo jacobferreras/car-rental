@@ -1,71 +1,16 @@
-import ServiceBenifits from "@/components/ui/home/ServiceBenifits";
-import CustomerTestimony from "@/components/ui/home/CustomerTestimony";
-import Image from "next/image";
 import Link from "next/link";
-import HomeBookingCard from "./HomeBookingCard";
-import prisma from "@/prisma/client";
-import HomeCarCard from "@/components/ui/home/HomeCarCard";
+import Hero from "./HeroSection";
+import VehicleSection from "./VehicleSection";
+import WhyChooseUsSection from "./WhyChooseUsSection";
+import TestimonialSection from "./TestimonialSection";
 
 const HomeSection = async () => {
-  const cars = await prisma.car.findMany({
-    take: 8,
-  });
-
   return (
     <div>
-      <div className="hero min-h-screen relative hero-overlay bg-overlay-opacity-60 ">
-        <Image
-          src="/HomeBg.png"
-          alt="Background"
-          fill
-          className="object-cover z-0"
-          priority
-        />
-        <div className="absolute inset-0 bg-[#0b0e13] opacity-70 z-0"></div>
-        <div className="flex flex-col justify-center items-center absolute z-20">
-          <h1 className="text-3xl sm:text-5xl lg:text-7xl text-center text-white font-family-mono font-bold z-20">
-            DRIVE YOUR JOURNEY WITH INSTADRIVE
-          </h1>
-          <p className="text-md sm:text-lg lg:text-xl text-center text-white font-family-sans mt-4 px-4 z-20">
-            Experience unparalleled luxury and performance with our exclusive
-            fleet of premium vehicles, curated for the discerning driver.
-          </p>
-          <div className="flex justify-center items-center mt-4">
-            <HomeBookingCard />
-          </div>
-        </div>
-      </div>
-
-      <div className="py-24 bg-[#111827]">
-        <div className="flex flex-col justify-center items-center px-2 mb-4">
-          <h1 className="text-2xl lg:text-5xl text-white font-family-mono font-bold mb-4">
-            Our Vehicles
-          </h1>
-        </div>
-
-        <div className="flex justify-center items-center">
-          <HomeCarCard cars={cars} />
-        </div>
-
-        <div className="flex justify-center items-centers py-12">
-          <Link href="/vehicles">
-            <button className="btn bg-[#1d4ed8] rounded-xl">
-              View All Vehicles <i className="bi bi-arrow-right"></i>
-            </button>
-          </Link>
-        </div>
-      </div>
-
-      <div className="bg-[#1f2937] py-24">
-        <div className="flex justify-center items-center text-2xl lg:text-5xl font-family-mono font-bold  text-white pl-4 pt-12">
-          Why Choose InstaDrive?
-        </div>
-        <ServiceBenifits />
-      </div>
-
-      <div className="justify-center items-center py-24 bg-[#111827]">
-        <CustomerTestimony />
-      </div>
+      <Hero />
+      <VehicleSection />
+      <WhyChooseUsSection />
+      <TestimonialSection />
 
       <div>
         <div className="flex flex-col justify-center items-center px-2 py-24 bg-[#1d2735]">
