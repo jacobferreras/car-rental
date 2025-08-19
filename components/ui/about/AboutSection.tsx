@@ -4,6 +4,7 @@ import MissionAndVisionCard from "./MissionAndVisionCard";
 import OurteamCard from "./OurteamCard";
 import CoreValueCard from "./CoreValueCard";
 import Link from "next/link";
+import CallToActionSection from "@/components/common/CallToActionSection";
 
 const AboutSection = () => {
   return (
@@ -53,19 +54,6 @@ const AboutSection = () => {
           </figure>
         </div>
       </div>
-
-      {/* <div className="flex flex-col md:flex-row items-center justify-center py-10 px-4 gap-8 bg-[url('/Mission.png')] bg-cover bg-no-repeat bg-center">
-        <MissionAndVisionCard
-          title="Our Mission"
-          description="To redefine the car rental experience by providing a seamless, transparent, and customer-centric service that exceeds expectations at every turn. We aim to empower our customers with the freedom to drive their dreams, backed by a commitment to quality and innovation."
-          iconClass="bi bi-bullseye"
-        />
-        <MissionAndVisionCard
-          title="Our Vision"
-          description="To be the leading car rental service known for our exceptional quality, innovative solutions, and unwavering commitment to customer satisfaction. We envision a future where every journey is effortless, enjoyable, and tailored to the unique needs of our customers, setting new standards in the industry."
-          iconClass="bi bi-eye-fill"
-        />
-      </div> */}
 
       <div className="flex flex-col items-center justify-center py-24 px-4 bg-[#1f2937]">
         <h1 className="mb-8 text-xl md:text-2xl lg:text-5xl font-bold font-family-mono">
@@ -127,24 +115,7 @@ const AboutSection = () => {
         </div>
       </div>
 
-      <div>
-        <div className="flex flex-col justify-center items-center px-2 py-24 bg-[#1d2735]">
-          <div className="text-2xl lg:text-5xl font-family-mono font-bold mb-4 text-white pl-4">
-            Ready to Experience Seamless Travel?
-          </div>
-          <div className="text-md lg:text-xl font-family-sans text-white text-center mb-8 px-4">
-            Browse our extensive fleet and find the perfect car for your next
-            adventure.
-          </div>
-          <div className="flex justify-center items-center">
-            <Link href="/vehicles">
-              <button className="btn bg-[#1d4ed8] rounded-xl">
-                Book Your Ride Now <i className="bi bi-arrow-right"></i>
-              </button>
-            </Link>
-          </div>
-        </div>
-      </div>
+      <CallToActionSection />
     </>
   );
 };
