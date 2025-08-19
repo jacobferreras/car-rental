@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Decimal } from "@prisma/client/runtime/library";
-import { CarStatus } from "../../../app/generated/prisma";
-import { useRouter } from "next/navigation";
+import { CarStatus, CarType } from "../../../app/generated/prisma";
+import Link from "next/link";
 
 interface Car {
   id: number;
@@ -14,19 +14,24 @@ interface Car {
   status: CarStatus;
   transmission: string;
   fuelType: string;
-  seats: number;
+  type: CarType;
+  color: string;
+  engine: string;
+  mileage: number;
+  horsepower: number;
+  frontImage: string;
+  backImage: string;
+  interiorImage: string;
+  rearImage: string;
   createdAt: Date;
   updatedAt: Date;
 }
 
 interface CarCardProps {
   cars: Car[];
-  onEdit?: (car: Car) => void;
 }
 
-const HomeCarCard = ({ cars, onEdit }: CarCardProps) => {
-  const router = useRouter();
-
+const HomeCarCard = ({ cars }: CarCardProps) => {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 px-4 mb-4">
       {cars.length === 0 ? (
@@ -61,14 +66,11 @@ const HomeCarCard = ({ cars, onEdit }: CarCardProps) => {
               <p className="text-gray-500">{car.description}</p>
 
               <div className="card-actions">
-                <button
-                  className="btn bg-[#1d4ed8] w-60 rounded-lg"
-                  onClick={() =>
-                    router.push(`/vehicles/${encodeURIComponent(car.model)}`)
-                  }
-                >
-                  Rent Now
-                </button>
+                <Link href={`/vehicles/${encodeURIComponent(car.model)}`}>
+                  <button className="btn bg-[#1d4ed8] w-60 rounded-lg">
+                    Rent Now
+                  </button>
+                </Link>
               </div>
             </div>
           </div>

@@ -1,20 +1,13 @@
-"use client";
 import ServiceBenifits from "@/components/ui/home/ServiceBenifits";
 import CustomerTestimony from "@/components/ui/home/CustomerTestimony";
 import Image from "next/image";
-import useCards from "@/hooks/useCards";
-import Car from "@/components/ui/home/HomeCarCard";
 import Link from "next/link";
-import Home from "@/app/page";
 import HomeBookingCard from "./HomeBookingCard";
+import prisma from "@/prisma/client";
+import HomeCarCard from "@/components/ui/home/HomeCarCard";
 
-const HomeSection = () => {
-  const { cars } = useCards({
-    type: "",
-    transmission: "",
-    limit: 8,
-    page: 1,
-  });
+const HomeSection = async () => {
+  const cars = await prisma.car.findMany();
 
   return (
     <div>
@@ -49,7 +42,7 @@ const HomeSection = () => {
         </div>
 
         <div className="flex justify-center items-center">
-          <Car cars={cars} />
+          <HomeCarCard cars={cars} />
         </div>
 
         <div className="flex justify-center items-centers py-12">
@@ -67,15 +60,6 @@ const HomeSection = () => {
         </div>
         <ServiceBenifits />
       </div>
-
-      {/* <div className="flex flex-col justify-center items-center px-2 py-24 bg-[url('/Inside.png')] bg-cover bg-no-repeat bg-center rounded-2xl">
-        <div className="text-2xl lg:text-5xl font-family-mono font-bold mb-4 md:mb-8 text-white pl-4">
-          Simple Steps to Book Your Car
-        </div>
-        <div>
-          <Steps />
-        </div>
-      </div> */}
 
       <div className="justify-center items-center py-24 bg-[#111827]">
         <CustomerTestimony />
