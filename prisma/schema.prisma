@@ -20,14 +20,14 @@ model Car {
   transmission Transmission @default(MANUAL)
   fuelType     FuelType   @default(PETROL)
   type        CarType @default(SEDAN)
-  engine              String
-  horsepower          Int
-  mileage             Int
-  color               String
-  frontImage          String
-  backImage           String
-  interiorImage       String
-  rearImage           String  
+  engine              String?
+  horsepower          Int?
+  mileage             Int?
+  color               String?
+  frontImage          String?
+  backImage           String?
+  interiorImage       String?
+  rearImage           String?
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
 
