@@ -10,7 +10,7 @@ import { AddCarButton } from "@/components/ui/vehicles/AddCarButton";
 import AddCarModal from "@/components/ui/vehicles/AddCarModal";
 import CarDetailsModal from "@/components/ui/vehicles/CarDetailsModal";
 import { Car } from "../../../app/generated/prisma";
-import Image from "next/image";
+import VehicleHero from "./VehicleHero";
 
 const VehicleSection = () => {
   const [refresh, setRefresh] = useState(0);
@@ -33,25 +33,7 @@ const VehicleSection = () => {
 
   return (
     <>
-      <div className="hero min-h-100 md:min-h-150 relative">
-        <Image
-          src="/Fleet.png"
-          alt="Background"
-          fill
-          className="object-cover z-0"
-          priority
-        />
-        <div className="absolute inset-0 bg-[#0b0e13] opacity-70 z-0"></div>
-        <div className="flex flex-col justify-center items-center absolute z-20">
-          <h1 className="text-3xl md:text-5xl lg:text-7xl text-center text-white font-bold font-family-mono">
-            OUR EXCEPTIONAL FLEET
-          </h1>
-          <h2 className="text-3xl md:text-5xl lg:text-3xl text-center text-white font-bold font-family-mono">
-            Explore our curated collection of the world's most prestigious and
-            exhilarating luxury vehicles.
-          </h2>
-        </div>
-      </div>
+      <VehicleHero />
 
       <div className="flex flex-col bg-[#111827]">
         <div className="flex flex-col sm:flex-row xl:flex-row justify-center items-center xl:justify-end xl:items-end xl:gap-0 mb-8 gap-4 pt-12 xl:ml-auto xl:pr-6 xl:mt-24 md:px-4">
