@@ -5,7 +5,7 @@ const VehicleHero = () => {
   return (
     <div className="hero min-h-100 md:min-h-150 relative">
       <Image
-        src="/Fleet.webp"
+        src="/Another.webp"
         alt="Background"
         fill
         className="object-cover z-0"
