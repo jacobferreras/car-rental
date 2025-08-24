@@ -6,10 +6,9 @@ const ContanctSection = () => {
     <>
       <div className="hero min-h-100 md:min-h-150 relative">
         <Image
-          src="/Contact.png"
+          src="/Inside.webp"
           alt="Background"
           fill
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           className="object-cover z-0"
           priority
         />

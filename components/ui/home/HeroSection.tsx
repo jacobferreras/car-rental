@@ -7,10 +7,9 @@ const Hero = () => {
     <div>
       <div className="hero min-h-screen relative hero-overlay bg-overlay-opacity-60 ">
         <Image
-          src="/HomeBg.png"
+          src="/HomeBg.webp"
           alt="Background"
           fill
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           className="object-cover z-0"
           priority
         />

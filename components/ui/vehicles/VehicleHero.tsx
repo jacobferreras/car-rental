@@ -5,10 +5,9 @@ const VehicleHero = () => {
   return (
     <div className="hero min-h-100 md:min-h-150 relative">
       <Image
-        src="/Fleet.png"
+        src="/Fleet.webp"
         alt="Background"
         fill
-        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         className="object-cover z-0"
         priority
       />
