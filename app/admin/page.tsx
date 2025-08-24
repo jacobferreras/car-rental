@@ -1,7 +1,7 @@
-import React from "react";
+import AdminSection from "@/components/ui/admin/AdminSection";
 
 const page = () => {
-  return <div>page</div>;
+  return <AdminSection />;
 };
 
 export default page;

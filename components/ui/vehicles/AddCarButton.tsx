@@ -1,7 +1,5 @@
 "use client";
 import { useEffect, useState } from "react";
-import useCards from "@/hooks/useCards";
-import AddCarModal from "./AddCarModal";
 
 interface AddCarButtonProps {
   onClick?: () => void;

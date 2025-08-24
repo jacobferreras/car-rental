@@ -1,14 +1,19 @@
 import { PrismaClient } from "../../../generated/prisma/client";
+import { NextRequest } from "next/server";
 
 const Prisma = new PrismaClient();
 
-export async function GET(
-  req: Request,
-  { params }: { params: { model: string } }
-) {
+export async function GET(req: NextRequest) {
   try {
+    // Extract the model param from the URL
+    const model = req.nextUrl.pathname.split("/").pop();
+
+    if (!model) {
+      return new Response("Model parameter is required", { status: 400 });
+    }
+
     const car = await Prisma.car.findFirst({
-      where: { model: { equals: params.model, mode: "insensitive" } },
+      where: { model: { equals: model, mode: "insensitive" } },
     });
 
     if (!car) {
