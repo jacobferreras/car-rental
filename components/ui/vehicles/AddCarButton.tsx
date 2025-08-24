@@ -9,11 +9,6 @@ interface AddCarButtonProps {
 
 export const AddCarButton = (props: AddCarButtonProps) => {
   const [isGranted, setIsGranted] = useState(false);
-  // const [refresh, setRefresh] = useState(0);
-  // const [openModal, setOpenModal] = useState(false);
-  // const {} = useCards({
-  //   refresh,
-  // });
 
   useEffect(() => {
     fetch("/api/permission")
@@ -30,17 +25,6 @@ export const AddCarButton = (props: AddCarButtonProps) => {
           Add Car
         </button>
       ) : null}
-
-      {/* <div>
-        <AddCarModal
-          open={openModal}
-          onClose={() => setOpenModal(false)}
-          onSuccess={() => {
-            setRefresh((prev) => prev + 1);
-            setOpenModal(false);
-          }}
-        />
-      </div> */}
     </div>
   );
 };
