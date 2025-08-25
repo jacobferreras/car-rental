@@ -10,7 +10,7 @@ const Dropdown = (props: DropdownProps) => {
     <select
       value={props.value}
       onChange={props.onChange}
-      className="select rounded-xl font-normal mr-5 w-50 bg-neutral-700 text-white"
+      className="select rounded-xl font-normal mr-5 w-68 lg:w-50 bg-neutral-700 text-white"
     >
       <option value="" className="text-white">
         Select Transmission

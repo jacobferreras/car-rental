@@ -1,9 +1,9 @@
-import ContanctSection from "@/components/ui/contact/ContanctSection";
+import ContanctScreen from "@/components/ui/contact/ContanctScreen";
 
 const page = () => {
   return (
     <div>
-      <ContanctSection />
+      <ContanctScreen />
     </div>
   );
 };
