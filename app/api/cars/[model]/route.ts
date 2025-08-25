@@ -6,7 +6,9 @@ const Prisma = new PrismaClient();
 export async function GET(req: NextRequest) {
   try {
     // Extract the model param from the URL
-    const model = req.nextUrl.pathname.split("/").pop();
+    const model = decodeURIComponent(
+      req.nextUrl.pathname.split("/").pop() || ""
+    );
 
     if (!model) {
       return new Response("Model parameter is required", { status: 400 });

@@ -115,7 +115,7 @@ export async function POST(req: Request) {
         model: String(model).trim(),
         description: String(description).trim(),
         year: Number(year),
-        type: CarType.SUV, // Default type, can be changed based on your logic
+        type: CarType.SUV,
         transmission,
         imageUrl: String(imageUrl).trim(),
         status,
