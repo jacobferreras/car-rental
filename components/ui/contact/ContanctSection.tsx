@@ -1,28 +1,15 @@
 import Image from "next/image";
 import ContactForm from "./ContactForm";
+import Hero from "../../common/Hero";
 
 const ContanctSection = () => {
   return (
     <>
-      <div className="hero min-h-70 md:min-h-150 relative">
-        <Image
-          src="/Inside.webp"
-          alt="Background"
-          fill
-          className="object-cover z-0"
-          priority
-        />
-        <div className="absolute inset-0 bg-[#0b0e13] opacity-70 z-0"></div>
-        <div className="flex flex-col justify-center items-center absolute z-20">
-          <h1 className="text-3xl md:text-5xl lg:text-7xl text-center text-white font-family-mono font-bold">
-            GET IN TOUCH
-          </h1>
-          <p className="text-sm sm:text-xl lg:text-2xl text-center text-white font-family-sans mt-4 px-8 z-20">
-            WE'RE HERE TO HELP! REACH OUT TO US FOR ANY INQUIRIES, SUPPORT OR
-            FEEDBACK
-          </p>
-        </div>
-      </div>
+      <Hero
+        title="GET IN TOUCH"
+        description="WE'RE HERE TO HELP! REACH OUT TO US FOR ANY INQUIRIES, SUPPORT OR FEEDBACK"
+        ImageSrc="/Inside.webp"
+      />
 
       <div className="px-4 py-24 lg:flex md:flex-row md:justify-center md:items-center md:gap-8 bg-[#111827]">
         <div className="pt-4">
