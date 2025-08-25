@@ -35,8 +35,8 @@ const VehicleSection = () => {
     <>
       <Hero
         title="OUR FLEET"
-        description="Explore our diverse range of vehicles, meticulously curated to meet your every need."
-        ImageSrc="/Fleet.webp"
+        description="EXPLORE OUR DIVERSE RANGE OF VEHICLES, METICULOUSLY CURATED TO MEET YOUR EVERY NEED."
+        ImageSrc="/Another.webp"
       />
       <div className="flex flex-col bg-[#111827]">
         <div className="flex flex-col sm:flex-row xl:flex-row justify-center items-center xl:justify-end xl:items-end xl:gap-0 mb-8 gap-4 pt-12 xl:ml-auto xl:pr-6 xl:mt-24 md:px-4">

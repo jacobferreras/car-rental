@@ -10,7 +10,7 @@ const AboutSection = () => {
     <>
       <Hero
         title="ABOUT INSTADRIVE"
-        description="At InstaDrive, we are committed to providing an unparalleled car rental experience."
+        description="AT INSTADRIVE, WE ARE COMMITTED TO PROVIDING AN UNPARALLELED CAR RENTAL EXPERIENCE."
         ImageSrc="/About.webp"
       />
       <AboutInstaDrive />
