@@ -19,7 +19,7 @@ const HomeBookingCard = () => {
             <DateInput />
           </div>
 
-          <div className="sm:pt-9">
+          <div className="sm:pt-9 ">
             <Link href="/vehicles">
               <button className="btn bg-[#1d4ed8] w-26">Search Car</button>
             </Link>

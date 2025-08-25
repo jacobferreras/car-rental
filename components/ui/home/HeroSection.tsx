@@ -18,7 +18,7 @@ const Hero = () => {
           <h1 className="text-3xl sm:text-5xl lg:text-7xl text-center text-white font-family-mono font-bold z-20">
             DRIVE YOUR JOURNEY WITH INSTADRIVE
           </h1>
-          <p className="text-md sm:text-lg lg:text-xl text-center text-white font-family-sans mt-4 px-4 z-20">
+          <p className="text-sm sm:text-xl lg:text-2xl text-center text-white font-family-sans mt-4 px-8 z-20">
             Experience unparalleled luxury and performance with our exclusive
             fleet of premium vehicles, curated for the discerning driver.
           </p>
