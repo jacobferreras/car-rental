@@ -61,7 +61,7 @@ const CustomerTestimony = () => {
   return (
     <div className="container mx-auto px-2 md:px-4 lg:px-8 xl:px-32 ">
       <div className="text-2xl lg:text-5xl font-family-mono font-bold mb-4 md:mb-8 text-center">
-        What our customers say
+        WHAT OUR CUSTOMERS SAY
       </div>
       <Swiper
         modules={[Pagination, Autoplay, Navigation]}

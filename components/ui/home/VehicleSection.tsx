@@ -10,10 +10,10 @@ const VehicleSection = async () => {
 
   return (
     <div>
-      <div className="py-24 bg-[#111827]">
+      <div className="py-12 lg:py-24 bg-[#111827]">
         <div className="flex flex-col justify-center items-center px-2 mb-4">
           <h1 className="text-2xl lg:text-5xl text-white font-family-mono font-bold mb-4">
-            Our Vehicles
+            OUR VEHICLES
           </h1>
         </div>
 

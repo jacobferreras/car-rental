@@ -4,7 +4,7 @@ import CustomerTestimony from "./CustomerTestimony";
 const TestimonialSection = () => {
   return (
     <div>
-      <div className="justify-center items-center py-24 bg-[#111827]">
+      <div className="justify-center items-center py-12 lg:py-24 bg-[#111827]">
         <CustomerTestimony />
       </div>
     </div>
