@@ -1,4 +1,4 @@
-import VehicleSection from "@/components/ui/vehicles/VehicleSection";
+import VehicleSection from "@/components/ui/vehicles/VehicleScreen";
 
 const page = () => {
   return (
