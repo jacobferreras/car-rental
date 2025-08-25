@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const AboutHero = () => {
   return (
-    <div className="hero min-h-100 md:min-h-150 relative">
+    <div className="hero min-h-70 md:min-h-150 relative">
       <Image
         src="/About.webp"
         alt="Background"
@@ -16,9 +16,10 @@ const AboutHero = () => {
         <h1 className="text-3xl md:text-5xl lg:text-7xl text-center text-white font-bold font-family-mono">
           ABOUT INSTADRIVE
         </h1>
-        <h2 className="text-3xl md:text-5xl lg:text-6xl text-center text-white font-bold font-family-mono">
-          WITH INSTADRIVE
-        </h2>
+        <p className="text-sm sm:text-xl lg:text-2xl text-center text-white font-family-sans mt-4 px-8 z-20">
+          At InstaDrive, we are committed to providing an unparalleled car
+          rental experience.
+        </p>
       </div>
     </div>
   );

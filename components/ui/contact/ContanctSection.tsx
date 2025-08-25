@@ -4,7 +4,7 @@ import ContactForm from "./ContactForm";
 const ContanctSection = () => {
   return (
     <>
-      <div className="hero min-h-100 md:min-h-150 relative">
+      <div className="hero min-h-70 md:min-h-150 relative">
         <Image
           src="/Inside.webp"
           alt="Background"
@@ -17,10 +17,10 @@ const ContanctSection = () => {
           <h1 className="text-3xl md:text-5xl lg:text-7xl text-center text-white font-family-mono font-bold">
             GET IN TOUCH
           </h1>
-          <h2 className="text-xl md:text-2xl text-center text-white font-family-mono font-bold">
+          <p className="text-sm sm:text-xl lg:text-2xl text-center text-white font-family-sans mt-4 px-8 z-20">
             WE'RE HERE TO HELP! REACH OUT TO US FOR ANY INQUIRIES, SUPPORT OR
             FEEDBACK
-          </h2>
+          </p>
         </div>
       </div>
 
