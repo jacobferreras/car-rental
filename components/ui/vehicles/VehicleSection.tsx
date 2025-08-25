@@ -10,7 +10,7 @@ import { AddCarButton } from "@/components/ui/vehicles/AddCarButton";
 import AddCarModal from "@/components/ui/vehicles/AddCarModal";
 import CarDetailsModal from "@/components/ui/vehicles/CarDetailsModal";
 import { Car } from "../../../app/generated/prisma";
-import VehicleHero from "./VehicleHero";
+import Hero from "../../common/Hero";
 
 const VehicleSection = () => {
   const [refresh, setRefresh] = useState(0);
@@ -33,8 +33,11 @@ const VehicleSection = () => {
 
   return (
     <>
-      <VehicleHero />
-
+      <Hero
+        title="OUR FLEET"
+        description="Explore our diverse range of vehicles, meticulously curated to meet your every need."
+        ImageSrc="/Fleet.webp"
+      />
       <div className="flex flex-col bg-[#111827]">
         <div className="flex flex-col sm:flex-row xl:flex-row justify-center items-center xl:justify-end xl:items-end xl:gap-0 mb-8 gap-4 pt-12 xl:ml-auto xl:pr-6 xl:mt-24 md:px-4">
           <div className="mr-4">
