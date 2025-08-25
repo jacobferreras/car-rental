@@ -5,7 +5,7 @@ import AboutCoreValues from "./AboutCoreValues";
 import AboutInstaDrive from "./AboutInstaDrive";
 import Hero from "../../common/Hero";
 
-const AboutSection = () => {
+const AboutScreen = () => {
   return (
     <>
       <Hero
@@ -21,4 +21,4 @@ const AboutSection = () => {
   );
 };
 
-export default AboutSection;
+export default AboutScreen;

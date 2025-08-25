@@ -12,7 +12,7 @@ import CarDetailsModal from "@/components/ui/vehicles/CarDetailsModal";
 import { Car } from "../../../app/generated/prisma";
 import Hero from "../../common/Hero";
 
-const VehicleSection = () => {
+const VehicleScreen = () => {
   const [refresh, setRefresh] = useState(0);
   const [selectedCar, setSelectedCar] = useState<Car | null>(null);
   const [currentPage, setCurrentPage] = useState(1);
@@ -135,4 +135,4 @@ const VehicleSection = () => {
   );
 };
 
-export default VehicleSection;
+export default VehicleScreen;

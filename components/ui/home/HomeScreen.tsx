@@ -4,7 +4,7 @@ import WhyChooseUsSection from "./WhyChooseUsSection";
 import TestimonialSection from "./TestimonialSection";
 import CallToActionSection from "../../common/CallToActionSection";
 
-const HomeSection = async () => {
+const HomeScreen = async () => {
   return (
     <div>
       <Hero />
@@ -16,4 +16,4 @@ const HomeSection = async () => {
   );
 };
 
-export default HomeSection;
+export default HomeScreen;

@@ -1,10 +1,10 @@
-import AboutSection from "@/components/ui/about/AboutSection";
+import AboutScreen from "@/components/ui/about/AboutScreen";
 
 const page = () => {
   return (
     <>
       <div>
-        <AboutSection />
+        <AboutScreen />
       </div>
     </>
   );

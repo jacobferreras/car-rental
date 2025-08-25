@@ -1,9 +1,9 @@
-import HomeSection from "@/components/ui/home/HomeScreen";
+import HomeScreen from "@/components/ui/home/HomeScreen";
 
 export default function Home() {
   return (
     <>
-      <HomeSection />
+      <HomeScreen />
     </>
   );
 }
