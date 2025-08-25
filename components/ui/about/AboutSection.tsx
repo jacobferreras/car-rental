@@ -1,14 +1,18 @@
 import React from "react";
 import CallToActionSection from "@/components/common/CallToActionSection";
-import AboutHero from "./AboutHero";
 import AboutTeam from "./AboutTeam";
 import AboutCoreValues from "./AboutCoreValues";
 import Image from "next/image";
+import Hero from "../../common/Hero";
 
 const AboutSection = () => {
   return (
     <>
-      <AboutHero />
+      <Hero
+        title="ABOUT INSTADRIVE"
+        description="At InstaDrive, we are committed to providing an unparalleled car rental experience."
+        ImageSrc="/About.webp"
+      />
 
       <div className="flex flex-col md:flex-row items-center justify-center py-24 px-4 md:gap-x-12 gap-x-24 bg-[#111827]">
         <div>
