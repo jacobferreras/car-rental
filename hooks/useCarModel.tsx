@@ -33,6 +33,7 @@ const useCarModel = () => {
   useEffect(() => {
     const getCarModel = async () => {
       try {
+        console.log("Fetching car model:", model);
         const data = await fetchCarModel(model as string);
         setCar(data);
       } catch (error) {
