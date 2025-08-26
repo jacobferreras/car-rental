@@ -22,7 +22,7 @@ const VehicleScreen = () => {
   const [search, setSearch] = useState("");
   const debounceSearch = useDebounce(search, 400);
   const [type, setType] = useState("");
-  const { cars, totalpages } = useCards({
+  const { cars, totalpages, loading } = useCards({
     type,
     transmission,
     limit: 8,
@@ -98,6 +98,7 @@ const VehicleScreen = () => {
               setSelectedCar(car);
               setOpenCarDetailsModal(true);
             }}
+            loading={loading}
           />
         </div>
 
