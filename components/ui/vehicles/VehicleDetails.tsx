@@ -11,7 +11,7 @@ const VehicleDetails = () => {
   }
 
   return (
-    <div className="min-h-screen bg-[#030712] animate-fade-in">
+    <div className="min-h-screen bg-[#030712]">
       <div className="pt-24 pb-12">
         <div className="rounded-xl mx-4 sm:mx-8 md:mx-12 bg-[#1f2937]">
           <h1 className="pl-4 sm:pl-6 pt-4 text-xl sm:text-2xl font-bold">
@@ -24,7 +24,7 @@ const VehicleDetails = () => {
             Vehicle Details
           </h1>
           <div className="h-px w-full bg-gray-600 my-4" />
-          <div className="flex flex-col md:flex-row pb-8 gap-4 md:gap-8">
+          <div className="flex flex-col md:flex-row pb-8 gap-4 md:gap-8 animate-fade-in">
             <figure className="px-4 pt-6 md:pt-10 w-full md:w-1/2 lg:w-2/5">
               <img
                 src={car.imageUrl}
