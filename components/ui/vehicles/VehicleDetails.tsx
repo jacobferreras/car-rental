@@ -1,16 +1,17 @@
 "use client";
 import useCarModel from "@/hooks/useCarModel";
 import Link from "next/link";
+import VehicleDetailsSkeleton from "./VehicleDetailsSkeleton";
 
 const VehicleDetails = () => {
   const { car } = useCarModel();
 
   if (!car) {
-    return <div>Loading...</div>;
+    return <VehicleDetailsSkeleton />;
   }
 
   return (
-    <div className="min-h-screen bg-[#030712]">
+    <div className="min-h-screen bg-[#030712] animate-fade-in">
       <div className="pt-24 pb-12">
         <div className="rounded-xl mx-4 sm:mx-8 md:mx-12 bg-[#1f2937]">
           <h1 className="pl-4 sm:pl-6 pt-4 text-xl sm:text-2xl font-bold">
