@@ -14,6 +14,7 @@ interface Car {
 const useCards = (props: Car) => {
   const [cars, setCars] = useState([]);
   const [totalpages, setTotalPages] = useState(0);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const getCars = async () => {
@@ -24,6 +25,7 @@ const useCards = (props: Car) => {
       } catch (error) {
         console.error("Error fetching cars:", error);
       } finally {
+        setLoading(false);
       }
     };
 
@@ -37,7 +39,7 @@ const useCards = (props: Car) => {
     props.refresh,
   ]);
 
-  return { cars, totalpages };
+  return { cars, totalpages, loading };
 };
 
 export default useCards;
