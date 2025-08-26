@@ -48,7 +48,7 @@ const CarCard = ({ cars, onEdit, loading }: CarCardProps) => {
         : cars.map((car: Car) => (
             <div
               key={car.id}
-              className="card bg-[#1c2634] shadow-md shadow-blue-500/50 hover:shadow-xl transition-opacity duration-700 delay-700 ease-in-out"
+              className="card bg-[#1c2634] shadow-md shadow-blue-500/50 hover:shadow-xl animate-fade-in"
             >
               {car.status === "AVAILABLE" ? (
                 <figure>
