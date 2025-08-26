@@ -2,6 +2,7 @@ import Image from "next/image";
 import EditCarDetailsButton from "../ui/vehicles/EditCarDetailsButton";
 import { Decimal } from "@prisma/client/runtime/library";
 import Link from "next/link";
+import Skeleton from "./Skeleton";
 import {
   CarStatus,
   CarType,
@@ -36,79 +37,76 @@ interface Car {
 interface CarCardProps {
   cars: Car[];
   onEdit?: (car: Car) => void;
+  loading?: boolean;
 }
 
-const CarCard = ({ cars, onEdit }: CarCardProps) => {
+const CarCard = ({ cars, onEdit, loading }: CarCardProps) => {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 px-4 mb-4">
-      {cars.length === 0 ? (
-        <div className="col-span-4 text-center min-h-150 flex items-center justify-center">
-          <p className="text-gray-500">No cars available</p>
-        </div>
-      ) : (
-        cars.map((car: Car) => (
-          <div
-            key={car.id}
-            className="card bg-[#1c2634] shadow-md shadow-blue-500/50 hover:shadow-xl"
-          >
-            {car.status === "AVAILABLE" ? (
-              <figure>
-                <Image
-                  src={car.imageUrl.trim()}
-                  alt={car.make}
-                  className="h-60"
-                  width="500"
-                  height="500"
-                />
-              </figure>
-            ) : (
-              <figure className="relative">
-                <Image
-                  src={car.imageUrl.trim()}
-                  alt={car.make}
-                  className="h-60 opacity-20"
-                  width="500"
-                  height="500"
-                />
-                <figcaption className="absolute justify-center items-center text-white font-bold text-2xl px-2 py-1">
-                  This car is currently unavailable
-                </figcaption>
-              </figure>
-            )}
+      {loading
+        ? Array.from({ length: 8 }).map((_, index) => <Skeleton key={index} />)
+        : cars.map((car: Car) => (
+            <div
+              key={car.id}
+              className="card bg-[#1c2634] shadow-md shadow-blue-500/50 hover:shadow-xl transition-opacity duration-700 delay-700 ease-in-out"
+            >
+              {car.status === "AVAILABLE" ? (
+                <figure>
+                  <Image
+                    src={car.imageUrl.trim()}
+                    alt={car.make}
+                    className="h-60"
+                    width="500"
+                    height="500"
+                  />
+                </figure>
+              ) : (
+                <figure className="relative">
+                  <Image
+                    src={car.imageUrl.trim()}
+                    alt={car.make}
+                    className="h-60 opacity-20"
+                    width="500"
+                    height="500"
+                  />
+                  <figcaption className="absolute justify-center items-center text-white font-bold text-2xl px-2 py-1">
+                    This car is currently unavailable
+                  </figcaption>
+                </figure>
+              )}
 
-            <div className="card-body justify-items-start">
-              <div>
-                <h2 className="card-title sm:text-sm md:text-md lg:text-lg xl:text-3xl font-bold">
-                  {car.make} ({car.model})
-                </h2>
-              </div>
+              <div className="card-body justify-items-start">
+                <div>
+                  <h2 className="card-title sm:text-sm md:text-md lg:text-lg xl:text-3xl font-bold">
+                    {car.make} ({car.model})
+                  </h2>
+                </div>
 
-              <div>
-                <h2 className="text-[#60a5fa] font-bold text-2xl justify-center">
-                  ₱{Number(car.pricePerDay)}/day
-                </h2>
-              </div>
+                <div>
+                  <h2 className="text-[#60a5fa] font-bold text-2xl justify-center">
+                    ₱{Number(car.pricePerDay)}/day
+                  </h2>
+                </div>
 
-              <div className="mb-4">
-                <p className="text-gray-500">{car.description}</p>
-              </div>
+                <div className="mb-4">
+                  <p className="text-gray-500">{car.description}</p>
+                </div>
 
-              <div className="justify-start flex gap-2">
-                <EditCarDetailsButton onClick={() => onEdit && onEdit(car)} />
-                <Link href={`/vehicles/${encodeURIComponent(car.model)}`}>
-                  {car.status === "AVAILABLE" ? (
-                    <button className="btn bg-[#1d4ed8]">Rent Now</button>
-                  ) : (
-                    <button className="btn bg-gray-500" disabled>
-                      Unavailable
-                    </button>
-                  )}
-                </Link>
+                <div className="justify-start flex gap-2">
+                  <EditCarDetailsButton onClick={() => onEdit && onEdit(car)} />
+                  <Link href={`/vehicles/${encodeURIComponent(car.model)}`}>
+                    {car.status === "AVAILABLE" ? (
+                      <button className="btn bg-[#1d4ed8]">Rent Now</button>
+                    ) : (
+                      <button className="btn bg-gray-500" disabled>
+                        Unavailable
+                      </button>
+                    )}
+                  </Link>
+                </div>
               </div>
             </div>
-          </div>
-        ))
-      )}
+          ))}
     </div>
   );
 };
