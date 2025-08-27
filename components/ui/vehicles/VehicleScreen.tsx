@@ -11,6 +11,7 @@ import AddCarModal from "@/components/ui/vehicles/AddCarModal";
 import CarDetailsModal from "@/components/ui/vehicles/CarDetailsModal";
 import { Car } from "../../../app/generated/prisma";
 import Hero from "../../common/Hero";
+import Skeleton from "../../common/Skeleton";
 
 const VehicleScreen = () => {
   const [refresh, setRefresh] = useState(0);
@@ -91,15 +92,21 @@ const VehicleScreen = () => {
           </label>
         </div>
 
-        <div className="flex flex-col justify-center items-center mb-4">
-          <CarCards
-            cars={cars}
-            onEdit={(car) => {
-              setSelectedCar(car);
-              setOpenCarDetailsModal(true);
-            }}
-            loading={loading}
-          />
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 px-4 mb-4">
+          {loading
+            ? Array.from({ length: 8 }).map((_, index) => (
+                <Skeleton key={index} />
+              ))
+            : cars.map((car: Car) => (
+                <CarCards
+                  key={car.id}
+                  car={car}
+                  onEdit={(car) => {
+                    setSelectedCar(car);
+                    setOpenCarDetailsModal(true);
+                  }}
+                />
+              ))}
         </div>
 
         <AddCarModal
