@@ -24,89 +24,79 @@ interface Car {
   type: CarType;
   createdAt: Date;
   updatedAt: Date;
-  color: string;
-  mileage: number;
-  engine: string;
-  horsepower: number;
-  frontImage: string;
-  backImage: string;
-  interiorImage: string;
-  rearImage: string;
+  color: string | null;
+  mileage: number | null;
+  engine: string | null;
+  horsepower: number | null;
+  frontImage: string | null;
+  backImage: string | null;
+  interiorImage: string | null;
+  rearImage: string | null;
 }
 
 interface CarCardProps {
-  cars: Car[];
   onEdit?: (car: Car) => void;
-  loading?: boolean;
+  car: Car;
 }
 
-const CarCard = ({ cars, onEdit, loading }: CarCardProps) => {
+const CarCard = ({ car, onEdit }: CarCardProps) => {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 px-4 mb-4">
-      {loading
-        ? Array.from({ length: 8 }).map((_, index) => <Skeleton key={index} />)
-        : cars.map((car: Car) => (
-            <div
-              key={car.id}
-              className="card bg-[#1c2634] shadow-md shadow-blue-500/50 hover:shadow-xl animate-fade-in"
-            >
-              {car.status === "AVAILABLE" ? (
-                <figure>
-                  <Image
-                    src={car.imageUrl.trim()}
-                    alt={car.make}
-                    className="h-60"
-                    width="500"
-                    height="500"
-                  />
-                </figure>
-              ) : (
-                <figure className="relative">
-                  <Image
-                    src={car.imageUrl.trim()}
-                    alt={car.make}
-                    className="h-60 opacity-20"
-                    width="500"
-                    height="500"
-                  />
-                  <figcaption className="absolute justify-center items-center text-white font-bold text-2xl px-2 py-1">
-                    This car is currently unavailable
-                  </figcaption>
-                </figure>
-              )}
+    <div className="card bg-[#1c2634] shadow-md shadow-blue-500/50 hover:shadow-xl animate-fade-in">
+      {car.status === "AVAILABLE" ? (
+        <figure>
+          <Image
+            src={car.imageUrl.trim()}
+            alt={car.make}
+            className="h-60"
+            width="500"
+            height="500"
+          />
+        </figure>
+      ) : (
+        <figure className="relative">
+          <Image
+            src={car.imageUrl.trim()}
+            alt={car.make}
+            className="h-60 opacity-20"
+            width="500"
+            height="500"
+          />
+          <figcaption className="absolute justify-center items-center text-white font-bold text-2xl px-2 py-1">
+            This car is currently unavailable
+          </figcaption>
+        </figure>
+      )}
 
-              <div className="card-body justify-items-start">
-                <div>
-                  <h2 className="card-title sm:text-sm md:text-md lg:text-lg xl:text-3xl font-bold">
-                    {car.make} ({car.model})
-                  </h2>
-                </div>
+      <div className="card-body justify-items-start">
+        <div>
+          <h2 className="card-title sm:text-sm md:text-md lg:text-lg xl:text-3xl font-bold">
+            {car.make} ({car.model})
+          </h2>
+        </div>
 
-                <div>
-                  <h2 className="text-[#60a5fa] font-bold text-2xl justify-center">
-                    ₱{Number(car.pricePerDay)}/day
-                  </h2>
-                </div>
+        <div>
+          <h2 className="text-[#60a5fa] font-bold text-2xl justify-center">
+            ₱{Number(car.pricePerDay)}/day
+          </h2>
+        </div>
 
-                <div className="mb-4">
-                  <p className="text-gray-500">{car.description}</p>
-                </div>
+        <div className="mb-4">
+          <p className="text-gray-500">{car.description}</p>
+        </div>
 
-                <div className="justify-start flex gap-2">
-                  <EditCarDetailsButton onClick={() => onEdit && onEdit(car)} />
-                  <Link href={`/vehicles/${encodeURIComponent(car.model)}`}>
-                    {car.status === "AVAILABLE" ? (
-                      <button className="btn bg-[#1d4ed8]">Rent Now</button>
-                    ) : (
-                      <button className="btn bg-gray-500" disabled>
-                        Unavailable
-                      </button>
-                    )}
-                  </Link>
-                </div>
-              </div>
-            </div>
-          ))}
+        <div className="justify-start flex gap-2">
+          <EditCarDetailsButton onClick={() => onEdit && onEdit(car)} />
+          <Link href={`/vehicles/${encodeURIComponent(car.model)}`}>
+            {car.status === "AVAILABLE" ? (
+              <button className="btn bg-[#1d4ed8]">Rent Now</button>
+            ) : (
+              <button className="btn bg-gray-500" disabled>
+                Unavailable
+              </button>
+            )}
+          </Link>
+        </div>
+      </div>
     </div>
   );
 };
