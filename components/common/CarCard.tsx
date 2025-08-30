@@ -85,7 +85,7 @@ const CarCard = ({ car, onEdit }: CarCardProps) => {
         <div className="justify-start flex gap-2">
           <Link href={`/vehicles/${encodeURIComponent(car.model)}`}>
             {car.status === "AVAILABLE" ? (
-              <button className="btn bg-[#1d4ed8]">Rent Now</button>
+              <button className="btn bg-[#1d4ed8]">View Car</button>
             ) : (
               <button className="btn bg-gray-500" disabled>
                 Unavailable
