@@ -6,9 +6,6 @@ import useCards from "@/hooks/useCards";
 import { useState } from "react";
 import Pagination from "@/components/ui/vehicles/Pagination";
 import useDebounce from "@/hooks/useDebounce";
-import { AddCarButton } from "@/components/ui/vehicles/AddCarButton";
-import AddCarModal from "@/components/ui/vehicles/AddCarModal";
-import CarDetailsModal from "@/components/ui/vehicles/CarDetailsModal";
 import { Car } from "../../../app/generated/prisma";
 import Hero from "../../common/Hero";
 import Skeleton from "../../common/Skeleton";
@@ -41,9 +38,6 @@ const VehicleScreen = () => {
       />
       <div className="flex flex-col bg-[#111827]">
         <div className="flex flex-col sm:flex-row xl:flex-row justify-center items-center xl:justify-end xl:items-end xl:gap-0 mb-8 gap-4 pt-12 xl:ml-auto xl:pr-6 xl:mt-24 md:px-4">
-          <div className="mr-4">
-            <AddCarButton onClick={() => setOpenModal(true)} />
-          </div>
           <Dropdown
             value={type}
             onChange={(e) => {
@@ -108,28 +102,6 @@ const VehicleScreen = () => {
                 />
               ))}
         </div>
-
-        <AddCarModal
-          open={openModal}
-          onClose={() => setOpenModal(false)}
-          onSuccess={() => {
-            setRefresh((r) => r + 1);
-            setCurrentPage(1);
-          }}
-        />
-
-        <CarDetailsModal
-          open={openCarDetailsModal}
-          onClose={() => {
-            setSelectedCar(null);
-            setOpenCarDetailsModal(false);
-          }}
-          car={selectedCar}
-          onSuccess={() => {
-            setRefresh((r) => r + 1);
-            setOpenCarDetailsModal(false);
-          }}
-        />
 
         <div className="flex justify-center items-center mt-8 mb-4">
           <Pagination
