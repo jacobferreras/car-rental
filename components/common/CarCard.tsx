@@ -1,8 +1,6 @@
 import Image from "next/image";
-import EditCarDetailsButton from "../ui/vehicles/EditCarDetailsButton";
 import { Decimal } from "@prisma/client/runtime/library";
 import Link from "next/link";
-import Skeleton from "./Skeleton";
 import {
   CarStatus,
   CarType,
@@ -85,7 +83,6 @@ const CarCard = ({ car, onEdit }: CarCardProps) => {
         </div>
 
         <div className="justify-start flex gap-2">
-          <EditCarDetailsButton onClick={() => onEdit && onEdit(car)} />
           <Link href={`/vehicles/${encodeURIComponent(car.model)}`}>
             {car.status === "AVAILABLE" ? (
               <button className="btn bg-[#1d4ed8]">Rent Now</button>
