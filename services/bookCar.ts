@@ -11,6 +11,9 @@ export const bookCar = async (
 ) => {
   try {
     const response = await axios.post("/api/booking", {
+      carId,
+      carMake,
+      carModel,
       firstName,
       lastName,
       startDate,

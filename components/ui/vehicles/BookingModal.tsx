@@ -21,15 +21,16 @@ const BookingModal = ({ open, onClose, carData }: BookingModalProps) => {
         <h3 className="font-bold text-3xl mb-4">Book A Ride</h3>
         <form
           className="flex flex-col gap-2"
-          onSubmit={() =>
+          onSubmit={(e) => {
+            e.preventDefault();
             handleBookCar(
               carData.id,
               carData.make,
               carData.model,
               formData.startDate,
               formData.endDate
-            )
-          }
+            );
+          }}
         >
           <input
             name="make"
