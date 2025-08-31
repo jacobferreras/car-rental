@@ -9,11 +9,17 @@ interface BookingModalProps {
     make: string;
     id: number;
   };
+  onBookingSuccess?: () => void;
 }
 
-const BookingModal = ({ open, onClose, carData }: BookingModalProps) => {
+const BookingModal = ({
+  open,
+  onClose,
+  carData,
+  onBookingSuccess,
+}: BookingModalProps) => {
   const { formData, loading, error, handleBookCar, handleChange } =
-    useBooking();
+    useBooking(onBookingSuccess);
 
   return (
     <div className={`modal ${open ? "modal-open" : ""}`}>
