@@ -2,8 +2,11 @@
 import useCarModel from "@/hooks/useCarModel";
 import Link from "next/link";
 import VehicleDetailsSkeleton from "./VehicleDetailsSkeleton";
+import { useState } from "react";
+import BookingModal from "./BookingModal";
 
 const VehicleDetails = () => {
+  const [isOpen, setIsOpen] = useState(false);
   const { car } = useCarModel();
 
   if (!car) {
@@ -62,7 +65,22 @@ const VehicleDetails = () => {
                 </p>
               </div>
 
-              <button className="btn bg-[#1d4ed8] rounded-xl">Book Now</button>
+              <button
+                className="btn bg-[#1d4ed8] rounded-xl"
+                onClick={() => setIsOpen(true)}
+              >
+                Book Now
+              </button>
+
+              <BookingModal
+                open={isOpen}
+                onClose={() => setIsOpen(false)}
+                carData={{
+                  model: car.model,
+                  make: car.make,
+                  id: car.id,
+                }}
+              />
             </div>
           </div>
         </div>
