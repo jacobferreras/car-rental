@@ -35,7 +35,8 @@ model Car {
 model Booking {
   id         Int      @id @default(autoincrement())
   carId      Int
-  carName    String
+  carMake    String
+  carModel   String
   userId     String?
   email      String?
   firstName  String

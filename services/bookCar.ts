@@ -2,7 +2,8 @@ import axios from "axios";
 
 export const bookCar = async (
   carId: number,
-  carName: string,
+  carMake: string,
+  carModel: string,
   firstName: string,
   lastName: string,
   startDate: Date,
@@ -10,8 +11,6 @@ export const bookCar = async (
 ) => {
   try {
     const response = await axios.post("/api/booking", {
-      carId,
-      carName,
       firstName,
       lastName,
       startDate,

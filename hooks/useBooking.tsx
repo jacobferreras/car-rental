@@ -22,7 +22,8 @@ const useBooking = () => {
 
   const handleBookCar = async (
     carId: number,
-    carName: string,
+    carMake: string,
+    carModel: string,
     startDate: string,
     endDate: string
   ) => {
@@ -31,7 +32,8 @@ const useBooking = () => {
     try {
       await bookCar(
         carId,
-        carName,
+        carMake,
+        carModel,
         formData.firstName,
         formData.lastName,
         new Date(formData.startDate),

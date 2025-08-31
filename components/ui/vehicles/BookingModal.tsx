@@ -24,6 +24,7 @@ const BookingModal = ({ open, onClose, carData }: BookingModalProps) => {
           onSubmit={() =>
             handleBookCar(
               carData.id,
+              carData.make,
               carData.model,
               formData.startDate,
               formData.endDate
