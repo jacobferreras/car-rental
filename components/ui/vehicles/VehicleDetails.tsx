@@ -4,6 +4,7 @@ import Link from "next/link";
 import VehicleDetailsSkeleton from "./VehicleDetailsSkeleton";
 import { useState } from "react";
 import BookingModal from "./BookingModal";
+import Image from "next/image";
 
 const VehicleDetails = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -27,12 +28,15 @@ const VehicleDetails = () => {
             Vehicle Details
           </h1>
           <div className="h-px w-full bg-gray-600 my-4" />
-          <div className="flex flex-col md:flex-row pb-8 gap-4 md:gap-8 animate-fade-in">
+          <div className="flex flex-col lg:flex-row pb-8 gap-4 md:gap-8 animate-fade-in">
             <figure className="px-4 pt-6 md:pt-10 w-full md:w-1/2 lg:w-2/5">
-              <img
+              <Image
                 src={car.imageUrl}
                 alt="Car"
-                className="rounded-xl w-full h-auto object-cover"
+                className="rounded-xl w-full h-auto lg:h-100 object-cover"
+                width={800}
+                height={600}
+                priority
               />
             </figure>
             <div className="card-body items-start px-4 md:px-0 w-full md:w-1/2 lg:w-3/5">
@@ -80,6 +84,7 @@ const VehicleDetails = () => {
                   make: car.make,
                   id: car.id,
                 }}
+                onBookingSuccess={() => setIsOpen(false)}
               />
             </div>
           </div>
