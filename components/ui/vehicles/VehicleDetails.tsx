@@ -17,7 +17,7 @@ const VehicleDetails = () => {
   return (
     <div className="min-h-screen bg-[#030712]">
       <div className="pt-24 pb-12">
-        <div className="rounded-xl mx-4 sm:mx-8 md:mx-12 bg-[#1f2937]">
+        <div className="rounded-xl mx-4 sm:mx-8 md:mx-12  bg-[#1f2937]">
           <h1 className="pl-4 sm:pl-6 pt-4 text-xl sm:text-2xl font-bold">
             {" "}
             <span>
@@ -28,18 +28,18 @@ const VehicleDetails = () => {
             Vehicle Details
           </h1>
           <div className="h-px w-full bg-gray-600 my-4" />
-          <div className="flex flex-col lg:flex-row pb-8 gap-4 md:gap-8 animate-fade-in">
-            <figure className="px-4 pt-6 md:pt-10 w-full md:w-1/2 lg:w-2/5">
+          <div className="flex flex-col xl:flex-row pb-8 gap-4 md:gap-8 justify-center items-center animate-fade-in">
+            <figure className="px-4 pt-6">
               <Image
                 src={car.imageUrl}
                 alt="Car"
-                className="rounded-xl w-full h-auto lg:h-100 object-cover"
+                className="rounded-xl w-auto h-auto xl:h-112 object-cover"
                 width={800}
                 height={600}
                 priority
               />
             </figure>
-            <div className="card-body items-start px-4 md:px-0 w-full md:w-1/2 lg:w-3/5">
+            <div className="card-body items-start  px-4 md:px-4 lg:px-12 xl:px-0 w-full xl:w-3/5">
               <div className="pt-2 mb-2 w-full">
                 <h1 className="card-title text-2xl sm:text-3xl md:text-4xl mb-2 break-words">
                   {car.make} {car.model}
