@@ -5,9 +5,11 @@ import VehicleDetailsSkeleton from "./VehicleDetailsSkeleton";
 import { useState } from "react";
 import BookingModal from "./BookingModal";
 import Image from "next/image";
+import ConfirmationModal from "./ConfirmationModal";
 
 const VehicleDetails = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isConfirmOpen, setIsConfirmOpen] = useState(false);
   const { car } = useCarModel();
 
   if (!car) {
@@ -84,7 +86,14 @@ const VehicleDetails = () => {
                   make: car.make,
                   id: car.id,
                 }}
-                onBookingSuccess={() => setIsOpen(false)}
+                onBookingSuccess={() => {
+                  setIsOpen(false);
+                  setIsConfirmOpen(true);
+                }}
+              />
+              <ConfirmationModal
+                isOpen={isConfirmOpen}
+                onClose={() => setIsConfirmOpen(false)}
               />
             </div>
           </div>
