@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { bookCar } from "@/services/bookCar";
 
-const useBooking = () => {
+const useBooking = (onBookingSuccess?: () => void) => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const [formData, setFormData] = useState({
@@ -39,6 +39,7 @@ const useBooking = () => {
         new Date(formData.startDate),
         new Date(formData.endDate)
       );
+      if (onBookingSuccess) onBookingSuccess();
     } catch (error) {
       setError(error as any);
     } finally {
