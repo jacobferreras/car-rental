@@ -33,7 +33,7 @@ const VehicleDetails = () => {
               <Image
                 src={car.imageUrl}
                 alt="Car"
-                className="rounded-xl w-auto h-auto xl:h-112 object-cover"
+                className="rounded-xl w-auto h-auto xl:w-200 xl:h-112 object-cover"
                 width={800}
                 height={600}
                 priority
