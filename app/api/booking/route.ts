@@ -17,7 +17,7 @@ export async function POST(request: Request) {
   if (!user)
     return new Response("Unauthorized", { status: 401, headers: corsHeaders });
 
-  const { carId, carName, startDate, endDate, firstName, lastName } =
+  const { carId, carMake, carModel, startDate, endDate, firstName, lastName } =
     await request.json();
 
   if (!carId || !startDate || !endDate) {
@@ -30,7 +30,8 @@ export async function POST(request: Request) {
   const booking = await prisma.booking.create({
     data: {
       carId,
-      carName,
+      carMake,
+      carModel,
       userId: user.id,
       email: user.email,
       firstName,

@@ -81,6 +81,10 @@ export async function POST(req: Request) {
     const {
       make,
       model,
+      color,
+      mileage,
+      horsepower,
+      engine,
       description,
       year,
       type,
@@ -94,6 +98,10 @@ export async function POST(req: Request) {
     if (
       !make ||
       !model ||
+      !color ||
+      !mileage ||
+      !horsepower ||
+      !engine ||
       !description ||
       !year ||
       !type ||
@@ -113,6 +121,10 @@ export async function POST(req: Request) {
       data: {
         make: String(make).trim(),
         model: String(model).trim(),
+        color: String(color).trim(),
+        mileage: Number(mileage),
+        horsepower: Number(horsepower),
+        engine: String(engine).trim(),
         description: String(description).trim(),
         year: Number(year),
         type: CarType.SUV,
