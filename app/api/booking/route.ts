@@ -31,6 +31,8 @@ export async function POST(request: Request) {
       carId,
       userId: user.id,
       email: user.email,
+      firstName,
+      lastName,
       startDate,
       endDate,
     },

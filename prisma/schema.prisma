@@ -37,6 +37,8 @@ model Booking {
   carId      Int
   userId     String?
   email      String?
+  firstName  String
+  lastName   String
   startDate  DateTime
   endDate    DateTime
   status     BookingStatus @default(PENDING)
