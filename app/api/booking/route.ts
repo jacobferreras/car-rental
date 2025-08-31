@@ -17,7 +17,8 @@ export async function POST(request: Request) {
   if (!user)
     return new Response("Unauthorized", { status: 401, headers: corsHeaders });
 
-  const { carId, startDate, endDate } = await request.json();
+  const { carId, carName, startDate, endDate, firstName, lastName } =
+    await request.json();
 
   if (!carId || !startDate || !endDate) {
     return new Response("Missing required fields", {
@@ -29,6 +30,7 @@ export async function POST(request: Request) {
   const booking = await prisma.booking.create({
     data: {
       carId,
+      carName,
       userId: user.id,
       email: user.email,
       firstName,
