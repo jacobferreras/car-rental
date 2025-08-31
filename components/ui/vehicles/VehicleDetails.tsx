@@ -6,11 +6,14 @@ import { useState } from "react";
 import BookingModal from "./BookingModal";
 import Image from "next/image";
 import ConfirmationModal from "./ConfirmationModal";
+import { useKindeAuth } from "@kinde-oss/kinde-auth-nextjs";
 
 const VehicleDetails = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isConfirmOpen, setIsConfirmOpen] = useState(false);
   const { car } = useCarModel();
+
+  const user = useKindeAuth();
 
   if (!car) {
     return <VehicleDetailsSkeleton />;
@@ -94,6 +97,11 @@ const VehicleDetails = () => {
               <ConfirmationModal
                 isOpen={isConfirmOpen}
                 onClose={() => setIsConfirmOpen(false)}
+                user={user.user?.email ?? ""}
+                cardata={{
+                  make: car.make,
+                  model: car.model,
+                }}
               />
             </div>
           </div>
