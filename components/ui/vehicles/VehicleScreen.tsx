@@ -3,31 +3,25 @@ import Dropdown from "@/components/ui/vehicles/DropdownSeats";
 import DropdownTransmission from "@/components/ui/vehicles/DropdownTransmission";
 import CarCards from "../../common/CarCard";
 import useCards from "@/hooks/useCards";
-import { useState } from "react";
 import Pagination from "@/components/ui/vehicles/Pagination";
-import useDebounce from "@/hooks/useDebounce";
 import { Car } from "../../../app/generated/prisma";
 import Hero from "../../common/Hero";
 import Skeleton from "../../common/Skeleton";
 
 const VehicleScreen = () => {
-  const [refresh, setRefresh] = useState(0);
-  const [selectedCar, setSelectedCar] = useState<Car | null>(null);
-  const [currentPage, setCurrentPage] = useState(1);
-  const [openModal, setOpenModal] = useState(false);
-  const [openCarDetailsModal, setOpenCarDetailsModal] = useState(false);
-  const [transmission, setTransmission] = useState("");
-  const [search, setSearch] = useState("");
-  const debounceSearch = useDebounce(search, 400);
-  const [type, setType] = useState("");
-  const { cars, totalpages, loading } = useCards({
-    type,
+  const {
+    cars,
+    totalpages,
+    loading,
     transmission,
-    limit: 8,
-    page: currentPage,
-    search: debounceSearch,
-    refresh,
-  });
+    setTransmission,
+    currentPage,
+    setCurrentPage,
+    type,
+    setType,
+    search,
+    setSearch,
+  } = useCards();
 
   return (
     <>
@@ -91,16 +85,7 @@ const VehicleScreen = () => {
             ? Array.from({ length: 8 }).map((_, index) => (
                 <Skeleton key={index} />
               ))
-            : cars.map((car: Car) => (
-                <CarCards
-                  key={car.id}
-                  car={car}
-                  onEdit={(car) => {
-                    setSelectedCar(car);
-                    setOpenCarDetailsModal(true);
-                  }}
-                />
-              ))}
+            : cars.map((car: Car) => <CarCards key={car.id} car={car} />)}
         </div>
 
         <div className="flex justify-center items-center mt-8 mb-4">
