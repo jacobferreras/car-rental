@@ -1,10 +1,5 @@
-import {
-  CarType,
-  PrismaClient,
-  Transmission,
-} from "../../generated/prisma/client";
-
-const prisma = new PrismaClient();
+import { CarType, Transmission } from "../../generated/prisma/client";
+import { prisma } from "../../../lib/prisma";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "http://localhost:3000",
@@ -70,8 +65,6 @@ export async function GET(req: Request) {
       status: 500,
       headers: corsHeaders,
     });
-  } finally {
-    await prisma.$disconnect();
   }
 }
 
@@ -146,8 +139,6 @@ export async function POST(req: Request) {
       status: 500,
       headers: corsHeaders,
     });
-  } finally {
-    await prisma.$disconnect();
   }
 }
 
@@ -182,7 +173,5 @@ export async function PATCH(req: Request) {
       status: 500,
       headers: corsHeaders,
     });
-  } finally {
-    await prisma.$disconnect();
   }
 }
