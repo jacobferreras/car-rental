@@ -33,11 +33,10 @@ interface Car {
 }
 
 interface CarCardProps {
-  onEdit?: (car: Car) => void;
   car: Car;
 }
 
-const CarCard = ({ car, onEdit }: CarCardProps) => {
+const CarCard = ({ car }: CarCardProps) => {
   return (
     <div className="card bg-[#1c2634] shadow-md shadow-blue-500/50 hover:shadow-xl animate-fade-in">
       {car.status === "AVAILABLE" ? (
