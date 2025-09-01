@@ -1,25 +1,29 @@
 "use client";
 import { useState, useEffect } from "react";
 import { fetchCars } from "@/services/fetchCars";
+import useDebounce from "./useDebounce";
 
-interface Car {
-  type?: string;
-  transmission?: string;
-  limit?: number;
-  page?: number;
-  search?: string;
-  refresh?: number;
-}
-
-const useCards = (props: Car) => {
+const useCards = () => {
+  const limit = 8;
+  const [search, setSearch] = useState("");
+  const debounceSearch = useDebounce(search, 400);
   const [cars, setCars] = useState([]);
+  const [type, setType] = useState("");
   const [totalpages, setTotalPages] = useState(0);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [transmission, setTransmission] = useState("");
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const getCars = async () => {
       try {
-        const data = await fetchCars(props);
+        const data = await fetchCars({
+          transmission,
+          page: currentPage,
+          limit: limit,
+          search: debounceSearch,
+          type,
+        });
         setCars(data.cars || []);
         setTotalPages(data.totalpages || 1);
       } catch (error) {
@@ -30,16 +34,21 @@ const useCards = (props: Car) => {
     };
 
     getCars();
-  }, [
-    props.transmission,
-    props.type,
-    props.limit,
-    props.page,
-    props.search,
-    props.refresh,
-  ]);
+  }, [transmission, currentPage, type, currentPage, debounceSearch]);
 
-  return { cars, totalpages, loading };
+  return {
+    cars,
+    totalpages,
+    loading,
+    transmission,
+    setTransmission,
+    currentPage,
+    setCurrentPage,
+    type,
+    setType,
+    search,
+    setSearch,
+  };
 };
 
 export default useCards;
