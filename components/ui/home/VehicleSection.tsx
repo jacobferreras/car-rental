@@ -1,11 +1,11 @@
-import React from "react";
+import React, { Suspense } from "react";
 import Link from "next/link";
 import HomeCarCard from "@/components/ui/home/HomeCarCard";
 import prisma from "@/prisma/client";
 
 const VehicleSection = async () => {
   const cars = await prisma.car.findMany({
-    take: 8,
+    take: 6,
   });
 
   return (
@@ -17,9 +17,9 @@ const VehicleSection = async () => {
           </h1>
         </div>
 
-        <div className="flex justify-center items-center">
+        <Suspense>
           <HomeCarCard cars={cars} />
-        </div>
+        </Suspense>
 
         <div className="flex justify-center items-centers py-12">
           <Link href="/vehicles">
