@@ -2,7 +2,7 @@ import ServiceCard from "./ServiceCard";
 
 const ServiceBenifits = () => {
   return (
-    <div className="flex flex-col md:flex-row justify-center items-center px-4  text-center gap-4 lg:gap-8 mt-4">
+    <div className="flex flex-col md:flex-row justify-center items-center text-center gap-4 lg:gap-8 mt-4 px-4">
       <ServiceCard
         title="Availability"
         description="InstaDrive offers a wide selection of vehicles ready to rent anytime, with real-time booking and flexible pick-up options. Whether it’s a last-minute trip or a planned vacation, we’re here 24/7."
