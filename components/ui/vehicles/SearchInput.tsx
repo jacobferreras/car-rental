@@ -12,8 +12,8 @@ const SearchInput = ({
   setCurrentPage,
 }: SearchInputProps) => {
   return (
-    <div className="pr-6">
-      <label className="input w-auto w-68 lg:w-50 rounded-xl">
+    <div className="pr-6 lg:pr-0">
+      <label className="input  w-68 lg:w-50 rounded-xl">
         <svg
           className="h-[1em] opacity-50"
           xmlns="http://www.w3.org/2000/svg"
