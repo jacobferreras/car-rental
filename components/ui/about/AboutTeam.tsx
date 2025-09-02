@@ -8,7 +8,7 @@ const AboutTeam = () => {
         Meet Our Team
       </h1>
       <div>
-        <div className="flex flex-col md:flex-row items-center justify-center gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 items-center justify-center gap-8">
           <OurteamCard
             imageUrl="/CEO.webp"
             name="John Doe"
