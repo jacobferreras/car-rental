@@ -4,6 +4,7 @@ import { Pagination, Autoplay, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import Image from "next/image";
 
 const testimonials = [
   {
@@ -100,10 +101,11 @@ const CustomerTestimony = () => {
                 </h2>
                 <StarRating rating={testimonial.rating} />
                 <figure className="px-10">
-                  <img
+                  <Image
                     src={testimonial.image}
                     alt={testimonial.name}
                     className="rounded-full w-16 h-16 object-cover"
+                    priority
                   />
                 </figure>
                 <p className="justify-center items-center text-center text-xl font-family-mono font-bold">
