@@ -49,8 +49,8 @@ const HomeCarCard = ({ cars }: CarCardProps) => {
                 src={car.imageUrl.trim()}
                 alt={car.make}
                 className="h-60 w-full"
-                width="1000"
-                height="1000"
+                width={1000}
+                height={1000}
                 priority
               />
             </figure>

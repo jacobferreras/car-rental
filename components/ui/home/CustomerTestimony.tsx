@@ -106,6 +106,8 @@ const CustomerTestimony = () => {
                     alt={testimonial.name}
                     className="rounded-full w-16 h-16 object-cover"
                     priority
+                    width={250}
+                    height={250}
                   />
                 </figure>
                 <p className="justify-center items-center text-center text-xl font-family-mono font-bold">
