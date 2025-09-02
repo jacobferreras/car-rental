@@ -10,7 +10,7 @@ const AboutCoreValues = () => {
           Our Core Values
         </h1>
       </div>
-      <div className="flex flex-col md:flex-row justify-center items-center px-4  text-center gap-4 lg:gap-8 mt-4 relative z-10">
+      <div className="flex flex-col md:flex-row justify-center items-center px-4  text-center gap-4 lg:gap-8 mt-12 relative z-10">
         <CoreValueCard
           title="Integrity"
           description="We believe in honesty and transparency in all our dealings. Our customers can trust that we will always provide clear information about our services, pricing, and policies."
