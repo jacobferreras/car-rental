@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const AboutInstaDrive = () => {
   return (
-    <div className="flex flex-col md:flex-row items-center justify-center py-24 px-4 md:gap-x-12 gap-x-24 bg-[#111827]">
+    <div className="flex flex-col md:flex-row items-center justify-center py-24 px-4 md:gap-x-12 gap-x-24 bg-[#111827] lg:px-12">
       <div>
         <h1 className="mb-4 text-xl md:text-2xl lg:text-4xl xl:text-5xl font-bold font-family-mono">
           Our Journey

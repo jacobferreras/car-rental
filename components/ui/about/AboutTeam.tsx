@@ -3,7 +3,7 @@ import OurteamCard from "./OurteamCard";
 
 const AboutTeam = () => {
   return (
-    <div className="flex flex-col items-center justify-center py-24 px-4 bg-[#1f2937]">
+    <div className="flex flex-col items-center justify-center py-24 px-4 lg:px-0 bg-[#1f2937]">
       <h1 className="mb-8 text-xl md:text-2xl lg:text-5xl font-bold font-family-mono">
         Meet Our Team
       </h1>
