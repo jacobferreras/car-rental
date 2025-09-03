@@ -45,8 +45,8 @@ const CarCard = ({ car }: CarCardProps) => {
             src={car.imageUrl.trim()}
             alt={car.make}
             className="h-60"
-            width="500"
-            height="500"
+            width={500}
+            height={300}
             loading="lazy"
           />
         </figure>
@@ -59,7 +59,7 @@ const CarCard = ({ car }: CarCardProps) => {
             width="500"
             height="500"
           />
-          <figcaption className="absolute justify-center items-center text-white font-bold text-2xl px-2 py-1">
+          <figcaption className="absolute justify-center text-center items-center text-white font-bold text-2xl px-2 py-1">
             This car is currently unavailable
           </figcaption>
         </figure>
@@ -79,7 +79,7 @@ const CarCard = ({ car }: CarCardProps) => {
         </div>
 
         <div className="mb-4">
-          <p className="text-gray-500">{car.description}</p>
+          <p className="text-white">{car.description}</p>
         </div>
 
         <div className="justify-start flex gap-2">
