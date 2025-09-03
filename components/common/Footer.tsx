@@ -22,14 +22,15 @@ const Footer = () => {
                 </svg>
                 <h3 className="text-xl font-bold text-[#558cd2]">InstaDrive</h3>
               </div>
-              <p className="text-gray-300 text-sm leading-relaxed">
+              <p className="text-white text-sm leading-relaxed">
                 Your trusted partner for premium car rentals. Experience
                 comfort, reliability, and exceptional service on every journey.
               </p>
               <div className="flex space-x-4">
                 <a
                   href="#"
-                  className="text-gray-400 hover:text-[#558cd2] transition-colors"
+                  className="text-white hover:text-[#558cd2] transition-colors"
+                  aria-label="Twitter"
                 >
                   <svg
                     className="w-5 h-5"
@@ -41,7 +42,8 @@ const Footer = () => {
                 </a>
                 <a
                   href="#"
-                  className="text-gray-400 hover:text-[#558cd2] transition-colors"
+                  className="text-white hover:text-[#558cd2] transition-colors"
+                  aria-label="Facebook"
                 >
                   <svg
                     className="w-5 h-5"
@@ -53,7 +55,8 @@ const Footer = () => {
                 </a>
                 <a
                   href="#"
-                  className="text-gray-400 hover:text-[#558cd2] transition-colors"
+                  className="text-white hover:text-[#558cd2] transition-colors"
+                  aria-label="LinkedIn"
                 >
                   <svg
                     className="w-5 h-5"
@@ -65,7 +68,8 @@ const Footer = () => {
                 </a>
                 <a
                   href="#"
-                  className="text-gray-400 hover:text-[#558cd2] transition-colors"
+                  className="text-white hover:text-[#558cd2] transition-colors"
+                  aria-label="GitHub"
                 >
                   <svg
                     className="w-5 h-5"

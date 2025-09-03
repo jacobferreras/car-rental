@@ -11,12 +11,18 @@ const HomeBookingCard = () => {
         </h1>
         <div className="flex flex-col sm:flex-row gap-4">
           <div>
+            <label htmlFor="pickup-date" className="sr-only">
+              Pick-up Date
+            </label>
             <h2 className="text-[#acafb5] lg:text-xl mb-2">Pick-up Date</h2>
-            <DateInput />
+            <DateInput id="pickup-date" />
           </div>
           <div>
+            <label htmlFor="pickup-date" className="sr-only">
+              Pick-up Date
+            </label>
             <h2 className="text-[#acafb5] lg:text-xl mb-2">Drop-off Date</h2>
-            <DateInput />
+            <DateInput id="dropoff-date" />
           </div>
 
           <div className="sm:pt-9 ">
