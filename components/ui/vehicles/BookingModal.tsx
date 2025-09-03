@@ -1,6 +1,13 @@
 import React from "react";
 import useBooking from "@/hooks/useBooking";
 
+interface BookingData {
+  firstName: string;
+  lastName: string;
+  startDate: string;
+  endDate: string;
+}
+
 interface BookingModalProps {
   open: boolean;
   onClose: () => void;
@@ -10,6 +17,7 @@ interface BookingModalProps {
     id: number;
   };
   onBookingSuccess?: () => void;
+  setBookingData: React.Dispatch<React.SetStateAction<BookingData>>;
 }
 
 const BookingModal = ({
@@ -17,6 +25,7 @@ const BookingModal = ({
   onClose,
   carData,
   onBookingSuccess,
+  setBookingData,
 }: BookingModalProps) => {
   const { formData, loading, error, handleBookCar, handleChange } =
     useBooking(onBookingSuccess);
@@ -37,7 +46,13 @@ const BookingModal = ({
               carData.model,
               formData.startDate,
               formData.endDate
-            );
+            ),
+              setBookingData({
+                firstName: formData.firstName,
+                lastName: formData.lastName,
+                startDate: formData.startDate,
+                endDate: formData.endDate,
+              });
           }}
         >
           <div>

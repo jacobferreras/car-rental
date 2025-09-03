@@ -11,6 +11,12 @@ import { useKindeAuth } from "@kinde-oss/kinde-auth-nextjs";
 const VehicleDetails = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isConfirmOpen, setIsConfirmOpen] = useState(false);
+  const [bookingData, setBookingData] = useState({
+    firstName: "",
+    lastName: "",
+    startDate: "",
+    endDate: "",
+  });
   const { car } = useCarModel();
 
   const user = useKindeAuth();
@@ -93,6 +99,7 @@ const VehicleDetails = () => {
                   setIsOpen(false);
                   setIsConfirmOpen(true);
                 }}
+                setBookingData={setBookingData}
               />
               <ConfirmationModal
                 isOpen={isConfirmOpen}
@@ -102,6 +109,7 @@ const VehicleDetails = () => {
                   make: car.make,
                   model: car.model,
                 }}
+                bookingData={bookingData}
               />
             </div>
           </div>
