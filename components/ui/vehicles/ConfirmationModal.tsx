@@ -27,8 +27,8 @@ const ConfirmationModal = ({
       }`}
     >
       <div className="modal-box bg-[#1c2634] text-center">
-        <h3 className="font-bold text-lg">Booking Confirmed!</h3>
-        <p className="py-4">
+        <h3 className="font-bold text-2xl">Booking Confirmed!</h3>
+        <p className="py-4 text-lg">
           {`Thank you for your booking, ${bookingData.firstName} ${bookingData.lastName}! Your request for ${bookingData.carMake} ${bookingData.carModel} from ${bookingData.startDate} to ${bookingData.endDate} has been received. 
           A confirmation email has been sent to at ${bookingData.email}.`}
         </p>
