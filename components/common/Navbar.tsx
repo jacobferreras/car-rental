@@ -16,7 +16,12 @@ const Navbar = () => {
     <div className="fixed navbar bg-[#182448] opacity-89 backdrop-blur-lg shadow-sm z-50">
       <div className="navbar-start">
         <div className="dropdown">
-          <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+          <div
+            tabIndex={0}
+            role="button"
+            className="btn btn-ghost lg:hidden"
+            aria-label="Open main menu"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-5 w-5"

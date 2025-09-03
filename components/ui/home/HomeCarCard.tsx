@@ -40,7 +40,7 @@ const HomeCarCard = ({ cars }: CarCardProps) => {
                   ₱{Number(car.pricePerDay)}/day
                 </h2>
 
-                <p className="text-gray-500">{car.description}</p>
+                <p className="text-white">{car.description}</p>
 
                 <div className="card-actions">
                   <Link href={`/vehicles/${encodeURIComponent(car.model)}`}>
