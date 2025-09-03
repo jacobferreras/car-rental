@@ -3,8 +3,6 @@ import useBooking from "@/hooks/useBooking";
 import { useKindeAuth } from "@kinde-oss/kinde-auth-nextjs";
 import { BookingData } from "@/Types/bookingData";
 
-const user = useKindeAuth();
-
 interface BookingModalProps {
   open: boolean;
   onClose: () => void;
@@ -26,6 +24,8 @@ const BookingModal = ({
 }: BookingModalProps) => {
   const { formData, loading, error, handleBookCar, handleChange } =
     useBooking(onBookingSuccess);
+
+  const user = useKindeAuth();
 
   return (
     <div className={`modal ${open ? "modal-open" : ""}`}>
