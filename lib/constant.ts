@@ -1,24 +1,28 @@
+import { IoShieldCheckmark } from "react-icons/io5";
+import { FaClock, FaLightbulb, FaGem } from "react-icons/fa";
+import { BsTransparency } from "react-icons/bs";
+
 export const service = [
   {
     id: 1,
     title: "Seamless Pickup & Return",
     description:
       "Our simple documentation process means your vehicle is ready when you are. Just a quick check and you'll be on the road in minutes.",
-    icon: "bi bi-clock",
+    icon: FaClock,
   },
   {
     id: 2,
     title: "Maximum Protection",
     description:
       "Our policy of requiring proof of insurance protects you from unexpected costs, ensuring a worry-free rental from start to finish.",
-    icon: "bi bi-shield-check",
+    icon: IoShieldCheckmark,
   },
   {
     id: 3,
     title: "Transparent & Trustworthy",
     description:
       "Our policies are clearly communicated from the start, so you always know what to expect. No hidden fees, no surprises, just a straightforward rental experience.",
-    icon: "bi bi-transparency",
+    icon: BsTransparency,
   },
 ];
 
@@ -28,21 +32,21 @@ export const coreValues = [
     title: "Integrity",
     description:
       "We believe in honesty and transparency in all our dealings. Our customers can trust that we will always provide clear information about our services, pricing, and policies.",
-    icon: "bi bi-shield-check",
+    icon: IoShieldCheckmark,
   },
   {
     id: 2,
     title: "Innovation",
     description:
       "We are committed to continuously improving our services and adopting the latest technologies to enhance the customer experience. Our goal is to make car rental as seamless and efficient as possible.",
-    icon: "bi bi-lightbulb",
+    icon: FaLightbulb,
   },
   {
     id: 3,
     title: "Excellence",
     description:
       "We strive for excellence in everything we do, from the quality of our vehicles to the level of service we provide. Our team is dedicated to ensuring that every customer has a memorable and enjoyable experience.",
-    icon: "bi bi-gem",
+    icon: FaGem,
   },
 ];
 

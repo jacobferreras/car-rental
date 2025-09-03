@@ -17,7 +17,7 @@ const AboutCoreValues = () => {
             key={value.id}
             title={value.title}
             description={value.description}
-            iconClass={value.icon}
+            icon={value.icon}
           />
         ))}
       </div>

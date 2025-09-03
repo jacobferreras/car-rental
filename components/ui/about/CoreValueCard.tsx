@@ -1,7 +1,7 @@
 interface CoreValueCardProps {
   title: string;
   description: string;
-  iconClass: string;
+  icon: React.ElementType;
 }
 
 const CoreValueCard = (props: CoreValueCardProps) => {
@@ -9,7 +9,7 @@ const CoreValueCard = (props: CoreValueCardProps) => {
     <>
       <div className="card bg-[#303a49] w-auto md:h-70  lg:h-90 md:w-106 shadow-md shadow-blue-600/50 hover:shadow-xl">
         <figure className="px-10 pt-10">
-          <i className={`${props.iconClass} text-[#93c5fd] text-5xl`}></i>
+          <props.icon className="text-[#93c5fd] text-5xl" />
         </figure>
 
         <div className="card-body items-center text-center">
