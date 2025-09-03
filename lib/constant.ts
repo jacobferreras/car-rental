@@ -1,4 +1,4 @@
-export const Service = [
+export const service = [
   {
     id: 1,
     title: "Seamless Pickup & Return",
@@ -22,7 +22,7 @@ export const Service = [
   },
 ];
 
-export const CoreValues = [
+export const coreValues = [
   {
     id: 1,
     title: "Integrity",
@@ -46,7 +46,7 @@ export const CoreValues = [
   },
 ];
 
-export const TeamMembers = [
+export const teamMembers = [
   {
     id: 1,
     imageUrl: "/CEO.webp",
@@ -78,5 +78,40 @@ export const TeamMembers = [
     position: "Customer Support Manager",
     description:
       "Bob leads our customer support team, ensuring that every inquiry is handled with care and professionalism, making sure our customers feel valued and supported.",
+  },
+];
+
+export const testimonials = [
+  {
+    id: 1,
+    quote:
+      "Amazing service! The car was clean and the booking process was seamless. Highly recommend!",
+    name: "Sarah Johnson",
+    rating: 5,
+    image: "/Fleet.jpg",
+  },
+  {
+    id: 2,
+    quote:
+      "Great experience! Professional staff and competitive prices. Will definitely use again.",
+    name: "Mike Davis",
+    rating: 5,
+    image: "/Fleet.jpg",
+  },
+  {
+    id: 3,
+    quote:
+      "Excellent customer support and reliable vehicles. Top notch service from start to finish.",
+    name: "Emily Chen",
+    rating: 5,
+    image: "/Fleet.jpg",
+  },
+  {
+    id: 4,
+    quote:
+      "Quick and easy rental process. The car was in perfect condition and saved my trip!",
+    name: "John Rodriguez",
+    rating: 5,
+    image: "/Fleet.jpg",
   },
 ];
