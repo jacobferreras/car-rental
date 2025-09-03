@@ -1,5 +1,6 @@
 import React from "react";
 import CoreValueCard from "./CoreValueCard";
+import { CoreValues } from "@/lib/constant";
 
 const AboutCoreValues = () => {
   return (
@@ -11,21 +12,14 @@ const AboutCoreValues = () => {
         </h1>
       </div>
       <div className="flex flex-col md:flex-row justify-center items-center px-4  text-center gap-4 lg:gap-8 mt-12 relative z-10">
-        <CoreValueCard
-          title="Integrity"
-          description="We believe in honesty and transparency in all our dealings. Our customers can trust that we will always provide clear information about our services, pricing, and policies."
-          iconClass="bi bi-shield-check"
-        />
-        <CoreValueCard
-          title="Innovation"
-          description="We are committed to continuously improving our services and adopting the latest technologies to enhance the customer experience. Our goal is to make car rental as seamless and efficient as possible."
-          iconClass="bi bi-lightbulb"
-        />
-        <CoreValueCard
-          title="Excellence"
-          description="We strive for excellence in everything we do, from the quality of our vehicles to the level of service we provide. Our team is dedicated to ensuring that every customer has a memorable and enjoyable experience."
-          iconClass="bi bi-gem"
-        />
+        {CoreValues.map((value) => (
+          <CoreValueCard
+            key={value.id}
+            title={value.title}
+            description={value.description}
+            iconClass={value.icon}
+          />
+        ))}
       </div>
     </div>
   );

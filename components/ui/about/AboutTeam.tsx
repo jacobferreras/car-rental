@@ -1,5 +1,6 @@
 import React from "react";
 import OurteamCard from "./OurteamCard";
+import { TeamMembers } from "@/lib/constant";
 
 const AboutTeam = () => {
   return (
@@ -9,30 +10,15 @@ const AboutTeam = () => {
       </h1>
       <div>
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 items-center justify-center gap-8">
-          <OurteamCard
-            imageUrl="/CEO.webp"
-            name="John Doe"
-            position="CEO & Founder"
-            description="John is the visionary behind InstaDrive, dedicated to providing a premium car rental experience that combines luxury and convenience. His leadership ensures that every customer receives exceptional service and quality."
-          />
-          <OurteamCard
-            imageUrl="/Head.webp"
-            name="Jane Smith"
-            position="Chief Operating Officer"
-            description="Jane is dedicated to ensuring that every aspect of our operations runs smoothly, from fleet management to customer service, making sure that our clients have the best experience possible."
-          />
-          <OurteamCard
-            imageUrl="/Customer.webp"
-            name="Alice Johnson"
-            position="Head of Marketing"
-            description="Alice is passionate about creating innovative marketing strategies that connect with our customers and enhance their experience with InstaDrive."
-          />
-          <OurteamCard
-            imageUrl="/Fleet.webp"
-            name="Bob Brown"
-            position="Customer Support Manager"
-            description="Bob leads our customer support team, ensuring that every inquiry is handled with care and professionalism, making sure our customers feel valued and supported."
-          />
+          {TeamMembers.map((member) => (
+            <OurteamCard
+              key={member.id}
+              imageUrl={member.imageUrl}
+              name={member.name}
+              position={member.position}
+              description={member.description}
+            />
+          ))}
         </div>
       </div>
     </div>
