@@ -1,9 +1,15 @@
-import VehicleScreen from "@/components/ui/vehicles/VehicleScreen";
+import Hero from "../../components/common/Hero";
+import VehicleSection from "../../components/ui/vehicles/VehicleSection";
 
 const page = () => {
   return (
     <>
-      <VehicleScreen />
+      <Hero
+        title="OUR FLEET"
+        description="EXPLORE OUR DIVERSE RANGE OF VEHICLES, METICULOUSLY CURATED TO MEET YOUR EVERY NEED."
+        ImageSrc="/Another.webp"
+      />
+      <VehicleSection />
     </>
   );
 };
