@@ -55,7 +55,7 @@ const CustomerTestimony = () => {
                     src={testimonial.image}
                     alt={testimonial.name}
                     className="rounded-full w-16 h-16 object-cover"
-                    priority
+                    loading="lazy"
                     width={250}
                     height={250}
                   />

@@ -47,6 +47,7 @@ const CarCard = ({ car }: CarCardProps) => {
             className="h-60"
             width="500"
             height="500"
+            loading="lazy"
           />
         </figure>
       ) : (

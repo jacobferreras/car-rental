@@ -23,7 +23,7 @@ const OurteamCard = ({
             className="rounded-full w-52 h-52 object-cover lg:w-35 lg:h-35 border-4 border-[#558cd2]"
             width={150}
             height={150}
-            priority
+            loading="lazy"
           />
         </figure>
         <div className="card-body items-center text-center">

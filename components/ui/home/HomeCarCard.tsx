@@ -27,7 +27,7 @@ const HomeCarCard = ({ cars }: CarCardProps) => {
                   className="h-60 w-full"
                   width={1000}
                   height={1000}
-                  priority
+                  loading="lazy"
                 />
               </figure>
 

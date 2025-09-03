@@ -25,6 +25,7 @@ const AboutInstaDrive = () => {
             width={800}
             height={600}
             className="rounded-xl mt-8 md:h-70 lg:h-96"
+            loading="lazy"
           />
         </figure>
       </div>
