@@ -91,7 +91,7 @@ const Footer = () => {
                 <li>
                   <Link
                     href="/"
-                    className="text-gray-300 hover:text-white transition-colors text-sm"
+                    className="text-white hover:text-blue-500  transition-colors text-sm"
                   >
                     Home
                   </Link>
@@ -99,7 +99,7 @@ const Footer = () => {
                 <li>
                   <Link
                     href="/vehicles"
-                    className="text-gray-300 hover:text-white transition-colors text-sm"
+                    className="text-white hover:text-blue-500  transition-colors text-sm"
                   >
                     Our Fleet
                   </Link>
@@ -107,7 +107,7 @@ const Footer = () => {
                 <li>
                   <Link
                     href="/about"
-                    className="text-gray-300 hover:text-white transition-colors text-sm"
+                    className="text-white hover:text-blue-500 transition-colors text-sm"
                   >
                     About Us
                   </Link>
@@ -115,7 +115,7 @@ const Footer = () => {
                 <li>
                   <Link
                     href="/contact"
-                    className="text-gray-300 hover:text-white transition-colors text-sm"
+                    className="text-white hover:text-blue-500 transition-colors text-sm"
                   >
                     Contact
                   </Link>
@@ -127,13 +127,11 @@ const Footer = () => {
             <div className="space-y-4">
               <h4 className="text-lg font-semibold text-[#558cd2]">Services</h4>
               <ul className="space-y-2">
-                <li className="text-gray-300 text-sm">Premium Car Rental</li>
-                <li className="text-gray-300 text-sm">Long-term Leasing</li>
-                <li className="text-gray-300 text-sm">Corporate Solutions</li>
-                <li className="text-gray-300 text-sm">Airport Transfers</li>
-                <li className="text-gray-300 text-sm">
-                  24/7 Roadside Assistance
-                </li>
+                <li className="text-white text-sm">Premium Car Rental</li>
+                <li className="text-white text-sm">Long-term Leasing</li>
+                <li className="text-white text-sm">Corporate Solutions</li>
+                <li className="text-white text-sm">Airport Transfers</li>
+                <li className="text-white text-sm">24/7 Roadside Assistance</li>
               </ul>
             </div>
 
@@ -164,8 +162,8 @@ const Footer = () => {
                     />
                   </svg>
                   <div>
-                    <p className="text-gray-300 text-sm">123 Business Avenue</p>
-                    <p className="text-gray-300 text-sm">New York, NY 10001</p>
+                    <p className="text-white text-sm">123 Business Avenue</p>
+                    <p className="text-white text-sm">New York, NY 10001</p>
                   </div>
                 </div>
                 <div className="flex items-center space-x-3">
@@ -182,7 +180,7 @@ const Footer = () => {
                       d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
                     />
                   </svg>
-                  <p className="text-gray-300 text-sm">+1 (555) 123-4567</p>
+                  <p className="text-white text-sm">+1 (555) 123-4567</p>
                 </div>
                 <div className="flex items-center space-x-3">
                   <svg
@@ -198,7 +196,7 @@ const Footer = () => {
                       d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                     />
                   </svg>
-                  <p className="text-gray-300 text-sm">info@instadrive.com</p>
+                  <p className="text-white text-sm">info@instadrive.com</p>
                 </div>
                 <div className="flex items-center space-x-3">
                   <svg
@@ -214,7 +212,7 @@ const Footer = () => {
                       d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
                     />
                   </svg>
-                  <p className="text-gray-300 text-sm">24/7 Available</p>
+                  <p className="text-white text-sm">24/7 Available</p>
                 </div>
               </div>
             </div>
@@ -225,25 +223,25 @@ const Footer = () => {
         <div className="border-t border-gray-700">
           <div className="container mx-auto px-6 py-4">
             <div className="flex flex-col md:flex-row justify-between items-center space-y-2 md:space-y-0">
-              <p className="text-gray-400 text-sm">
+              <p className="text-white text-sm">
                 © 2025 InstaDrive. All rights reserved.
               </p>
               <div className="flex space-x-6">
                 <Link
                   href="/privacy"
-                  className="text-gray-400 hover:text-white text-sm transition-colors"
+                  className="text-white hover:text-blue-500 text-sm transition-colors"
                 >
                   Privacy Policy
                 </Link>
                 <Link
                   href="/terms"
-                  className="text-gray-400 hover:text-white text-sm transition-colors"
+                  className="text-white hover:text-blue-500 text-sm transition-colors"
                 >
                   Terms of Service
                 </Link>
                 <Link
                   href="/cookies"
-                  className="text-gray-400 hover:text-white text-sm transition-colors"
+                  className="text-white hover:text-blue-500 text-sm transition-colors"
                 >
                   Cookie Policy
                 </Link>
