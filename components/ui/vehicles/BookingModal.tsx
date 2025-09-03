@@ -1,12 +1,9 @@
 import React from "react";
 import useBooking from "@/hooks/useBooking";
+import { useKindeAuth } from "@kinde-oss/kinde-auth-nextjs";
+import { BookingData } from "@/Types/bookingData";
 
-interface BookingData {
-  firstName: string;
-  lastName: string;
-  startDate: string;
-  endDate: string;
-}
+const user = useKindeAuth();
 
 interface BookingModalProps {
   open: boolean;
@@ -48,8 +45,11 @@ const BookingModal = ({
               formData.endDate
             ),
               setBookingData({
+                email: user.user?.email ?? "",
                 firstName: formData.firstName,
                 lastName: formData.lastName,
+                carModel: carData.model,
+                carMake: carData.make,
                 startDate: formData.startDate,
                 endDate: formData.endDate,
               });

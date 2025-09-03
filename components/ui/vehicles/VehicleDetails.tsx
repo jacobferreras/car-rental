@@ -12,8 +12,11 @@ const VehicleDetails = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isConfirmOpen, setIsConfirmOpen] = useState(false);
   const [bookingData, setBookingData] = useState({
+    email: "",
     firstName: "",
     lastName: "",
+    carModel: "",
+    carMake: "",
     startDate: "",
     endDate: "",
   });
@@ -105,10 +108,6 @@ const VehicleDetails = () => {
                 isOpen={isConfirmOpen}
                 onClose={() => setIsConfirmOpen(false)}
                 user={user.user?.email ?? ""}
-                cardata={{
-                  make: car.make,
-                  model: car.model,
-                }}
                 bookingData={bookingData}
               />
             </div>
