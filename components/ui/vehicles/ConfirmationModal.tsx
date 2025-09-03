@@ -4,13 +4,11 @@ interface ConfirmationModalProps {
   isOpen: boolean;
   onClose: () => void;
   user: string;
-  cardata: {
-    make: string;
-    model: string;
-  };
   bookingData: {
     firstName: string;
     lastName: string;
+    carModel: string;
+    carMake: string;
     startDate: string;
     endDate: string;
   };
@@ -20,7 +18,6 @@ const ConfirmationModal = ({
   isOpen,
   onClose,
   user,
-  cardata,
   bookingData,
 }: ConfirmationModalProps) => {
   return (
@@ -33,7 +30,7 @@ const ConfirmationModal = ({
       <div className="modal-box bg-[#1c2634] text-center">
         <h3 className="font-bold text-lg">Booking Confirmed!</h3>
         <p className="py-4">
-          {`Thank you for your booking, ${bookingData.firstName} ${bookingData.lastName}! Your request for ${cardata.make} ${cardata.model} from ${bookingData.startDate} to ${bookingData.endDate} has been received. 
+          {`Thank you for your booking, ${bookingData.firstName} ${bookingData.lastName}! Your request for ${bookingData.carMake} ${bookingData.carModel} from ${bookingData.startDate} to ${bookingData.endDate} has been received. 
           A confirmation email has been sent to at ${user}.`}
         </p>
         <div className="modal-action flex justify-center">
