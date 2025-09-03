@@ -1,6 +1,6 @@
 import React from "react";
 import OurteamCard from "./OurteamCard";
-import { TeamMembers } from "@/lib/constant";
+import { teamMembers } from "@/lib/constant";
 
 const AboutTeam = () => {
   return (
@@ -10,7 +10,7 @@ const AboutTeam = () => {
       </h1>
       <div>
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 items-center justify-center gap-8">
-          {TeamMembers.map((member) => (
+          {teamMembers.map((member) => (
             <OurteamCard
               key={member.id}
               imageUrl={member.imageUrl}

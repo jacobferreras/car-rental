@@ -1,45 +1,11 @@
 "use client";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay, Navigation } from "swiper/modules";
+import { testimonials } from "@/lib/constant";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import Image from "next/image";
-
-const testimonials = [
-  {
-    id: 1,
-    quote:
-      "Amazing service! The car was clean and the booking process was seamless. Highly recommend!",
-    name: "Sarah Johnson",
-    rating: 5,
-    image: "/Fleet.jpg",
-  },
-  {
-    id: 2,
-    quote:
-      "Great experience! Professional staff and competitive prices. Will definitely use again.",
-    name: "Mike Davis",
-    rating: 5,
-    image: "/Fleet.jpg",
-  },
-  {
-    id: 3,
-    quote:
-      "Excellent customer support and reliable vehicles. Top notch service from start to finish.",
-    name: "Emily Chen",
-    rating: 5,
-    image: "/Fleet.jpg",
-  },
-  {
-    id: 4,
-    quote:
-      "Quick and easy rental process. The car was in perfect condition and saved my trip!",
-    name: "John Rodriguez",
-    rating: 5,
-    image: "/Fleet.jpg",
-  },
-];
 
 const StarRating = ({ rating }: { rating: number }) => {
   return (

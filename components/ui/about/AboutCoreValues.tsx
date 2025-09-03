@@ -1,6 +1,6 @@
 import React from "react";
 import CoreValueCard from "./CoreValueCard";
-import { CoreValues } from "@/lib/constant";
+import { coreValues } from "@/lib/constant";
 
 const AboutCoreValues = () => {
   return (
@@ -12,7 +12,7 @@ const AboutCoreValues = () => {
         </h1>
       </div>
       <div className="flex flex-col md:flex-row justify-center items-center px-4  text-center gap-4 lg:gap-8 mt-12 relative z-10">
-        {CoreValues.map((value) => (
+        {coreValues.map((value) => (
           <CoreValueCard
             key={value.id}
             title={value.title}
