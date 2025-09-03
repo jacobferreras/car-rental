@@ -5,16 +5,19 @@ import HomeBookingCard from "./HomeBookingCard";
 const Hero = () => {
   return (
     <div>
-      <div className="hero min-h-screen relative hero-overlay bg-overlay-opacity-60 ">
-        <Image
-          src="/HomeBg.webp"
-          alt="Background"
-          fill
-          className="object-cover z-0"
-          priority
-        />
-        <div className="absolute inset-0 bg-[#0b0e13] opacity-70 z-0"></div>
-        <div className="flex flex-col justify-center items-center absolute z-20">
+      <div className="hero min-h-screen relative hero-overlay bg-overlay-opacity-60">
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/HomeBg.webp"
+            alt="Background"
+            width={2732}
+            height={1536}
+            className="object-cover w-full h-full"
+            priority
+          />
+          <div className="absolute inset-0 bg-[#0b0e13] opacity-70"></div>
+        </div>
+        <div className="flex flex-col justify-center items-center absolute z-20 w-full h-full top-0 left-0">
           <h1 className="text-3xl sm:text-5xl lg:text-7xl text-center text-white font-mono font-bold z-20">
             DRIVE YOUR JOURNEY WITH INSTADRIVE
           </h1>

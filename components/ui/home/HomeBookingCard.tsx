@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const HomeBookingCard = () => {
   return (
-    <div className="card card-border bg-[#090b0f] bg-opacity-50 w-70 sm:w-150 lg:w-204 ">
+    <div className="card card-border bg-[#090b0f] bg-opacity-50 w-70 sm:w-154 lg:w-204 ">
       <div className="card-body">
         <h1 className="card-title justify-center text-[#5897e4] sm:text-2xl md:text-3xl mb-2">
           Find Your Perfect Car
@@ -25,9 +25,9 @@ const HomeBookingCard = () => {
             <DateInput id="dropoff-date" />
           </div>
 
-          <div className="sm:pt-9 ">
+          <div className="sm:pt-9 md:pt-7 lg:pt-9 ">
             <Link href="/vehicles">
-              <button className="btn bg-[#1d4ed8] w-26">Search Car</button>
+              <button className="btn bg-[#1d4ed8] w-auto">Search Car</button>
             </Link>
           </div>
         </div>

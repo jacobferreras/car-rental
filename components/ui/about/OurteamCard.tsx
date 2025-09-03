@@ -21,8 +21,8 @@ const OurteamCard = ({
             src={imageUrl}
             alt={name}
             className="rounded-full w-52 h-52 object-cover lg:w-35 lg:h-35 border-4 border-[#558cd2]"
-            width={150}
-            height={150}
+            width={970}
+            height={647}
             loading="lazy"
           />
         </figure>
