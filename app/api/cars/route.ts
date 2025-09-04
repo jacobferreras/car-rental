@@ -70,8 +70,6 @@ export async function GET(req: Request) {
       status: 500,
       headers: corsHeaders,
     });
-  } finally {
-    await prisma.$disconnect();
   }
 }
 
@@ -146,8 +144,6 @@ export async function POST(req: Request) {
       status: 500,
       headers: corsHeaders,
     });
-  } finally {
-    await prisma.$disconnect();
   }
 }
 
@@ -182,7 +178,5 @@ export async function PATCH(req: Request) {
       status: 500,
       headers: corsHeaders,
     });
-  } finally {
-    await prisma.$disconnect();
   }
 }
