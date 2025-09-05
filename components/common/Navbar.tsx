@@ -66,7 +66,7 @@ const Navbar = () => {
             <li>
               <Link
                 href="/"
-                className="hover:underline hover:text-blue-500 hover:bg-transparent text-xl font-bold"
+                className="text-white hover:bg-transparent text-xl font-bold"
               >
                 Home
               </Link>
@@ -74,7 +74,7 @@ const Navbar = () => {
             <li>
               <Link
                 href="/vehicles"
-                className="hover:underline hover:text-blue-500 hover:bg-transparent text-xl font-bold"
+                className="text-white hover:bg-transparent text-xl font-bold"
               >
                 Vehicles
               </Link>
@@ -82,7 +82,7 @@ const Navbar = () => {
             <li>
               <Link
                 href="/about"
-                className="hover:underline hover:text-blue-500 hover:bg-transparent text-xl font-bold"
+                className="text-white hover:bg-transparent text-xl font-bold"
               >
                 About Us
               </Link>
@@ -90,7 +90,7 @@ const Navbar = () => {
             <li>
               <Link
                 href="/contact"
-                className="hover:underline hover:text-blue-500 hover:bg-transparent text-xl font-bold"
+                className="text-white hover:bg-transparent text-xl font-bold"
               >
                 Contact Us
               </Link>
