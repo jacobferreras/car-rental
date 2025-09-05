@@ -7,52 +7,93 @@ import {
 } from "@kinde-oss/kinde-auth-nextjs/components";
 import Image from "next/image";
 import Link from "next/link";
+import { ImCross } from "react-icons/im";
 
 const Navbar = () => {
   const { getUser, isLoading } = useKindeBrowserClient();
   const user = getUser();
 
   return (
-    <div className="fixed navbar bg-[#182448] opacity-89 backdrop-blur-lg shadow-sm z-50">
+    <div className="fixed navbar bg-[#182448] backdrop-blur-lg shadow-sm z-50">
       <div className="navbar-start">
-        <div className="dropdown">
-          <div
-            tabIndex={0}
-            role="button"
-            className="btn btn-ghost lg:hidden"
-            aria-label="Open main menu"
+        <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
+        <div className="drawer-content flex flex-col"></div>
+        <div className="flex-none lg:hidden">
+          <label
+            htmlFor="my-drawer-3"
+            aria-label="open sidebar"
+            className="btn btn-square btn-ghost"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5"
               fill="none"
               viewBox="0 0 24 24"
-              stroke="currentColor"
+              className="inline-block h-6 w-6 stroke-current"
             >
-              {" "}
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeWidth="2"
-                d="M4 6h16M4 12h8m-8 6h16"
-              />{" "}
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
             </svg>
-          </div>
-          <ul
-            tabIndex={0}
-            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
-          >
+          </label>
+        </div>
+        <div className="drawer-side">
+          <label
+            htmlFor="my-drawer-3"
+            aria-label="close sidebar"
+            className="drawer-overlay"
+          ></label>
+
+          <ul className="menu bg-[#1c2634] min-h-full w-80 p-4">
+            <h1 className="text-2xl font-bold mb-4 flex justify-between items-center">
+              InstaDrive
+              <span>
+                <ImCross
+                  className="text-2xl pt-1"
+                  aria-label="Close menu"
+                  onClick={() => {
+                    const drawer = document.getElementById(
+                      "my-drawer-3"
+                    ) as HTMLInputElement;
+                    if (drawer) drawer.checked = false;
+                  }}
+                  style={{ cursor: "pointer" }}
+                />
+              </span>
+            </h1>
             <li>
-              <Link href="/">Home</Link>
+              <Link
+                href="/"
+                className="hover:underline hover:text-blue-500 hover:bg-transparent text-xl font-bold"
+              >
+                Home
+              </Link>
             </li>
             <li>
-              <Link href="/vehicles">Vehicles</Link>
+              <Link
+                href="/vehicles"
+                className="hover:underline hover:text-blue-500 hover:bg-transparent text-xl font-bold"
+              >
+                Vehicles
+              </Link>
             </li>
             <li>
-              <Link href="/about">About Us</Link>
+              <Link
+                href="/about"
+                className="hover:underline hover:text-blue-500 hover:bg-transparent text-xl font-bold"
+              >
+                About Us
+              </Link>
             </li>
             <li>
-              <Link href="/contact">Contact Us</Link>
+              <Link
+                href="/contact"
+                className="hover:underline hover:text-blue-500 hover:bg-transparent text-xl font-bold"
+              >
+                Contact Us
+              </Link>
             </li>
           </ul>
         </div>
@@ -122,13 +163,7 @@ const Navbar = () => {
               className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
             >
               <li>
-                <a className="justify-between">
-                  Profile
-                  <span className="badge">New</span>
-                </a>
-              </li>
-              <li>
-                <a>Settings</a>
+                <a>Bookings</a>
               </li>
               <li>
                 <LogoutLink>Logout</LogoutLink>
