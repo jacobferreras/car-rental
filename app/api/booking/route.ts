@@ -48,13 +48,21 @@ export async function POST(request: Request) {
 }
 
 export async function GET(request: Request) {
-  const bookings = await prisma.booking.findMany({
-    orderBy: {
-      createdAt: "asc",
-    },
-  });
-  return new Response(JSON.stringify(bookings), {
-    status: 200,
-    headers: corsHeaders,
-  });
+  try {
+    const bookings = await prisma.booking.findMany({
+      orderBy: {
+        createdAt: "asc",
+      },
+    });
+    return new Response(JSON.stringify(bookings), {
+      status: 200,
+      headers: corsHeaders,
+    });
+  } catch (error) {
+    console.error("Error fetching bookings:", error);
+    return new Response("Internal Server Error", {
+      status: 500,
+      headers: corsHeaders,
+    });
+  }
 }
