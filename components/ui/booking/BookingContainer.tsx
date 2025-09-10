@@ -1,11 +1,10 @@
-import React from "react";
-
-const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
+import axios from "axios";
 
 const BookingContainer = async () => {
-  const bookings = await fetch(`${BASE_URL}/api/booking/user`).then((res) =>
-    res.json()
+  const data = await axios.get(
+    `${process.env.NEXT_PUBLIC_BASE_URL}/api/booking/user`
   );
+  console.log("User bookings data:", data.data);
 
   return (
     <>
