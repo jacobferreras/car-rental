@@ -226,26 +226,6 @@ const Footer = () => {
               <p className="text-white text-sm">
                 © 2025 InstaDrive. All rights reserved.
               </p>
-              <div className="flex space-x-6">
-                <Link
-                  href="/privacy"
-                  className="text-white hover:text-blue-500 text-sm transition-colors"
-                >
-                  Privacy Policy
-                </Link>
-                <Link
-                  href="/terms"
-                  className="text-white hover:text-blue-500 text-sm transition-colors"
-                >
-                  Terms of Service
-                </Link>
-                <Link
-                  href="/cookies"
-                  className="text-white hover:text-blue-500 text-sm transition-colors"
-                >
-                  Cookie Policy
-                </Link>
-              </div>
             </div>
           </div>
         </div>
