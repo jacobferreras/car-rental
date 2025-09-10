@@ -8,8 +8,7 @@ const QuickHelpSection = () => {
           Need Quick Answers?
         </div>
         <div className="text-md lg:text-xl font-family-sans text-white text-center mb-8 px-4">
-          For common questions, check our comprehensive FAQ section or browse
-          our support resources.
+          For common questions, check our comprehensive FAQ section.
         </div>
         <div className="flex justify-center items-center gap-4">
           <Link href="/faq">
@@ -18,9 +17,9 @@ const QuickHelpSection = () => {
             </button>
           </Link>
 
-          <button className="btn bg-[#1d4ed8]  rounded-xl">
+          {/* <button className="btn bg-[#1d4ed8]  rounded-xl">
             Support Center <i className="bi bi-info-circle"></i>
-          </button>
+          </button> */}
         </div>
       </div>
     </div>
