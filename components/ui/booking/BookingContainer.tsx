@@ -3,14 +3,10 @@ import useFetchBooking from "@/hooks/useFetchBooking";
 import BookingCard from "./BookingCard";
 import { FaArrowAltCircleLeft } from "react-icons/fa";
 import Link from "next/link";
+import BookingCardSkeleton from "./BookingCardSkeleton";
 
 const BookingContainer = () => {
-  const { bookings, loading, error } = useFetchBooking();
-
-  if (loading) return <div>Loading...</div>;
-  if (error) return <div>Error fetching bookings</div>;
-
-  console.log("Bookings:", bookings);
+  const { bookings, loading } = useFetchBooking();
 
   return (
     <>
@@ -26,7 +22,11 @@ const BookingContainer = () => {
                 My Bookings
               </h1>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                {bookings && bookings.length > 0 ? (
+                {loading ? (
+                  Array.from({ length: 8 }).map((_, idx) => (
+                    <BookingCardSkeleton key={idx} />
+                  ))
+                ) : bookings && bookings.length > 0 ? (
                   bookings.map((booking) => (
                     <BookingCard
                       key={booking.id}
