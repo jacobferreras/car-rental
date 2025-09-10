@@ -1,4 +1,4 @@
-import React from "react";
+import Link from "next/link";
 
 const QuickHelpSection = () => {
   return (
@@ -12,9 +12,12 @@ const QuickHelpSection = () => {
           our support resources.
         </div>
         <div className="flex justify-center items-center gap-4">
-          <button className="btn bg-[#1d4ed8]  rounded-xl">
-            Visit Our FAQ <i className="bi bi-patch-question-fill"></i>
-          </button>
+          <Link href="/faq">
+            <button className="btn bg-[#1d4ed8]  rounded-xl">
+              Visit Our FAQ <i className="bi bi-patch-question-fill"></i>
+            </button>
+          </Link>
+
           <button className="btn bg-[#1d4ed8]  rounded-xl">
             Support Center <i className="bi bi-info-circle"></i>
           </button>
