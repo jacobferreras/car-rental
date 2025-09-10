@@ -3,9 +3,7 @@ import React from "react";
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
 
 const BookingContainer = async () => {
-  const bookings = await fetch(`${BASE_URL}/api/booking/user`).then((res) =>
-    res.json()
-  );
+  const bookings = await fetch("/api/booking/user").then((res) => res.json());
 
   console.log(bookings);
 
