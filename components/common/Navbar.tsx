@@ -163,7 +163,7 @@ const Navbar = () => {
               className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
             >
               <li>
-                <a>Bookings</a>
+                <Link href="/booking">Bookings</Link>
               </li>
               <li>
                 <LogoutLink>Logout</LogoutLink>
