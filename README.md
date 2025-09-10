@@ -1,36 +1,60 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Car Rental Web Application
 
-## Getting Started
+A modern car rental platform built with Next.js, TypeScript, and Prisma. This project allows users to browse, book, and manage car rentals with a clean and responsive UI.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- Browse available vehicles with detailed information
+- Book cars with date selection and confirmation
+- User authentication (Kinde Auth integration)
+- Contact and About pages
+- Responsive design for desktop and mobile
+- Modular component structure
+- Custom React hooks for state management
+- Prisma ORM for database access
+
+## Tech Stack
+
+- [Next.js](https://nextjs.org/)
+- [React](https://react.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Prisma](https://www.prisma.io/)
+- [PostgreSQL](https://www.postgresql.org/) (or your preferred database)
+- [Tailwind CSS](https://tailwindcss.com/) (if used)
+- [Kinde Auth](https://kinde.com/) (for authentication)
+
+## Project Structure
+
+```
+.
+├── app/                # Next.js app directory (pages, API routes)
+├── components/         # Reusable React components
+├── hooks/              # Custom React hooks
+├── lib/                # Utility libraries (constants, Prisma client)
+├── prisma/             # Prisma schema and client
+├── public/             # Static assets (images, icons)
+├── services/           # Service functions (API calls, business logic)
+├── Types/              # TypeScript types and interfaces
+├── package.json
+├── tsconfig.json
+└── README.md
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Folder Highlights
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- `app/api/` - API routes for authentication, booking, cars, and permissions
+- `components/common/` - Shared UI components (Navbar, Footer, etc.)
+- `components/ui/` - Page-specific UI components
+- `hooks/` - Custom hooks for bookings, cars, debounce, etc.
+- `services/` - Business logic and API service functions
+- `Types/` - TypeScript type definitions
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Contributing
 
-## Learn More
+Contributions are welcome! Please open issues or submit pull requests for improvements and bug fixes.
 
-To learn more about Next.js, take a look at the following resources:
+## License
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+[MIT](LICENSE)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**Developed by jacobferreras**
