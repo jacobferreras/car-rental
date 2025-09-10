@@ -119,3 +119,36 @@ export const testimonials = [
     image: "/Fleet.jpg",
   },
 ];
+
+export const faqs = [
+  {
+    id: 1,
+    question: "How do I book a car?",
+    answer:
+      "Booking a car is simple! Just select your desired vehicle, choose your pickup and drop-off dates, and complete the reservation form. You will receive a confirmation email with all the details of your booking, including a checklist of documents to bring for pickup.",
+  },
+  {
+    id: 2,
+    question: "What are the required documents for pickup?",
+    answer:
+      "For a seamless pickup, please bring the following: a physical, unexpired driver's license for all drivers, the physical credit card used for the booking, and valid proof of auto insurance.",
+  },
+  {
+    id: 3,
+    question: "Why do you require proof of insurance?",
+    answer:
+      "Proof of insurance is required to protect both you and our company from financial risk. Your personal auto insurance acts as the primary coverage for the vehicle in case of damage, theft, or an accident. It ensures all parties are protected and helps facilitate a smoother claims process if an incident occurs.",
+  },
+  {
+    id: 4,
+    question: "What if I don't have personal auto insurance?",
+    answer:
+      "If you do not have personal auto insurance, or if your policy doesn't cover rentals, you may purchase a supplemental rental insurance plan directly from us at the time of your pickup.",
+  },
+  {
+    id: 5,
+    question: "Are there any hidden fees?",
+    answer:
+      "We pride ourselves on transparency. All fees and charges will be clearly communicated during the booking process. There are no hidden fees, so you can rent with confidence.",
+  },
+];
