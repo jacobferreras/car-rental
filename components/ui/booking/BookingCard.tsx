@@ -5,8 +5,7 @@ interface BookingCardProps {
   carModel: string;
   startDate: Date;
   endDate: Date;
-  firstName: string;
-  lastName: string;
+
   status: string;
 }
 
@@ -16,8 +15,6 @@ const BookingCard = ({
   carModel,
   startDate,
   endDate,
-  firstName,
-  lastName,
   status,
 }: BookingCardProps) => {
   return (
@@ -35,9 +32,6 @@ const BookingCard = ({
           </p>
           <p>
             <b>End Date:</b> {new Date(endDate).toLocaleDateString()}
-          </p>
-          <p>
-            <b>Client:</b> {firstName} {lastName}
           </p>
           <p>
             <b>Status:</b> {status}

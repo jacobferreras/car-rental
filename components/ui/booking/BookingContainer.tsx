@@ -33,8 +33,6 @@ const BookingContainer = () => {
                     carModel={booking.carModel}
                     startDate={booking.startDate}
                     endDate={booking.endDate}
-                    firstName={booking.firstName}
-                    lastName={booking.lastName}
                     status={booking.status}
                     email={booking.email}
                   />
