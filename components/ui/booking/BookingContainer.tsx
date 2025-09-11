@@ -10,7 +10,7 @@ const BookingContainer = () => {
 
   return (
     <>
-      <div className="min-h-screen bg-[#111827] px-12 flex justify-center items-center">
+      <div className="min-h-screen bg-[#111827]  flex justify-center items-center">
         <div className="px-2 py-24">
           <div className="card w-auto bg-[#1a202c] card-xl shadow-sm px-4 md:px-12 py-4 md:py-12">
             <Link href="/" className="flex flex-row gap-2 cursor-pointer pt-4">
