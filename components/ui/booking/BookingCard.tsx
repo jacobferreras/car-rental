@@ -22,13 +22,13 @@ const BookingCard = ({
 }: BookingCardProps) => {
   return (
     <>
-      <div className="card w-96 bg-[#1f2937] card-md shadow-sm">
-        <div className="card-body text-white">
-          <h2 className="text-2xl text-[#60a5e7] font-extrabold mb-2">
+      <div className="card w-auto bg-[#1f2937] card-lg shadow-sm mx-auto">
+        <div className="card-body text-white px-4 py-6 sm:px-6 sm:py-8">
+          <h2 className="text-xl sm:text-2xl text-[#60a5e7] font-extrabold mb-2">
             {carMake} {carModel}
           </h2>
-          <h3>
-            <b>Emai:</b> {email}
+          <h3 className="break-words">
+            <b>Email:</b> {email}
           </h3>
           <p>
             <b>Start Date:</b> {new Date(startDate).toLocaleDateString()}
