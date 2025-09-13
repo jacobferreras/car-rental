@@ -32,7 +32,7 @@ const SearchInput = ({
         </svg>
         <input
           type="search"
-          className="grow "
+          className="grow"
           placeholder="Search"
           value={search}
           onChange={(e) => {
