@@ -50,19 +50,16 @@ const VehicleSection = () => {
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 px-4 mb-4">
-        {isLoading
-          ? Array.from({ length: 8 }).map((_, index) => (
-              <Skeleton key={index} />
-            ))
-          : data?.cars?.map((car: Car) => <CarCards key={car.id} car={car} />)}
-
-        {data.cars?.length === 0 ? (
+        {isLoading ? (
+          Array.from({ length: 8 }).map((_, index) => <Skeleton key={index} />)
+        ) : data?.cars?.length ? (
+          data.cars.map((car: Car) => <CarCards key={car.id} car={car} />)
+        ) : (
           <p className="text-center justify-center items-center flex col-span-4">
             No cars found
           </p>
-        ) : null}
+        )}
       </div>
-
       <div className="flex justify-center items-center mt-8 mb-4">
         <Pagination
           currentPage={currentPage}
