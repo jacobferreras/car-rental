@@ -5,8 +5,20 @@ import { FaArrowAltCircleLeft } from "react-icons/fa";
 import Link from "next/link";
 import BookingCardSkeleton from "./BookingCardSkeleton";
 
+interface Booking {
+  id: number;
+  email: string;
+  carMake: string;
+  carModel: string;
+  startDate: Date;
+  endDate: Date;
+  firstName: string;
+  lastName: string;
+  status: string;
+}
+
 const BookingContainer = () => {
-  const { bookings, loading } = useFetchBooking();
+  const { data, isLoading } = useFetchBooking();
 
   return (
     <>
@@ -21,12 +33,12 @@ const BookingContainer = () => {
               MY BOOKINGS
             </h1>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-              {loading ? (
+              {isLoading ? (
                 Array.from({ length: 8 }).map((_, idx) => (
                   <BookingCardSkeleton key={idx} />
                 ))
-              ) : bookings && bookings.length > 0 ? (
-                bookings.map((booking) => (
+              ) : data && data.length > 0 ? (
+                data.map((booking: Booking) => (
                   <BookingCard
                     key={booking.id}
                     carMake={booking.carMake}
