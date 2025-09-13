@@ -8,24 +8,26 @@ import { Car } from "../../../app/generated/prisma";
 import CarCards from "../../common/CarCard";
 import useCars from "@/hooks/useCars";
 import { useState } from "react";
+import useDebounce from "@/hooks/useDebounce";
 
 const VehicleSection = () => {
   const [type, setType] = useState("");
   const [transmission, setTransmission] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
   const [search, setSearch] = useState("");
+  const debouncedSearch = useDebounce(search, 500);
 
   const { data, isLoading } = useCars({
     transmission,
     page: currentPage,
     limit: 8,
-    search,
+    search: debouncedSearch,
     type,
   });
 
   return (
     <div className="flex flex-col bg-[#111827]">
-      <div className="flex flex-col  md:flex-row md:justify-center md:items-center xl:justify-end xl:items-end xl:gap-0 mb-8 gap-4 pt-12 xl:ml-auto xl:pr-6 xl:mt-24 md:px-4">
+      <div className="flex flex-col  md:flex-row justify-center items-center xl:justify-end xl:items-end xl:gap-0 mb-8 gap-4 pt-12 xl:ml-auto xl:pr-6 xl:mt-24 md:px-4">
         <Dropdown
           value={type}
           onChange={(e) => {
