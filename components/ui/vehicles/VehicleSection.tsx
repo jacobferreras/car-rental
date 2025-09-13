@@ -6,22 +6,22 @@ import SearchInput from "./SearchInput";
 import Pagination from "@/components/ui/vehicles/Pagination";
 import { Car } from "../../../app/generated/prisma";
 import CarCards from "../../common/CarCard";
-import useCards from "@/hooks/useCards";
+import useCars from "@/hooks/useCars";
+import { useState } from "react";
 
 const VehicleSection = () => {
-  const {
-    cars,
-    totalpages,
-    loading,
+  const [type, setType] = useState("");
+  const [transmission, setTransmission] = useState("");
+  const [currentPage, setCurrentPage] = useState(1);
+  const [search, setSearch] = useState("");
+
+  const { data, isLoading, error } = useCars({
     transmission,
-    setTransmission,
-    currentPage,
-    setCurrentPage,
-    type,
-    setType,
+    page: currentPage,
+    limit: 8,
     search,
-    setSearch,
-  } = useCards();
+    type,
+  });
 
   return (
     <div className="flex flex-col bg-[#111827]">
@@ -50,17 +50,17 @@ const VehicleSection = () => {
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 px-4 mb-4">
-        {loading
+        {isLoading
           ? Array.from({ length: 8 }).map((_, index) => (
               <Skeleton key={index} />
             ))
-          : cars.map((car: Car) => <CarCards key={car.id} car={car} />)}
+          : data?.cars?.map((car: Car) => <CarCards key={car.id} car={car} />)}
       </div>
 
       <div className="flex justify-center items-center mt-8 mb-4">
         <Pagination
           currentPage={currentPage}
-          totalPages={totalpages}
+          totalPages={data?.totalpages || 0}
           onPageChange={setCurrentPage}
         />
       </div>
