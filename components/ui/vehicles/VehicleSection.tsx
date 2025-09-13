@@ -25,7 +25,7 @@ const VehicleSection = () => {
 
   return (
     <div className="flex flex-col bg-[#111827]">
-      <div className="flex flex-col  md:flex-row items-center xl:justify-end xl:items-end xl:gap-0 mb-8 gap-4 pt-12 xl:ml-auto xl:pr-6 xl:mt-24 md:px-4">
+      <div className="flex flex-col  md:flex-row md:justify-center md:items-center xl:justify-end xl:items-end xl:gap-0 mb-8 gap-4 pt-12 xl:ml-auto xl:pr-6 xl:mt-24 md:px-4">
         <Dropdown
           value={type}
           onChange={(e) => {
@@ -55,6 +55,12 @@ const VehicleSection = () => {
               <Skeleton key={index} />
             ))
           : data?.cars?.map((car: Car) => <CarCards key={car.id} car={car} />)}
+
+        {data.cars?.length === 0 ? (
+          <p className="text-center justify-center items-center flex col-span-4">
+            No cars found
+          </p>
+        ) : null}
       </div>
 
       <div className="flex justify-center items-center mt-8 mb-4">
