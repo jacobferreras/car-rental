@@ -45,7 +45,6 @@ const Navbar = () => {
             aria-label="close sidebar"
             className="drawer-overlay"
           ></label>
-
           <ul className="menu bg-[#1c2634] min-h-full w-80 p-4">
             <h1 className="text-2xl font-bold mb-4 flex justify-between items-center">
               InstaDrive
@@ -67,6 +66,12 @@ const Navbar = () => {
               <Link
                 href="/"
                 className="text-white hover:bg-transparent text-xl font-bold"
+                onClick={() => {
+                  const drawer = document.getElementById(
+                    "my-drawer-3"
+                  ) as HTMLInputElement;
+                  if (drawer) drawer.checked = false;
+                }}
               >
                 Home
               </Link>
@@ -75,6 +80,12 @@ const Navbar = () => {
               <Link
                 href="/vehicles"
                 className="text-white hover:bg-transparent text-xl font-bold"
+                onClick={() => {
+                  const drawer = document.getElementById(
+                    "my-drawer-3"
+                  ) as HTMLInputElement;
+                  if (drawer) drawer.checked = false;
+                }}
               >
                 Vehicles
               </Link>
@@ -83,6 +94,12 @@ const Navbar = () => {
               <Link
                 href="/about"
                 className="text-white hover:bg-transparent text-xl font-bold"
+                onClick={() => {
+                  const drawer = document.getElementById(
+                    "my-drawer-3"
+                  ) as HTMLInputElement;
+                  if (drawer) drawer.checked = false;
+                }}
               >
                 About Us
               </Link>
@@ -91,6 +108,12 @@ const Navbar = () => {
               <Link
                 href="/contact"
                 className="text-white hover:bg-transparent text-xl font-bold"
+                onClick={() => {
+                  const drawer = document.getElementById(
+                    "my-drawer-3"
+                  ) as HTMLInputElement;
+                  if (drawer) drawer.checked = false;
+                }}
               >
                 Contact Us
               </Link>
