@@ -13,9 +13,9 @@ const SearchInput = ({
 }: SearchInputProps) => {
   return (
     <div className="pr-6 lg:pr-0">
-      <label className="input  w-68 lg:w-50 rounded-xl">
+      <label className="input  w-68 lg:w-50 rounded-xl bg-[#404040]">
         <svg
-          className="h-[1em] opacity-50"
+          className="h-[1em] opacity-50 "
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
         >
@@ -32,7 +32,7 @@ const SearchInput = ({
         </svg>
         <input
           type="search"
-          className="grow"
+          className="grow "
           placeholder="Search"
           value={search}
           onChange={(e) => {
@@ -40,8 +40,6 @@ const SearchInput = ({
             setCurrentPage(1);
           }}
         />
-        <kbd className="kbd kbd-sm">⌘</kbd>
-        <kbd className="kbd kbd-sm">K</kbd>
       </label>
     </div>
   );
