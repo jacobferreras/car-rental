@@ -15,7 +15,7 @@ const VehicleSection = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [search, setSearch] = useState("");
 
-  const { data, isLoading, error } = useCars({
+  const { data, isLoading } = useCars({
     transmission,
     page: currentPage,
     limit: 8,
