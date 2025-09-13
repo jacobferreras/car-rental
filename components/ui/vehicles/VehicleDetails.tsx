@@ -6,6 +6,7 @@ import { useState } from "react";
 import BookingModal from "./BookingModal";
 import Image from "next/image";
 import ConfirmationModal from "./ConfirmationModal";
+import { FaArrowCircleLeft } from "react-icons/fa";
 
 const VehicleDetails = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -33,7 +34,7 @@ const VehicleDetails = () => {
             {" "}
             <span>
               <Link href="/vehicles">
-                <i className="bi bi-arrow-left-circle-fill mr-2"></i>
+                <FaArrowCircleLeft className="mr-2" />
               </Link>
             </span>
             Vehicle Details

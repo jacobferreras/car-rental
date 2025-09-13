@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import { FaArrowCircleLeft } from "react-icons/fa";
 
 const VehicleDetailsSkeleton = () => {
   return (
@@ -9,7 +10,7 @@ const VehicleDetailsSkeleton = () => {
           <h1 className="pl-4 sm:pl-6 pt-4 text-xl sm:text-2xl font-bold">
             <span>
               <Link href="/vehicles">
-                <i className="bi bi-arrow-left-circle-fill mr-2"></i>
+                <FaArrowCircleLeft className="mr-2" />
               </Link>
             </span>
             Vehicle Details
